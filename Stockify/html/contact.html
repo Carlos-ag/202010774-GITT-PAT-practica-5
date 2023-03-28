@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contáctanos</title>
+    <link rel="icon" href="../assets/images/logo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+
+</head>
+
+<body>
+    <br>
+    <center>
+        <a href="index.html"><img src="../assets/images/logo.jpeg" alt="Home" height="100px"></a>
+    </center>
+    <br>
+    <center>
+            <h1>Contact us!</h1>
+        </center>
+            <form action="http://localhost:8080/contact" method="post" enctype="application/json" id="contact-form">
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </p>
+
+                <p>
+                    <label for="message">Message:</label>
+                    <br>
+                    <center>
+                        <textarea id="message" name="message" placeholder="Type your message here" style="height:200px; width: 80%" required></textarea>
+                    </center>
+                </p>
+
+                <center>
+                    <button type="submit" id="submit-contact-form">Submit</button>
+                </center>
+
+            </form>
+    
+            <script src="../javascript/contactUs.js"></script>
+</body>
+
+</html>

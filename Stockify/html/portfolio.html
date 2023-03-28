@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Inicio</title>
+</head>
+
+<body>
+
+
+
+  <div class="main">
+
+    <div id="server-status">
+      <div class="circle pulse" id="pulse-server-status"></div>
+      <div id="text-server-status"></div>
+    </div>
+
+
+
+
+    <div id="server-up" style="display: none;">
+
+      <h1>Cartera:</h1>
+
+      <aside>
+        <details>
+          <summary>
+            Añadir valores:
+          </summary>
+          <form id="form-portfolio">
+            <br>
+            <label for="symbol">Símbolo:</label><br>
+            <input type="text" id="form-portfolio-symbol" name="symbol" placeholder="Ticker symbol de la acción"
+              required><br><br>
+            <label for="date">Fecha:</label><br>
+            <input type="date" id="form-portfolio-date" name="date" max="today" required><br><br>
+            <label for="quantity">Cantidad:</label><br>
+            <input type="number" min="1" id="form-portfolio-quantity" name="quantity"
+              placeholder="Número de acciones compradas" required><br><br>
+            <label for="price">Precio:</label><br>
+            <input type="number" id="form-portfolio-price" name="price" placeholder="$" required><br><br>
+            <input type="submit" id="form-portfolio-submit">
+          </form>
+        </details>
+      </aside>
+
+      <br><br>
+      <table id="table-portfolio"></table>
+    </div>
+
+    <div id="server-down" style="display: none;">
+      <h1>El servidor no está disponible</h1>
+      <p>Sentimos las molestias, intente refrescar la página o acceda de nuevo más adelante.</p>
+      <p>Estamos trabajando duranmente para resolver el problema.</p>
+    </div>
+
+  </div>
+
+
+  <script src="../javascript/portfolio.js"></script>
+
+</body>
+
+</html>

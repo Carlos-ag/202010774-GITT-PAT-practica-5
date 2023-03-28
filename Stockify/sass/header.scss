@@ -1,0 +1,17 @@
+@use "constants";
+
+
+
+  #header-search-bar {
+    position:relative;
+    top: 25%;
+    left: 25%;
+    width: constants.$search-bar-width;
+    height: constants.$search-bar-height;
+    border: 1px solid gray;
+    border-radius: 20px;
+
+    // padding: 10px;
+    // margin: 0 auto;
+    font-size: 1em;
+  }

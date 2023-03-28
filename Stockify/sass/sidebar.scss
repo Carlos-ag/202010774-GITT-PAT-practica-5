@@ -1,0 +1,46 @@
+@use "constants";
+
+@media only screen and (max-width: 600px) {
+  .sidebar-button {
+    font-size: 2.0vw; 
+    padding: 2.5%;
+    display: block;
+    border: none;
+    text-decoration: none;
+    border-radius: 25px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .sidebar-button {
+    font-size: 1.5vw;
+    padding: 3% 7% 3% 15%;
+    margin-bottom: 10%;
+    display: block;
+    border: none;
+    text-decoration: none;
+    border-radius: 0 25px 25px 0;
+  }
+}
+
+
+
+.sidebar-button-unselected {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #818181;
+}
+
+.sidebar-button-unselected:hover {
+  color: #f1f1f1;
+  background: rgb(70,70,70);
+}
+
+
+.sidebar-button-selected, .sidebar-button-selected:hover {
+  background: rgb(99,79,54);
+  color: rgb(241,158,58);
+}
+
+
