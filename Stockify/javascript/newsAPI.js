@@ -1,10 +1,10 @@
 var stocksToWatch = ["SPY", "MSFT", "AAPL", "AMZN", "FB", "GOOG", "TSLA", "NVDA", "PYPL", "NFLX", "ADBE"];
 // change the order of the stocks to watch randomly
 stocksToWatch.sort(() => Math.random() - 0.5);
-// var API_KEYS = ["8KZJnlpVSnFGbGw2Di6Uw3E7doSpfSotzgay7yV2","olrrHn3cOLueBfPnFFQbAPHZDZsuS3KWu9L6XcdO", "48to6hG5ktxHQp0EcBCRhkcH3EGXwhfPbJLuqlOI","wTrA5KhDgUQ76JlzLIVH90C4Chqf6rXwFb7eSqYk",
-// "jylPjj8hPAAeNDagJRVoBYo29zsVYW1VZWsPzYNK"];
+var API_KEYS = ["8KZJnlpVSnFGbGw2Di6Uw3E7doSpfSotzgay7yV2","olrrHn3cOLueBfPnFFQbAPHZDZsuS3KWu9L6XcdO", "48to6hG5ktxHQp0EcBCRhkcH3EGXwhfPbJLuqlOI","wTrA5KhDgUQ76JlzLIVH90C4Chqf6rXwFb7eSqYk",
+"jylPjj8hPAAeNDagJRVoBYo29zsVYW1VZWsPzYNK"];
 // var API_KEYS = ["8KZJnlpVSnFGbGw2Di6Uw3E7doSpfSotzgay7yV2"];
-var API_KEYS = [""];
+// var API_KEYS = [""];
 var apiIndex = 0;
 var errorMessageShown = false;
 

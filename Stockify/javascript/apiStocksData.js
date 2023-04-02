@@ -1,8 +1,8 @@
 // this function is called when the user clicks on the search button
 
 // var API_KEYS_STOCKS = ["2B176BA76YRHIWDI", "ZPWHHJ1VEJJFZYLS", "KL69KTDSTMYQ86TB", "5G7XH8VXOPD5ZNHS", "J024F2FKA2OZQ6WF", "0E8ZUXMLUG8GJGUR"]
-// var API_KEYS_STOCKS = ["2B176BA76YRHIWDI"]
-var API_KEYS_STOCKS = [""]
+var API_KEYS_STOCKS = ["2B176BA76YRHIWDI"]
+// var API_KEYS_STOCKS = [""]
 var apiIndexStocks = 0;
 
 function getAPIKeyStocks() {
