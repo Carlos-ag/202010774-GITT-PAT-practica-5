@@ -11,8 +11,6 @@
 
 <body>
 
-
-
   <div class="main">
 
     <div id="server-status">
@@ -20,13 +18,21 @@
       <div id="text-server-status"></div>
     </div>
 
-
-
-
     <div id="server-up" style="display: none;">
 
       <h1>Cartera:</h1>
 
+      <!-- File upload and download input field and upload button -->
+      <div>
+        <h2>Subir archivo CSV:</h2>
+        <input type="file" id="file-upload" accept=".csv">
+        <button id="upload-file-button" disabled>Subir cartera</button>
+        <br><br>
+        <button id="download-file-button">Descargar cartera</button>
+        <br><br>
+      </div>
+
+      
       <aside>
         <details>
           <summary>
@@ -60,7 +66,6 @@
     </div>
 
   </div>
-
 
   <script src="../javascript/portfolio.js"></script>
 

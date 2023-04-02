@@ -17,8 +17,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
+import org.springframework.http.HttpHeaders;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+
+import org.springframework.core.io.Resource;
+
 import com.stockify.stockifyapp.models.PorfolioMovement;
 import com.stockify.stockifyapp.restservices.PortfolioService;
+
+
+
 
 @RestController
 public class PorfolioController {
@@ -56,6 +71,39 @@ public class PorfolioController {
     }
 
 
+
+    @PostMapping("/upload")
+    @CrossOrigin(origins = "*")
+    public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
+        try {
+            portfolioService.processCSVFile(file);
+            return ResponseEntity.status(HttpStatus.OK).body("File uploaded and processed successfully");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to upload file: " + e.getMessage());
+        }
+    }
+
+    @GetMapping("/download")
+    @CrossOrigin(origins = "*")
+public ResponseEntity<Resource> downloadFile() {
+    try {
+        Resource resource = portfolioService.loadCSVFileAsResource();
+        String contentType = Files.probeContentType(resource.getFile().toPath());
+
+        if (contentType == null) {
+            contentType = "application/octet-stream";
+        }
+
+        return ResponseEntity.ok()
+                .contentType(MediaType.parseMediaType(contentType))
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
+                .body(resource);
+    } catch (FileNotFoundException e) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+    } catch (IOException e) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+    }
+}
 
 
 }

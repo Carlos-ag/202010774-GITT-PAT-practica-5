@@ -1,0 +1,38 @@
+2023-04-02T23:27:38.439+02:00  INFO 11062 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 11062 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4)
+2023-04-02T23:27:38.441+02:00 DEBUG 11062 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T23:27:38.442+02:00  INFO 11062 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T23:27:39.291+02:00  WARN 11062 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-02T23:27:39.322+02:00  WARN 11062 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-04-02T23:27:39.348+02:00 ERROR 11062 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-04-02T23:28:38.493+02:00  INFO 11169 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 11169 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4)
+2023-04-02T23:28:38.494+02:00 DEBUG 11169 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T23:28:38.495+02:00  INFO 11169 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T23:28:39.317+02:00  WARN 11169 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-04-02T23:28:39.344+02:00  WARN 11169 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-04-02T23:28:39.366+02:00 ERROR 11169 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

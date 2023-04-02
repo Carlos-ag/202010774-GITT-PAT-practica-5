@@ -1,5 +1,8 @@
 var url_fetch_portfolio = "http://localhost:8080/portfolio";
 var url_add_movement = "http://localhost:8080/movement";
+var url_server_health = "http://localhost:8080/actuator/health";
+var url_upload_file = "http://localhost:8080/upload";
+var url_download_file = "http://localhost:8080/download";
 var serverUP = false;
 
 function formatDate(dateString) {
@@ -37,6 +40,59 @@ function fillTable(responseJson) {
 
 }
 
+// Add this function to handle the upload button's state
+function handleFileUploadButtonState() {
+    const fileInput = document.getElementById("file-upload");
+    const uploadButton = document.getElementById("upload-file-button");
+  
+    fileInput.addEventListener("change", function () {
+      if (fileInput.files.length > 0 && fileInput.files[0].type === "text/csv") {
+        uploadButton.disabled = false;
+      } else {
+        uploadButton.disabled = true;
+      }
+    });
+  }
+  
+  // Add this function to handle file upload
+async function uploadFile() {
+    const fileInput = document.getElementById("file-upload");
+  
+    const formData = new FormData();
+    formData.append("file", fileInput.files[0]);
+  
+    try {
+      const response = await fetch(url_upload_file, {
+        method: "POST",
+        body: formData,
+      });
+  
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(errorText);
+      } else {
+        alert("Archivo subido con éxito");
+        fetchTable(); // Reload the table after a successful file upload
+      }
+    } catch (error) {
+      alert("Error al subir el archivo: " + error.message);
+    }
+  }
+  
+  
+  // Add this function to handle file download
+  function downloadFile() {
+    window.location.href = url_download_file;
+  }
+  
+  // Add event listeners to the upload and download buttons
+  function handleFileButtons() {
+    const uploadButton = document.getElementById("upload-file-button");
+    const downloadButton = document.getElementById("download-file-button");
+  
+    uploadButton.addEventListener("click", uploadFile);
+    downloadButton.addEventListener("click", downloadFile);
+  }
 
 
 async function fetchTable() {
@@ -160,6 +216,8 @@ async function init() {
     await handleServerHealth();
     handleFormSubmit();
     fetchTable();
+    handleFileUploadButtonState();
+    handleFileButtons();
 
 }
 
