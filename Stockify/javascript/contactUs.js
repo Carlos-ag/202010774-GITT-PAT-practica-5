@@ -43,8 +43,45 @@ function handleFormSubmit() {
         });
 }
 
+function handleServerUpContact() {
+    document.getElementById("server-up").style.display = "inline";
+}
+
+function handleServerDownContact() 
+    {
+        document.getElementById("server-down").style.display = "inline";
+        alert("Server is down. Please try again later or run the server locally.");
+    }
+
+
+async function handleServerHealthContact() {
+    await fetch("http://localhost:8080/actuator/health")
+    .then((response) => {
+        console.log(response);
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error(response.statusText);
+    })
+    .then((responseJson) => {
+        if (responseJson.status === "UP") {
+            handleServerUpContact();
+        }
+        else {
+            handleServerDownContact();
+        }
+    })
+    .catch((error) => {
+        handleServerDownContact();
+        console.log(error)
+    });
+}
+
+
+
 function main() {
         // listener in the form submit button
+        handleServerHealthContact();
         const form = document.getElementById("contact-form");
         const submitButton = document.getElementById("submit-contact-form");
         submitButton.addEventListener("click", async function (event) {

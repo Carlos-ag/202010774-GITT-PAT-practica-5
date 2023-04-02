@@ -9,6 +9,10 @@ public class Stock {
         this.ticker = ticker;
     }
 
+    public String getTicker() {
+        return ticker;
+    }
+
     public HashMap<String, Object> getStockMap() {
         HashMap<String, Object> stockMap = new HashMap<>();
         stockMap.put("ticker", ticker);

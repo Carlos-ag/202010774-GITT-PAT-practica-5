@@ -12,26 +12,26 @@ import org.springframework.stereotype.Service;
 
 import com.stockify.stockifyapp.commons.Checker;
 import com.stockify.stockifyapp.commons.Converter;
-import com.stockify.stockifyapp.models.PorfolioManager;
+import com.stockify.stockifyapp.models.PortfolioManager;
 import com.stockify.stockifyapp.models.PorfolioMovement;
 import com.stockify.stockifyapp.models.Stock;
 
 @Service
 public class PortfolioService {
-    private PorfolioManager porfolioManagerModel;
+    private PortfolioManager portfolioManager;
 
     public PortfolioService() {
-        this.porfolioManagerModel = new PorfolioManager();
+        this.portfolioManager = new PortfolioManager();
     }
 
     public Optional<ArrayList<HashMap<String, Object>>> getPortfolioMap() {
-        ArrayList<HashMap<String, Object>> map = porfolioManagerModel.getPortfolioMap();
+        ArrayList<HashMap<String, Object>> map = portfolioManager.getPortfolioMap();
         return Optional.ofNullable(map.size() == 0 ? null : map);
     }
 
 
     public List<PorfolioMovement> getPortfolio() {
-        return porfolioManagerModel.getPortfolio();
+        return portfolioManager.getPortfolio();
     }
 
     
@@ -55,7 +55,7 @@ public class PortfolioService {
         double price = Converter.convertObjectToDouble(payload.get("price"));
 
         PorfolioMovement movement = new PorfolioMovement(new Stock(ticker), quantity, price, date);
-        porfolioManagerModel.addMovement(movement);
+        portfolioManager.addMovement(movement);
         return movement;
     }
 
@@ -109,6 +109,5 @@ public class PortfolioService {
         }
         
     }
-    
 
 }

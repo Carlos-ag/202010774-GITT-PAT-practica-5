@@ -26,7 +26,7 @@ public class PorfolioController {
     private static final Logger logger = LoggerFactory.getLogger(PorfolioController.class);
 
     @Autowired
-    private PortfolioService portfolioService;
+    private PortfolioService portfolioService = new PortfolioService();
 
     @GetMapping("/portfolio")
     @CrossOrigin(origins = "*")

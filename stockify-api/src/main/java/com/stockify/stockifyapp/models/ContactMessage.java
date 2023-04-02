@@ -1,3 +1,4 @@
+
 package com.stockify.stockifyapp.models;
 
 import org.springframework.lang.NonNull;
@@ -14,15 +15,26 @@ public class ContactMessage {
         if (name == null || email == null || message == null) {
             throw new IllegalArgumentException("Name, email, and message cannot be null");
         }
-        
+
         this.name = name;
         this.email = email;
         this.message = message;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getMessage() {
+        return message;
     }
 
     @Override
     public String toString() {
         return "ContactMessage [email=" + email + ", message=" + message + ", name=" + name + "]";
     }
-
 }

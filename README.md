@@ -23,6 +23,10 @@ Se han añadido loggers en el backend para que se puedan ver los movimientos que
 Se ha añadido el actuator para poder ver los endpoints disponibles en la página web. Para ello se ha usado la librería spring-boot-starter-actuator. Para ver los endpoints disponibles se puede acceder a la siguiente dirección: http://localhost:8080/actuator 
 Sobre todo se ha usado el endpoint /actuator/health para comprobar que el backend está funcionando correctamente y si no es así, se muestra un mensaje de error en el frontend. Este mensaje podríamos verlo en la pestaña Portfolios de la página web ya que es la que necesita del backend para funcionar.
 
+### IMPORTANTE:
+Para ejecutar la API hace falta ponerse desde la carpeta stockify-api.
+El frontend y el backend están separados (Stockify y stockify-api respectivamente)
+
 
 
 

@@ -2,6 +2,16 @@ var url_fetch_portfolio = "http://localhost:8080/portfolio";
 var url_add_movement = "http://localhost:8080/movement";
 var serverUP = false;
 
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+}
+
+
+
 
 function fillTable(responseJson) {  
     const table = document.getElementById("table-portfolio");
@@ -16,7 +26,7 @@ function fillTable(responseJson) {
 
     for(let i = 0; i<responseJson.length; i++){
         const row = table.insertRow(); 
-        responseJson[i].date = (parseInt(responseJson[i].date.substring(8,10)) + 1) + "/" + responseJson[i].date.substring(5,7) + "/" + responseJson[i].date.substring(0,4);
+        responseJson[i].date = formatDate(responseJson[i].date);
         const values = [responseJson[i].date, responseJson[i].stock.ticker, responseJson[i].quantity, responseJson[i].price];
 
         for(let j = 0; j<values.length; j++){
@@ -132,7 +142,7 @@ async function handleServerHealth() {
         throw new Error(response.statusText);
     })
     .then((responseJson) => {
-        if (responseJson.status == "UP") {
+        if (responseJson.status === "UP") {
             handleServerUp();
         }
         else {

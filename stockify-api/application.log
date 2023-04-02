@@ -10,3 +10,1202 @@
 2023-03-23T19:49:32.634+01:00  INFO 1202 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
 2023-03-23T19:49:33.597+01:00  INFO 1202 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.195 seconds (process running for 1.556)
 2023-03-23T19:49:35.667+01:00  INFO 1202 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Thu Mar 23 19:49:33 CET 2023, quantity=10, price=100.0, id=b6c534ae-ed90-4619-9484-380c062250ad, stock={ticker=AAPL}}, {date=Thu Mar 23 19:49:33 CET 2023, quantity=10, price=100.0, id=ba4d43f9-ec89-4eea-8015-76129876b759, stock={ticker=MSFT}}]]
+2023-04-02T19:45:40.100+02:00  INFO 5899 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5899 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T19:45:40.103+02:00 DEBUG 5899 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T19:45:40.103+02:00  INFO 5899 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T19:45:40.953+02:00  INFO 5899 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.058 seconds (process running for 1.362)
+2023-04-02T19:46:05.521+02:00  INFO 5899 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Portfolio: Optional.empty
+2023-04-02T19:46:16.862+02:00  INFO 5899 --- [http-nio-8080-exec-4] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@3c6b053e
+2023-04-02T19:46:16.876+02:00  INFO 5899 --- [http-nio-8080-exec-5] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=52fce620-90db-415e-a3ac-ac74d5c2193b, stock={ticker=AALP}}]]
+2023-04-02T19:46:18.917+02:00  INFO 5899 --- [http-nio-8080-exec-6] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@77875bd4
+2023-04-02T19:46:18.929+02:00  INFO 5899 --- [http-nio-8080-exec-7] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=52fce620-90db-415e-a3ac-ac74d5c2193b, stock={ticker=AALP}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=e66febcb-058d-42d2-acd3-44b46f86823b, stock={ticker=AALP}}]]
+2023-04-02T19:46:48.964+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5994 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T19:46:48.965+02:00 DEBUG 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T19:46:48.967+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T19:46:49.880+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.112 seconds (process running for 1.29)
+2023-04-02T19:46:55.375+02:00  INFO 5994 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Portfolio: Optional.empty
+2023-04-02T19:46:58.147+02:00  INFO 5994 --- [http-nio-8080-exec-4] c.s.s.controllers.PorfolioController     : Portfolio: Optional.empty
+2023-04-02T19:48:16.134+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5994 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T19:48:16.135+02:00 DEBUG 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T19:48:16.135+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T19:48:16.269+02:00  WARN 5994 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController': Unsatisfied dependency expressed through field 'portfolioService': Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+2023-04-02T19:48:16.282+02:00 ERROR 5994 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController': Unsatisfied dependency expressed through field 'portfolioService': Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:712) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:692) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:481) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1408) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:709) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 23 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 34 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error on token "String", strictfp expected
+	movements cannot be resolved or is not a field
+	movements cannot be resolved or is not a field
+	movements cannot be resolved or is not a field
+	movements cannot be resolved or is not a field
+	movements cannot be resolved or is not a field
+	movements cannot be resolved to a variable
+	movements cannot be resolved to a variable
+
+	at com.stockify.stockifyapp.models.PorfolioManager.<init>(PorfolioManager.java:18) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 36 common frames omitted
+
+2023-04-02T19:48:18.733+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5994 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T19:48:18.733+02:00 DEBUG 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T19:48:18.733+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T19:48:18.880+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.165 seconds (process running for 90.291)
+2023-04-02T19:48:27.393+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5994 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T19:48:27.393+02:00 DEBUG 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T19:48:27.393+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T19:48:27.514+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.129 seconds (process running for 98.925)
+2023-04-02T19:48:32.987+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5994 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T19:48:32.988+02:00 DEBUG 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T19:48:32.988+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T19:48:33.101+02:00  INFO 5994 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.121 seconds (process running for 104.512)
+2023-04-02T19:48:47.610+02:00  INFO 5994 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Portfolio: Optional.empty
+2023-04-02T19:48:56.000+02:00  INFO 5994 --- [http-nio-8080-exec-4] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@4cd9a010
+2023-04-02T19:48:56.010+02:00  INFO 5994 --- [http-nio-8080-exec-3] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}]]
+2023-04-02T19:49:02.969+02:00  INFO 5994 --- [http-nio-8080-exec-5] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@1aa3ea92
+2023-04-02T19:49:02.981+02:00  INFO 5994 --- [http-nio-8080-exec-6] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}]]
+2023-04-02T19:49:06.267+02:00  INFO 5994 --- [http-nio-8080-exec-8] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}]]
+2023-04-02T19:54:45.559+02:00  INFO 5994 --- [http-nio-8080-exec-1] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}]]
+2023-04-02T19:54:54.181+02:00  INFO 5994 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@7240ca60
+2023-04-02T19:54:54.192+02:00  INFO 5994 --- [http-nio-8080-exec-4] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=5b705940-1dc0-4dc8-ac5a-36ea2242e348, stock={ticker=AAPL}}]]
+2023-04-02T19:54:57.820+02:00  INFO 5994 --- [http-nio-8080-exec-3] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@31c058
+2023-04-02T19:54:57.831+02:00  INFO 5994 --- [http-nio-8080-exec-5] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=5b705940-1dc0-4dc8-ac5a-36ea2242e348, stock={ticker=AAPL}}, {date=Sun Apr 02 00:00:00 CEST 2023, quantity=1, price=1.0, id=7e212899-2f06-4330-96fa-6940b1d4c364, stock={ticker=AAPL}}]]
+2023-04-02T19:55:33.836+02:00  INFO 5994 --- [http-nio-8080-exec-7] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=5b705940-1dc0-4dc8-ac5a-36ea2242e348, stock={ticker=AAPL}}, {date=Sun Apr 02 00:00:00 CEST 2023, quantity=1, price=1.0, id=7e212899-2f06-4330-96fa-6940b1d4c364, stock={ticker=AAPL}}]]
+2023-04-02T19:56:40.847+02:00  INFO 5994 --- [http-nio-8080-exec-1] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=5b705940-1dc0-4dc8-ac5a-36ea2242e348, stock={ticker=AAPL}}, {date=Sun Apr 02 00:00:00 CEST 2023, quantity=1, price=1.0, id=7e212899-2f06-4330-96fa-6940b1d4c364, stock={ticker=AAPL}}]]
+2023-04-02T19:56:50.075+02:00  INFO 5994 --- [http-nio-8080-exec-4] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@7b086c18
+2023-04-02T19:56:50.083+02:00  INFO 5994 --- [http-nio-8080-exec-3] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=5b705940-1dc0-4dc8-ac5a-36ea2242e348, stock={ticker=AAPL}}, {date=Sun Apr 02 00:00:00 CEST 2023, quantity=1, price=1.0, id=7e212899-2f06-4330-96fa-6940b1d4c364, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=28afef1b-e792-42d9-bd0b-3f71916f8188, stock={ticker=AAPL}}]]
+2023-04-02T19:58:42.056+02:00  INFO 5994 --- [http-nio-8080-exec-7] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=5b705940-1dc0-4dc8-ac5a-36ea2242e348, stock={ticker=AAPL}}, {date=Sun Apr 02 00:00:00 CEST 2023, quantity=1, price=1.0, id=7e212899-2f06-4330-96fa-6940b1d4c364, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=28afef1b-e792-42d9-bd0b-3f71916f8188, stock={ticker=AAPL}}]]
+2023-04-02T19:58:54.379+02:00  INFO 5994 --- [http-nio-8080-exec-9] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=5b705940-1dc0-4dc8-ac5a-36ea2242e348, stock={ticker=AAPL}}, {date=Sun Apr 02 00:00:00 CEST 2023, quantity=1, price=1.0, id=7e212899-2f06-4330-96fa-6940b1d4c364, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=28afef1b-e792-42d9-bd0b-3f71916f8188, stock={ticker=AAPL}}]]
+2023-04-02T19:59:02.927+02:00  INFO 5994 --- [http-nio-8080-exec-1] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=5b705940-1dc0-4dc8-ac5a-36ea2242e348, stock={ticker=AAPL}}, {date=Sun Apr 02 00:00:00 CEST 2023, quantity=1, price=1.0, id=7e212899-2f06-4330-96fa-6940b1d4c364, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=28afef1b-e792-42d9-bd0b-3f71916f8188, stock={ticker=AAPL}}]]
+2023-04-02T19:59:09.896+02:00  INFO 5994 --- [http-nio-8080-exec-4] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=5b705940-1dc0-4dc8-ac5a-36ea2242e348, stock={ticker=AAPL}}, {date=Sun Apr 02 00:00:00 CEST 2023, quantity=1, price=1.0, id=7e212899-2f06-4330-96fa-6940b1d4c364, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=28afef1b-e792-42d9-bd0b-3f71916f8188, stock={ticker=AAPL}}]]
+2023-04-02T19:59:18.485+02:00 ERROR 5994 --- [http-nio-8080-exec-3] c.s.s.controllers.PorfolioController     : Error adding movement: Payload date is in the future
+2023-04-02T19:59:20.938+02:00 ERROR 5994 --- [http-nio-8080-exec-5] c.s.s.controllers.PorfolioController     : Error adding movement: Payload date is in the future
+2023-04-02T20:00:13.257+02:00  INFO 5994 --- [http-nio-8080-exec-7] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=5b705940-1dc0-4dc8-ac5a-36ea2242e348, stock={ticker=AAPL}}, {date=Sun Apr 02 00:00:00 CEST 2023, quantity=1, price=1.0, id=7e212899-2f06-4330-96fa-6940b1d4c364, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=28afef1b-e792-42d9-bd0b-3f71916f8188, stock={ticker=AAPL}}]]
+2023-04-02T20:03:26.310+02:00  INFO 5994 --- [http-nio-8080-exec-1] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=50e92f02-f9aa-4501-9203-da7c5a2103a4, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=c3b4026b-f980-4176-a344-51f210292cd3, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=5b705940-1dc0-4dc8-ac5a-36ea2242e348, stock={ticker=AAPL}}, {date=Sun Apr 02 00:00:00 CEST 2023, quantity=1, price=1.0, id=7e212899-2f06-4330-96fa-6940b1d4c364, stock={ticker=AAPL}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=1.0, id=28afef1b-e792-42d9-bd0b-3f71916f8188, stock={ticker=AAPL}}]]
+2023-04-02T20:03:35.523+02:00  INFO 6274 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 6274 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T20:03:35.525+02:00 DEBUG 6274 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T20:03:35.525+02:00  INFO 6274 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T20:03:36.241+02:00  WARN 6274 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController': Unsatisfied dependency expressed through field 'portfolioService': Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+2023-04-02T20:03:36.265+02:00 ERROR 6274 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController': Unsatisfied dependency expressed through field 'portfolioService': Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:712) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:692) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:481) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1408) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:709) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 23 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 34 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280) ~[na:na]
+	at java.base/java.util.UUID.fromString(UUID.java:258) ~[na:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.getPortfolioMovementsFromCSV(PorfolioManager.java:43) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.<init>(PorfolioManager.java:28) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 36 common frames omitted
+
+2023-04-02T20:25:12.832+02:00  INFO 6547 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 6547 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T20:25:12.834+02:00 DEBUG 6547 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T20:25:12.834+02:00  INFO 6547 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T20:25:13.483+02:00  WARN 6547 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController': Unsatisfied dependency expressed through field 'portfolioService': Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+2023-04-02T20:25:13.508+02:00 ERROR 6547 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController': Unsatisfied dependency expressed through field 'portfolioService': Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:712) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:692) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:481) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1408) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:709) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 23 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 34 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280) ~[na:na]
+	at java.base/java.util.UUID.fromString(UUID.java:258) ~[na:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.getPortfolioMovementsFromCSV(PorfolioManager.java:43) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.<init>(PorfolioManager.java:28) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 36 common frames omitted
+
+2023-04-02T20:25:25.248+02:00  INFO 6556 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 6556 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T20:25:25.249+02:00 DEBUG 6556 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T20:25:25.251+02:00  INFO 6556 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T20:25:25.881+02:00  WARN 6556 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController': Unsatisfied dependency expressed through field 'portfolioService': Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+2023-04-02T20:25:25.904+02:00 ERROR 6556 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController': Unsatisfied dependency expressed through field 'portfolioService': Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:712) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:692) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:481) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1408) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:709) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 23 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 34 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280) ~[na:na]
+	at java.base/java.util.UUID.fromString(UUID.java:258) ~[na:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.getPortfolioMovementsFromCSV(PorfolioManager.java:43) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.<init>(PorfolioManager.java:28) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 36 common frames omitted
+
+2023-04-02T20:25:44.277+02:00  INFO 6602 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 6602 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T20:25:44.278+02:00 DEBUG 6602 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T20:25:44.278+02:00  INFO 6602 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T20:25:44.879+02:00  WARN 6602 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController': Unsatisfied dependency expressed through field 'portfolioService': Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+2023-04-02T20:25:44.903+02:00 ERROR 6602 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController': Unsatisfied dependency expressed through field 'portfolioService': Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:712) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:692) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:481) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1408) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:709) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 23 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 34 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280) ~[na:na]
+	at java.base/java.util.UUID.fromString(UUID.java:258) ~[na:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.getPortfolioMovementsFromCSV(PorfolioManager.java:43) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.<init>(PorfolioManager.java:28) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 36 common frames omitted
+
+2023-04-02T20:30:43.763+02:00  INFO 6860 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 6860 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T20:30:43.764+02:00 DEBUG 6860 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T20:30:43.765+02:00  INFO 6860 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T20:30:44.406+02:00  WARN 6860 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController': Unsatisfied dependency expressed through field 'portfolioService': Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+2023-04-02T20:30:44.430+02:00 ERROR 6860 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController': Unsatisfied dependency expressed through field 'portfolioService': Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:712) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:692) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:481) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1408) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'portfolioService' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/restservices/PortfolioService.class]: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:709) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 23 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.restservices.PortfolioService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 34 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280) ~[na:na]
+	at java.base/java.util.UUID.fromString(UUID.java:258) ~[na:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.getPortfolioMovementsFromCSV(PorfolioManager.java:43) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.<init>(PorfolioManager.java:28) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 36 common frames omitted
+
+2023-04-02T20:32:20.503+02:00  INFO 6941 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 6941 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T20:32:20.506+02:00 DEBUG 6941 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T20:32:20.506+02:00  INFO 6941 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T20:32:21.139+02:00  WARN 6941 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+2023-04-02T20:32:21.163+02:00 ERROR 6941 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 20 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280) ~[na:na]
+	at java.base/java.util.UUID.fromString(UUID.java:258) ~[na:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.getPortfolioMovementsFromCSV(PorfolioManager.java:40) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.<init>(PorfolioManager.java:27) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at com.stockify.stockifyapp.controllers.PorfolioController.<init>(PorfolioController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+
+2023-04-02T20:32:45.366+02:00  INFO 6962 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 6962 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T20:32:45.367+02:00 DEBUG 6962 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T20:32:45.368+02:00  INFO 6962 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T20:32:45.974+02:00  WARN 6962 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+2023-04-02T20:32:45.996+02:00 ERROR 6962 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 20 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280) ~[na:na]
+	at java.base/java.util.UUID.fromString(UUID.java:258) ~[na:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.getPortfolioMovementsFromCSV(PorfolioManager.java:40) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PorfolioManager.<init>(PorfolioManager.java:27) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at com.stockify.stockifyapp.controllers.PorfolioController.<init>(PorfolioController.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+
+2023-04-02T20:42:03.712+02:00  INFO 7180 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 7180 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T20:42:03.713+02:00 DEBUG 7180 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T20:42:03.714+02:00  INFO 7180 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T20:42:04.334+02:00  WARN 7180 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+2023-04-02T20:42:04.355+02:00 ERROR 7180 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 20 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280) ~[na:na]
+	at java.base/java.util.UUID.fromString(UUID.java:258) ~[na:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.getPortfolioMovementsFromCSV(PortfolioManager.java:40) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.<init>(PortfolioManager.java:27) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at com.stockify.stockifyapp.controllers.PorfolioController.<init>(PorfolioController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+
+2023-04-02T20:42:12.984+02:00  INFO 7190 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 7190 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T20:42:12.985+02:00 DEBUG 7190 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T20:42:12.987+02:00  INFO 7190 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T20:42:13.711+02:00  WARN 7190 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+2023-04-02T20:42:13.753+02:00 ERROR 7190 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 20 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280) ~[na:na]
+	at java.base/java.util.UUID.fromString(UUID.java:258) ~[na:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.getPortfolioMovementsFromCSV(PortfolioManager.java:40) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.<init>(PortfolioManager.java:27) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at com.stockify.stockifyapp.controllers.PorfolioController.<init>(PorfolioController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+
+2023-04-02T20:50:13.585+02:00  INFO 7456 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 7456 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T20:50:13.586+02:00 DEBUG 7456 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T20:50:13.587+02:00  INFO 7456 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T20:50:14.217+02:00  WARN 7456 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+2023-04-02T20:50:14.242+02:00 ERROR 7456 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 20 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280) ~[na:na]
+	at java.base/java.util.UUID.fromString(UUID.java:258) ~[na:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.getPortfolioMovementsFromCSV(PortfolioManager.java:40) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.<init>(PortfolioManager.java:27) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at com.stockify.stockifyapp.controllers.PorfolioController.<init>(PorfolioController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+
+2023-04-02T20:53:04.373+02:00  INFO 7557 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 7557 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T20:53:04.375+02:00 DEBUG 7557 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T20:53:04.376+02:00  INFO 7557 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T20:53:05.311+02:00  INFO 7557 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.142 seconds (process running for 1.455)
+2023-04-02T20:55:16.747+02:00  INFO 7610 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 7610 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T20:55:16.749+02:00 DEBUG 7610 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T20:55:16.749+02:00  INFO 7610 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T20:55:17.650+02:00  INFO 7610 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.126 seconds (process running for 1.347)
+2023-04-02T20:55:51.327+02:00  INFO 7610 --- [http-nio-8080-exec-3] c.s.s.c.ContactMessageController         : Added contact message: ContactMessage [email=202010774@alu.comillas.edi, message=AYUDA, name=Carlos]
+2023-04-02T20:56:14.452+02:00  INFO 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 7657 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T20:56:14.453+02:00 DEBUG 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T20:56:14.454+02:00  INFO 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T20:56:15.333+02:00  INFO 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.084 seconds (process running for 1.289)
+2023-04-02T20:56:33.283+02:00  INFO 7657 --- [http-nio-8080-exec-2] c.s.s.c.ContactMessageController         : Added contact message: ContactMessage [email=202010774@alu.comillas.edu, message=Test2, name=Carlos]
+2023-04-02T20:56:38.159+02:00  INFO 7657 --- [http-nio-8080-exec-5] c.s.s.controllers.PorfolioController     : Portfolio: Optional.empty
+2023-04-02T20:56:50.445+02:00  INFO 7657 --- [http-nio-8080-exec-6] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@abbb57e
+2023-04-02T20:56:50.463+02:00  INFO 7657 --- [http-nio-8080-exec-7] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=10, price=120.0, id=6df8ed9b-818c-4670-afb4-cd60d0d172e0, stock={ticker=AAPL}}]]
+2023-04-02T21:05:51.494+02:00  INFO 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 7657 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:05:51.495+02:00 DEBUG 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:05:51.495+02:00  INFO 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:05:51.635+02:00  WARN 7657 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+2023-04-02T21:05:51.653+02:00 ERROR 7657 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 20 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280) ~[na:na]
+	at java.base/java.util.UUID.fromString(UUID.java:258) ~[na:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.getPortfolioMovementsFromCSV(PortfolioManager.java:40) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.<init>(PortfolioManager.java:27) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at com.stockify.stockifyapp.controllers.PorfolioController.<init>(PorfolioController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+
+2023-04-02T21:07:26.071+02:00  INFO 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 7657 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:07:26.072+02:00 DEBUG 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:07:26.072+02:00  INFO 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:07:26.268+02:00  INFO 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.217 seconds (process running for 672.229)
+2023-04-02T21:08:57.629+02:00  INFO 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 7657 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:08:57.630+02:00 DEBUG 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:08:57.630+02:00  INFO 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:08:57.765+02:00  INFO 7657 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.145 seconds (process running for 763.701)
+2023-04-02T21:09:03.872+02:00  INFO 7913 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 7913 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:09:03.874+02:00 DEBUG 7913 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:09:03.874+02:00  INFO 7913 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:09:04.757+02:00  INFO 7913 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.087 seconds (process running for 1.311)
+2023-04-02T21:09:28.371+02:00  INFO 7913 --- [http-nio-8080-exec-3] c.s.s.c.ContactMessageController         : Added contact message: ContactMessage [email=202010774@alu.comillas.edu, message=Test1, name=Carlos]
+2023-04-02T21:09:36.017+02:00  INFO 7913 --- [http-nio-8080-exec-5] c.s.s.c.ContactMessageController         : Added contact message: ContactMessage [email=202010774@alu.comillas.edu, message=Test2, name=Carlos]
+2023-04-02T21:09:45.445+02:00  INFO 7913 --- [http-nio-8080-exec-7] c.s.s.controllers.PorfolioController     : Portfolio: Optional.empty
+2023-04-02T21:09:53.241+02:00  INFO 7913 --- [http-nio-8080-exec-9] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@7c2587bb
+2023-04-02T21:09:53.260+02:00  INFO 7913 --- [http-nio-8080-exec-10] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=ace7d058-fc5c-4131-ab7b-716704aa616e, stock={ticker=AAPL}}]]
+2023-04-02T21:10:06.675+02:00  INFO 7913 --- [http-nio-8080-exec-1] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@3ce3d1dd
+2023-04-02T21:10:06.686+02:00  INFO 7913 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=ace7d058-fc5c-4131-ab7b-716704aa616e, stock={ticker=AAPL}}, {date=Fri Feb 17 00:00:00 CET 2023, quantity=5, price=110.0, id=aff2eb09-1b5e-4a08-890a-98a2df1acd80, stock={ticker=AAPL}}]]
+2023-04-02T21:10:19.808+02:00  INFO 7913 --- [http-nio-8080-exec-3] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@b90687
+2023-04-02T21:10:19.820+02:00  INFO 7913 --- [http-nio-8080-exec-4] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=ace7d058-fc5c-4131-ab7b-716704aa616e, stock={ticker=AAPL}}, {date=Fri Feb 17 00:00:00 CET 2023, quantity=5, price=110.0, id=aff2eb09-1b5e-4a08-890a-98a2df1acd80, stock={ticker=AAPL}}, {date=Fri Feb 17 00:00:00 CET 2023, quantity=5, price=236.0, id=5f950a83-5b7d-49e7-9a62-8ac0cabb1d44, stock={ticker=MSFT}}]]
+2023-04-02T21:10:22.664+02:00  INFO 7913 --- [http-nio-8080-exec-6] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=ace7d058-fc5c-4131-ab7b-716704aa616e, stock={ticker=AAPL}}, {date=Fri Feb 17 00:00:00 CET 2023, quantity=5, price=110.0, id=aff2eb09-1b5e-4a08-890a-98a2df1acd80, stock={ticker=AAPL}}, {date=Fri Feb 17 00:00:00 CET 2023, quantity=5, price=236.0, id=5f950a83-5b7d-49e7-9a62-8ac0cabb1d44, stock={ticker=MSFT}}]]
+2023-04-02T21:10:46.896+02:00  INFO 8001 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8001 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:10:46.897+02:00 DEBUG 8001 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:10:46.897+02:00  INFO 8001 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:10:47.491+02:00  WARN 8001 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+2023-04-02T21:10:47.515+02:00 ERROR 8001 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 20 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280) ~[na:na]
+	at java.base/java.util.UUID.fromString(UUID.java:258) ~[na:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.getPortfolioMovementsFromCSV(PortfolioManager.java:40) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.<init>(PortfolioManager.java:27) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at com.stockify.stockifyapp.controllers.PorfolioController.<init>(PorfolioController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+
+2023-04-02T21:15:53.395+02:00  INFO 8157 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8157 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:15:53.396+02:00 DEBUG 8157 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:15:53.396+02:00  INFO 8157 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:15:54.052+02:00  WARN 8157 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+2023-04-02T21:15:54.078+02:00 ERROR 8157 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 20 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280) ~[na:na]
+	at java.base/java.util.UUID.fromString(UUID.java:258) ~[na:na]
+	at com.stockify.stockifyapp.commons.Converter.convertStringToUuid(Converter.java:35) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.getPortfolioMovementsFromCSV(PortfolioManager.java:43) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.<init>(PortfolioManager.java:29) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at com.stockify.stockifyapp.controllers.PorfolioController.<init>(PorfolioController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+
+2023-04-02T21:16:32.850+02:00  INFO 8189 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8189 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:16:32.852+02:00 DEBUG 8189 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:16:32.852+02:00  INFO 8189 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:16:33.526+02:00  WARN 8189 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+2023-04-02T21:16:33.549+02:00 ERROR 8189 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 20 common frames omitted
+Caused by: java.lang.StringIndexOutOfBoundsException: Range [0, 16) out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349) ~[na:na]
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4602) ~[na:na]
+	at java.base/java.lang.String.substring(String.java:2715) ~[na:na]
+	at com.stockify.stockifyapp.commons.Converter.convertStringToUuid(Converter.java:38) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.getPortfolioMovementsFromCSV(PortfolioManager.java:43) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.<init>(PortfolioManager.java:29) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at com.stockify.stockifyapp.controllers.PorfolioController.<init>(PorfolioController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+
+2023-04-02T21:17:33.975+02:00  INFO 8232 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8232 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:17:33.976+02:00 DEBUG 8232 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:17:33.977+02:00  INFO 8232 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:18:04.081+02:00  INFO 8257 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8257 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:18:04.083+02:00 DEBUG 8257 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:18:04.083+02:00  INFO 8257 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:18:16.519+02:00  INFO 8274 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8274 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:18:16.520+02:00 DEBUG 8274 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:18:16.521+02:00  INFO 8274 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:18:17.401+02:00  INFO 8274 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.146 seconds (process running for 1.373)
+2023-04-02T21:18:25.140+02:00  INFO 8287 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8287 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:18:25.141+02:00 DEBUG 8287 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:18:25.142+02:00  INFO 8287 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:18:26.001+02:00  INFO 8287 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.067 seconds (process running for 1.341)
+2023-04-02T21:18:44.113+02:00  INFO 8302 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8302 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:18:44.114+02:00 DEBUG 8302 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:18:44.115+02:00  INFO 8302 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:18:51.303+02:00  WARN 8302 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+2023-04-02T21:18:51.342+02:00 ERROR 8302 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 20 common frames omitted
+Caused by: java.lang.StringIndexOutOfBoundsException: Range [0, 16) out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349) ~[na:na]
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4602) ~[na:na]
+	at java.base/java.lang.String.substring(String.java:2715) ~[na:na]
+	at com.stockify.stockifyapp.commons.Converter.convertStringToUuid(Converter.java:40) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.getPortfolioMovementsFromCSV(PortfolioManager.java:44) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.<init>(PortfolioManager.java:29) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at com.stockify.stockifyapp.controllers.PorfolioController.<init>(PorfolioController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+
+2023-04-02T21:19:02.746+02:00  INFO 8330 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8330 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:19:02.747+02:00 DEBUG 8330 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:19:02.747+02:00  INFO 8330 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:21:15.297+02:00  INFO 8376 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8376 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:21:15.299+02:00 DEBUG 8376 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:21:15.299+02:00  INFO 8376 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:21:22.967+02:00  INFO 8393 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8393 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:21:22.968+02:00 DEBUG 8393 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:21:22.969+02:00  INFO 8393 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:21:43.323+02:00  INFO 8424 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8424 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:21:43.324+02:00 DEBUG 8424 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:21:43.325+02:00  INFO 8424 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:21:44.177+02:00  INFO 8424 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.056 seconds (process running for 1.291)
+2023-04-02T21:22:05.092+02:00  INFO 8424 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Portfolio: Optional.empty
+2023-04-02T21:22:12.651+02:00  INFO 8424 --- [http-nio-8080-exec-4] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@4da2dd7e
+2023-04-02T21:22:12.663+02:00  INFO 8424 --- [http-nio-8080-exec-5] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=18e56e10-e9c9-4959-8b6d-e4540ba1a2d3, stock={ticker=AAPL}}]]
+2023-04-02T21:23:29.631+02:00  INFO 8424 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8424 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:23:29.632+02:00 DEBUG 8424 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:23:29.632+02:00  INFO 8424 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:23:34.338+02:00  INFO 8482 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8482 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:23:34.339+02:00 DEBUG 8482 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:23:34.340+02:00  INFO 8482 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:23:39.446+02:00  INFO 8492 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8492 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:23:39.447+02:00 DEBUG 8492 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:23:39.448+02:00  INFO 8492 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:23:40.353+02:00  INFO 8492 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.12 seconds (process running for 1.353)
+2023-04-02T21:23:44.752+02:00  INFO 8500 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8500 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:23:44.754+02:00 DEBUG 8500 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:23:44.754+02:00  INFO 8500 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:23:45.631+02:00  INFO 8500 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.1 seconds (process running for 1.335)
+2023-04-02T21:23:51.745+02:00  INFO 8500 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Portfolio: Optional.empty
+2023-04-02T21:24:01.254+02:00  INFO 8500 --- [http-nio-8080-exec-3] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@51fc1ce0
+2023-04-02T21:24:01.270+02:00  INFO 8500 --- [http-nio-8080-exec-4] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=120, price=1.0, id=1016f2e3-9ab0-466f-a504-0d0bb1bbf380, stock={ticker=AAPL}}]]
+2023-04-02T21:24:22.471+02:00  INFO 8539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8539 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:24:22.473+02:00 DEBUG 8539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:24:22.473+02:00  INFO 8539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:24:43.154+02:00  INFO 8556 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8556 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:24:43.155+02:00 DEBUG 8556 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:24:43.156+02:00  INFO 8556 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:24:53.139+02:00  WARN 8556 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+2023-04-02T21:24:53.188+02:00 ERROR 8556 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 20 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "1,00"
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054) ~[na:na]
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110) ~[na:na]
+	at java.base/java.lang.Double.parseDouble(Double.java:735) ~[na:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.getPortfolioMovementsFromCSV(PortfolioManager.java:51) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.<init>(PortfolioManager.java:30) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at com.stockify.stockifyapp.controllers.PorfolioController.<init>(PorfolioController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+
+2023-04-02T21:32:34.238+02:00  INFO 8701 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8701 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:32:34.239+02:00 DEBUG 8701 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:32:34.241+02:00  INFO 8701 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:32:43.685+02:00  WARN 8701 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+2023-04-02T21:32:43.726+02:00 ERROR 8701 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 20 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "1,00"
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054) ~[na:na]
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110) ~[na:na]
+	at java.base/java.lang.Double.parseDouble(Double.java:735) ~[na:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.getPortfolioMovementsFromCSV(PortfolioManager.java:53) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.<init>(PortfolioManager.java:31) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at com.stockify.stockifyapp.controllers.PorfolioController.<init>(PorfolioController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+
+2023-04-02T21:32:56.463+02:00  INFO 8734 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8734 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:32:56.465+02:00 DEBUG 8734 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:32:56.465+02:00  INFO 8734 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:32:57.410+02:00  INFO 8734 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.177 seconds (process running for 1.481)
+2023-04-02T21:33:06.530+02:00  INFO 8734 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Portfolio: Optional.empty
+2023-04-02T21:33:14.439+02:00  INFO 8734 --- [http-nio-8080-exec-4] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@59ebf2c1
+2023-04-02T21:33:14.453+02:00  INFO 8734 --- [http-nio-8080-exec-5] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sun Apr 02 00:00:00 CEST 2023, quantity=5, price=120.0, id=fab8dc5d-22fe-418f-9d48-240672d61201, stock={ticker=AAPL}}]]
+2023-04-02T21:33:17.273+02:00  INFO 8734 --- [http-nio-8080-exec-7] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sun Apr 02 00:00:00 CEST 2023, quantity=5, price=120.0, id=fab8dc5d-22fe-418f-9d48-240672d61201, stock={ticker=AAPL}}]]
+2023-04-02T21:33:38.142+02:00  INFO 8734 --- [http-nio-8080-exec-8] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@c464a0d
+2023-04-02T21:33:38.159+02:00  INFO 8734 --- [http-nio-8080-exec-9] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sun Apr 02 00:00:00 CEST 2023, quantity=5, price=120.0, id=fab8dc5d-22fe-418f-9d48-240672d61201, stock={ticker=AAPL}}, {date=Thu Feb 02 00:00:00 CET 2023, quantity=2, price=236.0, id=e308f941-3e25-48dc-a95c-4eb35e4425c0, stock={ticker=MSFT}}]]
+2023-04-02T21:33:47.118+02:00  INFO 8766 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8766 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:33:47.119+02:00 DEBUG 8766 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:33:47.120+02:00  INFO 8766 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:34:09.409+02:00  INFO 8789 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8789 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:34:09.410+02:00 DEBUG 8789 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:34:09.411+02:00  INFO 8789 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:34:21.786+02:00  WARN 8789 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+2023-04-02T21:34:21.825+02:00 ERROR 8789 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes/com/stockify/stockifyapp/controllers/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:9) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controllers.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 20 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "236,00"
+	at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2054) ~[na:na]
+	at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:110) ~[na:na]
+	at java.base/java.lang.Double.parseDouble(Double.java:735) ~[na:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.getPortfolioMovementsFromCSV(PortfolioManager.java:53) ~[classes/:na]
+	at com.stockify.stockifyapp.models.PortfolioManager.<init>(PortfolioManager.java:31) ~[classes/:na]
+	at com.stockify.stockifyapp.restservices.PortfolioService.<init>(PortfolioService.java:24) ~[classes/:na]
+	at com.stockify.stockifyapp.controllers.PorfolioController.<init>(PorfolioController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+
+2023-04-02T21:34:27.300+02:00  INFO 8818 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8818 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:34:27.301+02:00 DEBUG 8818 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:34:27.302+02:00  INFO 8818 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:34:34.353+02:00  INFO 8818 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 7.266 seconds (process running for 7.56)
+2023-04-02T21:34:41.033+02:00  INFO 8818 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sun Apr 02 00:00:00 CEST 2023, quantity=5, price=120.0, id=fab8dc5d-22fe-418f-9d48-240672d61201, stock={ticker=AAPL}}, {date=Thu Feb 02 00:00:00 CET 2023, quantity=2, price=236.0, id=e308f941-3e25-48dc-a95c-4eb35e4425c0, stock={ticker=MSFT}}]]
+2023-04-02T21:37:19.504+02:00  INFO 8818 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8818 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:37:19.504+02:00 DEBUG 8818 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:37:19.505+02:00  INFO 8818 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:37:29.835+02:00  INFO 8906 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8906 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:37:29.836+02:00 DEBUG 8906 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:37:29.837+02:00  INFO 8906 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:37:37.132+02:00  INFO 8906 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 7.503 seconds (process running for 7.805)
+2023-04-02T21:37:41.524+02:00  INFO 8906 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sun Apr 02 00:00:00 CEST 2023, quantity=5, price=120.0, id=fab8dc5d-22fe-418f-9d48-240672d61201, stock={ticker=AAPL}}, {date=Thu Feb 02 00:00:00 CET 2023, quantity=2, price=236.0, id=e308f941-3e25-48dc-a95c-4eb35e4425c0, stock={ticker=MSFT}}]]
+2023-04-02T21:37:53.033+02:00  INFO 8906 --- [http-nio-8080-exec-3] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@edd824c
+2023-04-02T21:37:53.039+02:00  INFO 8906 --- [http-nio-8080-exec-4] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sun Apr 02 00:00:00 CEST 2023, quantity=5, price=120.0, id=fab8dc5d-22fe-418f-9d48-240672d61201, stock={ticker=AAPL}}, {date=Thu Feb 02 00:00:00 CET 2023, quantity=2, price=236.0, id=e308f941-3e25-48dc-a95c-4eb35e4425c0, stock={ticker=MSFT}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=130.0, id=a218a123-db88-481d-8629-663756d81bf7, stock={ticker=TSLA}}]]
+2023-04-02T21:38:06.984+02:00  INFO 8943 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8943 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:38:06.985+02:00 DEBUG 8943 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:38:06.985+02:00  INFO 8943 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:38:16.289+02:00  INFO 8943 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 9.514 seconds (process running for 9.822)
+2023-04-02T21:38:23.520+02:00  INFO 8943 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sun Apr 02 00:00:00 CEST 2023, quantity=5, price=120.0, id=fab8dc5d-22fe-418f-9d48-240672d61201, stock={ticker=AAPL}}, {date=Thu Feb 02 00:00:00 CET 2023, quantity=2, price=236.0, id=e308f941-3e25-48dc-a95c-4eb35e4425c0, stock={ticker=MSFT}}, {date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=130.0, id=a218a123-db88-481d-8629-663756d81bf7, stock={ticker=TSLA}}]]
+2023-04-02T21:38:47.572+02:00  INFO 8977 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 8977 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:38:47.573+02:00 DEBUG 8977 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:38:47.573+02:00  INFO 8977 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:38:48.469+02:00  INFO 8977 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.111 seconds (process running for 1.359)
+2023-04-02T21:38:54.008+02:00  INFO 8977 --- [http-nio-8080-exec-3] c.s.s.controllers.PorfolioController     : Portfolio: Optional.empty
+2023-04-02T21:39:01.881+02:00  INFO 8977 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@3184f4f5
+2023-04-02T21:39:01.900+02:00  INFO 8977 --- [http-nio-8080-exec-4] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=c71703cc-f73d-41b9-a450-465ec56c0fca, stock={ticker=AAPL}}]]
+2023-04-02T21:39:03.960+02:00  INFO 8977 --- [http-nio-8080-exec-6] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=c71703cc-f73d-41b9-a450-465ec56c0fca, stock={ticker=AAPL}}]]
+2023-04-02T21:39:11.799+02:00  INFO 8977 --- [http-nio-8080-exec-7] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@643d6020
+2023-04-02T21:39:11.810+02:00  INFO 8977 --- [http-nio-8080-exec-9] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=c71703cc-f73d-41b9-a450-465ec56c0fca, stock={ticker=AAPL}}, {date=Fri Feb 17 00:00:00 CET 2023, quantity=2, price=234.0, id=c104a0b4-056d-4186-95f1-dde3bcd574d1, stock={ticker=MSFT}}]]
+2023-04-02T21:39:13.568+02:00  INFO 8977 --- [http-nio-8080-exec-10] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=c71703cc-f73d-41b9-a450-465ec56c0fca, stock={ticker=AAPL}}, {date=Fri Feb 17 00:00:00 CET 2023, quantity=2, price=234.0, id=c104a0b4-056d-4186-95f1-dde3bcd574d1, stock={ticker=MSFT}}]]
+2023-04-02T21:39:17.377+02:00  INFO 9003 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 9003 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:39:17.378+02:00 DEBUG 9003 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:39:17.379+02:00  INFO 9003 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:39:18.237+02:00  INFO 9003 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.076 seconds (process running for 1.312)
+2023-04-02T21:39:20.568+02:00  INFO 9003 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=c71703cc-f73d-41b9-a450-465ec56c0fca, stock={ticker=AAPL}}, {date=Fri Feb 17 00:00:00 CET 2023, quantity=2, price=234.0, id=c104a0b4-056d-4186-95f1-dde3bcd574d1, stock={ticker=MSFT}}]]
+2023-04-02T21:40:59.618+02:00  INFO 9003 --- [http-nio-8080-exec-5] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=c71703cc-f73d-41b9-a450-465ec56c0fca, stock={ticker=AAPL}}, {date=Fri Feb 17 00:00:00 CET 2023, quantity=2, price=234.0, id=c104a0b4-056d-4186-95f1-dde3bcd574d1, stock={ticker=MSFT}}]]
+2023-04-02T21:41:12.570+02:00  INFO 9003 --- [http-nio-8080-exec-6] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@12a95449
+2023-04-02T21:41:12.575+02:00  INFO 9003 --- [http-nio-8080-exec-7] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=c71703cc-f73d-41b9-a450-465ec56c0fca, stock={ticker=AAPL}}, {date=Fri Feb 17 00:00:00 CET 2023, quantity=2, price=234.0, id=c104a0b4-056d-4186-95f1-dde3bcd574d1, stock={ticker=MSFT}}, {date=Sat Mar 11 00:00:00 CET 2023, quantity=12, price=100.0, id=90d5feb0-e382-4ae3-8679-37a13a6f83a9, stock={ticker=AAPL}}]]
+2023-04-02T21:41:16.117+02:00  INFO 9003 --- [http-nio-8080-exec-8] c.s.s.controllers.PorfolioController     : Added movement: com.stockify.stockifyapp.models.PorfolioMovement@6d115190
+2023-04-02T21:41:16.130+02:00  INFO 9003 --- [http-nio-8080-exec-10] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=c71703cc-f73d-41b9-a450-465ec56c0fca, stock={ticker=AAPL}}, {date=Fri Feb 17 00:00:00 CET 2023, quantity=2, price=234.0, id=c104a0b4-056d-4186-95f1-dde3bcd574d1, stock={ticker=MSFT}}, {date=Sat Mar 11 00:00:00 CET 2023, quantity=12, price=100.0, id=90d5feb0-e382-4ae3-8679-37a13a6f83a9, stock={ticker=AAPL}}, {date=Sat Mar 11 00:00:00 CET 2023, quantity=12, price=100.1, id=40ba3246-7f46-454b-a2fe-c1b28fddcd97, stock={ticker=AAPL}}]]
+2023-04-02T21:41:20.180+02:00  INFO 9003 --- [http-nio-8080-exec-1] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=c71703cc-f73d-41b9-a450-465ec56c0fca, stock={ticker=AAPL}}, {date=Fri Feb 17 00:00:00 CET 2023, quantity=2, price=234.0, id=c104a0b4-056d-4186-95f1-dde3bcd574d1, stock={ticker=MSFT}}, {date=Sat Mar 11 00:00:00 CET 2023, quantity=12, price=100.0, id=90d5feb0-e382-4ae3-8679-37a13a6f83a9, stock={ticker=AAPL}}, {date=Sat Mar 11 00:00:00 CET 2023, quantity=12, price=100.1, id=40ba3246-7f46-454b-a2fe-c1b28fddcd97, stock={ticker=AAPL}}]]
+2023-04-02T21:41:25.245+02:00  INFO 9073 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 9073 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:41:25.246+02:00 DEBUG 9073 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:41:25.246+02:00  INFO 9073 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:41:26.171+02:00  INFO 9073 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.135 seconds (process running for 1.366)
+2023-04-02T21:41:31.551+02:00  INFO 9082 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 9082 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-4/stockify-api)
+2023-04-02T21:41:31.553+02:00 DEBUG 9082 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-02T21:41:31.553+02:00  INFO 9082 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-02T21:41:32.411+02:00  INFO 9082 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.065 seconds (process running for 1.292)
+2023-04-02T21:41:34.488+02:00  INFO 9082 --- [http-nio-8080-exec-2] c.s.s.controllers.PorfolioController     : Portfolio: Optional[[{date=Sat Apr 01 00:00:00 CEST 2023, quantity=1, price=120.0, id=c71703cc-f73d-41b9-a450-465ec56c0fca, stock={ticker=AAPL}}, {date=Fri Feb 17 00:00:00 CET 2023, quantity=2, price=234.0, id=c104a0b4-056d-4186-95f1-dde3bcd574d1, stock={ticker=MSFT}}, {date=Sat Mar 11 00:00:00 CET 2023, quantity=12, price=100.0, id=90d5feb0-e382-4ae3-8679-37a13a6f83a9, stock={ticker=AAPL}}, {date=Sat Mar 11 00:00:00 CET 2023, quantity=12, price=100.1, id=40ba3246-7f46-454b-a2fe-c1b28fddcd97, stock={ticker=AAPL}}]]

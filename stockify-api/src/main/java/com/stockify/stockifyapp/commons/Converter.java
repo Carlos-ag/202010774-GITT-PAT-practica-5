@@ -1,8 +1,11 @@
 package com.stockify.stockifyapp.commons;
 
+import java.io.Console;
+import java.math.BigInteger;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.UUID;
 
 public abstract class Converter {
 
@@ -28,5 +31,14 @@ public abstract class Converter {
             value = (Byte) object;
         }
         return value;
+    }
+
+    public static UUID convertStringToUuid(String s) {
+        // String s2 = s.replace("-", "");
+        // UUID uuid = new UUID(
+        //         new BigInteger(s2.substring(0, 16), 16).longValue(),
+        //         new BigInteger(s2.substring(16), 16).longValue());
+        UUID uuid = UUID.fromString(s);
+        return uuid;
     }
 }
