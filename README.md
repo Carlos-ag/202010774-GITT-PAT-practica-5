@@ -2,7 +2,7 @@
 
 ## Práctica 4:
 
-### USO:
+### MUY IMPORTANTE: USO:
 Para usarlo hay que ejecutar el backend en el puerto 8080 (por defecto) para que funcione con el front. Como verá tengo el front y el backend en dos carpetas diferentes. Para ejecutar el backend hay que ponerse en la carpeta stockify-api. La web se puede acceder desde [aquí](https://carlos-ag.github.io/202010774-GITT-PAT-practica-4/Stockify/html/index.html)
 
 ### Endpoints:
