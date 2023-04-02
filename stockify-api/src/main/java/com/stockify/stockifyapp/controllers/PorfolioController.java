@@ -77,8 +77,10 @@ public class PorfolioController {
     public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
         try {
             portfolioService.processCSVFile(file);
+            logger.info("File uploaded and processed successfully");
             return ResponseEntity.status(HttpStatus.OK).body("File uploaded and processed successfully");
         } catch (Exception e) {
+            logger.error("Failed to upload file: " + e.getMessage());
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to upload file: " + e.getMessage());
         }
     }
@@ -94,13 +96,17 @@ public ResponseEntity<Resource> downloadFile() {
             contentType = "application/octet-stream";
         }
 
+        logger.info("File downloaded successfully");
+
         return ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType(contentType))
                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
                 .body(resource);
     } catch (FileNotFoundException e) {
+        logger.error("File not found: " + e.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
     } catch (IOException e) {
+        logger.error("Failed to download file: " + e.getMessage());
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
     }
 }

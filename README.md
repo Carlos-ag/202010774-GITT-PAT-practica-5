@@ -2,15 +2,21 @@
 
 ## Práctica 4:
 
+### USO:
+Para usarlo hay que ejecutar el backend en el puerto 8080 (por defecto) para que funcione con el front. Como verá tengo el front y el backend en dos carpetas diferentes. Para ejecutar el backend hay que ponerse en la carpeta stockify-api.
+
 ### Endpoints:
 
 En esta práctica se ha realizado el Backend de la página web Stockify. Para ello se ha usado Spring Boot y Java. Se ha incluido los siguientes endpoints, ya incorporados en la página web:
 - /portfolio (GET): Devuelve la información de la cartera de acciones del usuario.
 - /movement (POST): Añade un movimiento a la cartera de acciones del usuario.
 - /contact (POST): Añade un mensaje para el equipo de Stockify.
+- /upload (POST): Añade un archivo CSV con los movimientos de la cartera de acciones del usuario.
+- /download (GET): Descarga un archivo CSV con los movimientos de la cartera de acciones del usuario.
 
 En todas las páginas en las que aparecen estos endpoints se ha añadido una verificación de que el backend está funcionando correctamente (health check). Si no lo está, se muestra un mensaje de error en el frontend. 
-Además, todos los mensajes que se envían al servidor se registran en un log y se almacenan en los ficheros contactMessages.csv y portfolioMovements.csv. Por lo que verá que si añade un movimiento a la cartera de acciones, se almacena en el fichero portfolioMovements.csv y si envía un mensaje de contacto, se almacena en el fichero contactMessages.csv. Y claro, si vuelve a inicializar la página web sus datos siguen ahí y verá su cartera de acciones y los mensajes de contacto que ha enviado.
+Además hay mensajes de error en el frontend para cuando se produce un error en el backend. Por ejemplo, si se subir un CSV con un formato incorrecto, se muestra un mensaje de error en el frontend y obviamente no se cambia el archivo que estaba previamente.
+Se dispone de un registro de log, y los datos que se envían al servidor se almacenan en los ficheros contactMessages.csv y portfolioMovements.csv (que este ultimo es el fichero que se cambia / descarga con el /upload o el /download). Por lo que verá que si añade un movimiento a la cartera de acciones, se almacena en el fichero portfolioMovements.csv y si envía un mensaje de contacto, se almacena en el fichero contactMessages.csv. Y claro, si vuelve a inicializar la página web sus datos siguen ahí y verá su cartera de acciones y los mensajes de contacto que ha enviado.
 
 Un movimiento de la cartera de acciones se compone de los siguientes datos:
 - Nombre de la acción (Ticker)
