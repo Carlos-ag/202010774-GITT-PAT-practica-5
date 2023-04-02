@@ -9,6 +9,9 @@ En esta práctica se ha realizado el Backend de la página web Stockify. Para el
 - /movement (POST): Añade un movimiento a la cartera de acciones del usuario.
 - /contact (POST): Añade un mensaje para el equipo de Stockify.
 
+En todas las páginas en las que aparecen estos endpoints se ha añadido una verificación de que el backend está funcionando correctamente (health check). Si no lo está, se muestra un mensaje de error en el frontend. 
+Además, todos los mensajes que se envían al servidor se registran en un log y se almacenan en los ficheros contactMessages.csv y portfolioMovements.csv. Por lo que verá que si añade un movimiento a la cartera de acciones, se almacena en el fichero portfolioMovements.csv y si envía un mensaje de contacto, se almacena en el fichero contactMessages.csv. Y claro, si vuelve a inicializar la página web sus datos siguen ahí y verá su cartera de acciones y los mensajes de contacto que ha enviado.
+
 Un movimiento de la cartera de acciones se compone de los siguientes datos:
 - Nombre de la acción (Ticker)
 - Número de acciones
