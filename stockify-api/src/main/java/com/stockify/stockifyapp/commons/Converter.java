@@ -1,7 +1,5 @@
 package com.stockify.stockifyapp.commons;
 
-import java.io.Console;
-import java.math.BigInteger;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
