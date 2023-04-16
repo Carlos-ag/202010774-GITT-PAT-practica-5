@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/icons/person.png"/>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="profile.css">
     <title>Inicio</title>
 </head>
 <body>
@@ -13,22 +16,55 @@
   <div class="main">
     <!-- style="height: 100px; overflow: hidden;" -->
     
-    <div class="body">
-      <h1>Hola, Carlos</h1>
-      <form action="">
-        <label for="fname">Nombre:</label>
-        <input type="text" id="fname" name="fname" value="Carlos"><br><br>
-        <label for="lname">Apellido:</label>
-        <input type="text" id="lname" name="lname" value="Martín de Argila"><br><br>
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" value="202010774@alu.comillas.edu"><br><br>
-        <center>
-          <input type="submit" class="fun-button" value="Enviar">
-        </center>
-  
-      </form>
-    </div> 
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6" id="user-info-section">
+              <h2>User Information</h2>
+              <form>
+                  <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" class="form-control" id="name" readonly>
+                  </div>
+                  <div class="form-group">
+                      <label for="surname">Surname</label>
+                      <input type="text" class="form-control" id="surname" readonly>
+                  </div>
+                  <div class="form-group">
+                      <label for="phone">Phone Number</label>
+                      <input type="tel" class="form-control" id="phone" readonly>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email Address</label>
+                      <input type="email" class="form-control" id="email" readonly>
+                  </div>
+                  <div class="form-group">
+                      <label for="subscription">Subscription Plan</label>
+                      <input type="text" class="form-control" id="subscription" readonly>
+                  </div>
+                  <button type="button" id="edit-button" class="btn btn-primary float-right">
+                      <i class="fas fa-edit"></i> Edit
+                  </button>
+              </form>
+          </div>
+          <div class="col-md-6" id="contact-messages-section">
+              <h2>Contact Messages</h2>
+              <div id="messages-list">
+                  <ul class="list-group"></ul>
+              </div>
+              <div id="chat" style="display:none;">
+                  <button type="button" id="back-button" class="btn btn-light">
+                      <i class="fas fa-chevron-left"></i> Back
+                  </button>
+                  <div id="chat-content"></div>
+              </div>
+          </div>
+      </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="profile.js"></script>
+  
 
 </body>
 

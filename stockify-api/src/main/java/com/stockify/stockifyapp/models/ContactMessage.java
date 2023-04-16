@@ -8,7 +8,7 @@ public class ContactMessage {
     private String name;
     @NonNull
     private String email;
-    @NonNull
+    @NonNullx
     private String message;
 
     public ContactMessage(String name, String email, String message) {

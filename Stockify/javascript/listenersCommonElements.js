@@ -1,25 +1,18 @@
 let previousPage = "home";
 
-function loadPage(pageName) {
+function loadPage(pageName, addToHistory = true) {
+  // Add new state and change the URL only if addToHistory is true
+  if (addToHistory) {
+    const stateObj = { page: pageName };
+    history.pushState(stateObj, pageName, `/${pageName}`);
+  }
+
   // set the #content element to the page.html file
   $(".loading").show();
-  $("#content").load("../html/" + pageName+ ".html");
+  $("#content").load("../html/" + pageName + ".html");
   document.title = pageName.charAt(0).toUpperCase() + pageName.slice(1);
   $(".loading").hide();
-  
-
-
-  // // change the style of the selected button to .sidebar button-selected and the others to .sidebar button
-  // const buttons = document.getElementsByClassName("sidebar-button");
-  // // remove the class "button-selected" from only buttons that have it
-  
-  // for (let i = 0; i < buttons.length; i++) {
-  //   buttons[i].classList.remove("button-selected");
-  // }
-  // const buttonSelected = document.getElementById(pageName);
-  // buttonSelected.remove()
-  // buttonSelected.classList.add("button-selected");
-
+ 
   const previousButtonSelected = document.getElementById(previousPage);
   previousButtonSelected.classList.remove("sidebar-button-selected");
   previousButtonSelected.classList.add("sidebar-button-unselected");
@@ -29,8 +22,18 @@ function loadPage(pageName) {
   buttonSelected.classList.add("sidebar-button-selected");
 
   previousPage = pageName;
-  
+
 }
+
+function handleNavigationButtons() {
+  window.addEventListener("popstate", function (e) {
+    if (e.state && e.state.page) {
+      loadPage(e.state.page, false);
+    }
+  });
+}
+
+
 
 
 
@@ -76,7 +79,7 @@ function searchBarListener() {
     if (e.target.id != "header-search-bar") {
       searchResults.style.display = "none";
     }
-  } );
+  });
 }
 
 
@@ -84,30 +87,9 @@ function init() {
   logoListener();
   loadPage("home");
   sidebarListeners();
-  searchBarListener()
+  searchBarListener();
+  handleNavigationButtons();
 }
 
-// $(document).ready(function () {
-
-//   init();
-// });
 
 init();
-// document.addEventListener("DOMContentLoaded", function(event){
-//   init();
-// });
-
-
-
-
-// window.addEventListener('load', function () {
-//   init();
-// });
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   init();
-// });
-
-
-// ===================
