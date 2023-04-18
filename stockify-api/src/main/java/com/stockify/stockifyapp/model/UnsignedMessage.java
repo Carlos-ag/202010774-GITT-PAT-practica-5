@@ -3,15 +3,20 @@ package com.stockify.stockifyapp.model;
 
 import java.time.LocalDateTime;
 
-import org.springframework.data.annotation.Id;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
+import jakarta.persistence.Id;
 
-
+@Entity
 @Table(name = "unsigned_messages")
 public class UnsignedMessage {
     
     @Id    
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id; 
     private String name; 
     private String email; 
@@ -37,6 +42,7 @@ public class UnsignedMessage {
         this.name = name;
         this.email = email;
         this.message = message;
+        this.timestamp = LocalDateTime.now();
     }
 
     public String getName() {

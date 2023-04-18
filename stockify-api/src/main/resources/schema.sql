@@ -1,6 +1,6 @@
 -- unsigned_messages table
 
-CREATE TABLE SIGNED_MESSAGES (
+CREATE TABLE signed_messages (
     id INT NOT NULL AUTO_INCREMENT,
     user_id INT NOT NULL,
     message VARCHAR(255) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE SIGNED_MESSAGES (
 );
 
 -- unsigned_messages table
-CREATE TABLE UNSIGNED_MESSAGES (
+CREATE TABLE unsigned_messages (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE UNSIGNED_MESSAGES (
 
 -- USERS table
 
-CREATE TABLE USERS (
+CREATE TABLE users (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,

@@ -11,11 +11,8 @@ import com.stockify.stockifyapp.repository.UnsignedMessageRepository;
 @Service
 public class UnsignedMessageService {
 
+    @Autowired
     private UnsignedMessageRepository unsignedMessageRepository;
-
-    public UnsignedMessageService(UnsignedMessageRepository unsignedMessageRepository) {
-        this.unsignedMessageRepository = unsignedMessageRepository;
-    }
 
     public UnsignedMessage addMessage(Map<String, Object> message) {
         try {
