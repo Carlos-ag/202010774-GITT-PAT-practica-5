@@ -9,20 +9,41 @@ import com.stockify.stockifyapp.repository.UserRepository;
 @Service
 public class UserService {
 
-    private final UserRepository userRepository;
-
     @Autowired
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    private UserRepository userRepository;
+
+    public User addUser(User user) {
+        try {
+            checkIfPayloadIsValid(user);
+            User newUser = new User(user.getName(), user.getEmail(), user.getPassword());
+            userRepository.save(newUser);
+            return newUser;
+        } catch (Exception e) {
+            throw e;
+        }
+
     }
 
-    public User getUserById(Integer id) {
-        return userRepository.findById(id).orElse(null);
+    public void checkIfPayloadIsValid(User user) {
+        if (user == null) {
+            throw new IllegalArgumentException("User is required");
+        }
+        if (user.getName() == null) {
+            throw new IllegalArgumentException("Name is required");
+        }
+        if (user.getEmail() == null) {
+            throw new IllegalArgumentException("Email is required");
+        }
+        if (user.getPassword() == null) {
+            throw new IllegalArgumentException("Password is required");
+        }
+
+        // check that email is valid with regex
+
+        String email = user.getEmail();
+        if (!email.matches("^[A-Za-z0-9+_.-]+@(.+)$")) {
+            throw new IllegalArgumentException("Email is invalid");
+        }
+
     }
-
-    public User createUser(User newUser) {
-        return userRepository.save(newUser);
-    }
-
-
 }

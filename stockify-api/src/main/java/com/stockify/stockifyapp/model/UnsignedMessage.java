@@ -1,4 +1,3 @@
-
 package com.stockify.stockifyapp.model;
 
 import java.time.LocalDateTime;
@@ -26,13 +25,7 @@ public class UnsignedMessage {
     public UnsignedMessage() {
     }
 
-    public UnsignedMessage(Integer id, String name, String email, String message) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.message = message;
-        this.timestamp = LocalDateTime.now();
-    }
+
 
     public UnsignedMessage(String name, String email, String message) {
         if (name == null || email == null || message == null) {
