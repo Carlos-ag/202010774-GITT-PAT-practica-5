@@ -1,4 +1,4 @@
-package com.stockify.stockifyapp.controllers;
+package com.stockify.stockifyapp.controller;
 
 
 import java.util.Map;
@@ -13,24 +13,26 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.stockify.stockifyapp.models.ContactMessage;
-import com.stockify.stockifyapp.restservices.ContactMessageService;
+import com.stockify.stockifyapp.model.UnsignedMessage;
+import com.stockify.stockifyapp.service.UnsignedMessageService;
 
 @RestController
-public class ContactMessageController {
+public class UnsignedMessageController {
 
-    private static final Logger logger = LoggerFactory.getLogger(ContactMessageController.class);
+    private static final Logger logger = LoggerFactory.getLogger(UnsignedMessageController.class);
 
-    @Autowired
-    private ContactMessageService contactMessageService;
+    private UnsignedMessageService unsignedMessageService;
 
+    public UnsignedMessageController(UnsignedMessageService unsignedMessageService) {
+        this.unsignedMessageService = unsignedMessageService;
+    }
 
-
+    
     @PostMapping(path = "/contact", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @CrossOrigin(origins = "*")
     public ResponseEntity<Object> addContactMessage(@RequestBody Map<String, Object> message) {
         try {
-            ContactMessage contactMessage = contactMessageService.addMessage(message);
+            UnsignedMessage contactMessage = unsignedMessageService.addMessage(message);
             logger.info("Added contact message: " + contactMessage.toString());
             return ResponseEntity.ok().build();
         } catch (Exception e) {

@@ -1,4 +1,4 @@
-package com.stockify.stockifyapp.commons;
+package com.stockify.stockifyapp.common;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

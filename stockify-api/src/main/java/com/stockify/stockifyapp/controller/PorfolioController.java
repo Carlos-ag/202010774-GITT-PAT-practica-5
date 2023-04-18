@@ -1,4 +1,4 @@
-package com.stockify.stockifyapp.controllers;
+package com.stockify.stockifyapp.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,8 +29,8 @@ import java.nio.file.Files;
 
 import org.springframework.core.io.Resource;
 
-import com.stockify.stockifyapp.models.PorfolioMovement;
-import com.stockify.stockifyapp.restservices.PortfolioService;
+import com.stockify.stockifyapp.model.PorfolioMovement;
+import com.stockify.stockifyapp.service.PortfolioService;
 
 
 

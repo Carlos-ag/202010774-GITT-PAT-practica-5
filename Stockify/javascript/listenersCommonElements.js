@@ -4,7 +4,7 @@ function loadPage(pageName, addToHistory = true) {
   // Add new state and change the URL only if addToHistory is true
   if (addToHistory) {
     const stateObj = { page: pageName };
-    history.pushState(stateObj, pageName, `/${pageName}`);
+    history.pushState(stateObj, pageName, `/html/${pageName}`);
   }
 
   // set the #content element to the page.html file
@@ -23,6 +23,8 @@ function loadPage(pageName, addToHistory = true) {
 
   previousPage = pageName;
 
+   changeFavicon(pageName);
+
 }
 
 function handleNavigationButtons() {
@@ -34,6 +36,13 @@ function handleNavigationButtons() {
 }
 
 
+function changeFavicon(iconName) {
+  const link = document.querySelector("link[rel*='icon']") || document.createElement("link");
+  link.type = "image/png";
+  link.rel = "shortcut icon";
+  link.href = `../assets/icons/${iconName}.png`;
+  document.getElementsByTagName("head")[0].appendChild(link);
+}
 
 
 

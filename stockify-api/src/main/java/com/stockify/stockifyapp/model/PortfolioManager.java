@@ -1,4 +1,4 @@
-package com.stockify.stockifyapp.models;
+package com.stockify.stockifyapp.model;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -13,10 +13,11 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
+
+import com.stockify.stockifyapp.common.Converter;
+
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
-
-import com.stockify.stockifyapp.commons.Converter;
 
 
 public class PortfolioManager {

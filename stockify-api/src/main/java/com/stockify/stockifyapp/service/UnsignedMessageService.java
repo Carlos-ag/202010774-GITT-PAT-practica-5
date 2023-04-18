@@ -1,26 +1,27 @@
-package com.stockify.stockifyapp.restservices;
+package com.stockify.stockifyapp.service;
 
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.stockify.stockifyapp.models.ContactMessage;
-import com.stockify.stockifyapp.models.ContactUsManager;
+import com.stockify.stockifyapp.model.UnsignedMessage;
+import com.stockify.stockifyapp.repository.UnsignedMessageRepository;
 
 @Service
-public class ContactMessageService {
+public class UnsignedMessageService {
 
-    ContactUsManager contactUsManager;
+    private UnsignedMessageRepository unsignedMessageRepository;
 
-    ContactMessageService() {
-        this.contactUsManager = new ContactUsManager();
+    public UnsignedMessageService(UnsignedMessageRepository unsignedMessageRepository) {
+        this.unsignedMessageRepository = unsignedMessageRepository;
     }
 
-    public ContactMessage addMessage(Map<String, Object> message) {
+    public UnsignedMessage addMessage(Map<String, Object> message) {
         try {
             checkIfPayloadIsValid(message);
-            ContactMessage contactMessage = new ContactMessage((String) message.get("name"), (String) message.get("email"), (String) message.get("message"));
-            contactUsManager.addMessage(contactMessage);
+            UnsignedMessage contactMessage = new UnsignedMessage((String) message.get("name"), (String) message.get("email"), (String) message.get("message"));
+            unsignedMessageRepository.save(contactMessage);
             return contactMessage;
         }
         catch (Exception e) {

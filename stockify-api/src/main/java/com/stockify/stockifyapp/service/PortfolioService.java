@@ -1,4 +1,4 @@
-package com.stockify.stockifyapp.restservices;
+package com.stockify.stockifyapp.service;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -10,11 +10,11 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import com.stockify.stockifyapp.commons.Checker;
-import com.stockify.stockifyapp.commons.Converter;
-import com.stockify.stockifyapp.models.PortfolioManager;
-import com.stockify.stockifyapp.models.PorfolioMovement;
-import com.stockify.stockifyapp.models.Stock;
+import com.stockify.stockifyapp.common.Checker;
+import com.stockify.stockifyapp.common.Converter;
+import com.stockify.stockifyapp.model.PorfolioMovement;
+import com.stockify.stockifyapp.model.PortfolioManager;
+import com.stockify.stockifyapp.model.Stock;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.stockify.stockifyapp.models;
+package com.stockify.stockifyapp.model;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -6,10 +6,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class ContactUsManager {
-    ArrayList<ContactMessage> messages;
+    ArrayList<UnsignedMessage> messages;
     public static String CSV_FILE = "data/contactMessages.csv";
 
-    public ContactUsManager(ArrayList<ContactMessage> messages) {
+    public ContactUsManager(ArrayList<UnsignedMessage> messages) {
         this.messages = messages;
     }
 
@@ -17,7 +17,7 @@ public class ContactUsManager {
         this.messages = new ArrayList<>();
     }
 
-    private void addMessageToCsv(ContactMessage message) {
+    private void addMessageToCsv(UnsignedMessage message) {
         try (FileWriter fileWriter = new FileWriter(CSV_FILE, true);
              BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
             String messageData = String.format("\"%s\",\"%s\",\"%s\"\n", message.getName(), message.getEmail(), message.getMessage());
@@ -28,7 +28,7 @@ public class ContactUsManager {
     }
     
 
-    public void addMessage(ContactMessage message) {
+    public void addMessage(UnsignedMessage message) {
         this.messages.add(message);
         addMessageToCsv(message);
     }

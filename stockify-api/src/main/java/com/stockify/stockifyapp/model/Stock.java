@@ -1,4 +1,4 @@
-package com.stockify.stockifyapp.models;
+package com.stockify.stockifyapp.model;
 
 import java.util.HashMap;
 

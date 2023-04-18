@@ -1,4 +1,4 @@
-package com.stockify.stockifyapp.commons;
+package com.stockify.stockifyapp.common;
 
 public abstract class Checker {
     public static boolean isNumber(Object value) {
