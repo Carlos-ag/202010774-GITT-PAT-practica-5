@@ -12,10 +12,15 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+
+    public User getUserInfo(Integer userId) {
+        return userRepository.findById(userId).get();
+    }
+
     public User addUser(User user) {
         try {
             checkIfPayloadIsValid(user);
-            User newUser = new User(user.getName(), user.getEmail(), user.getPassword());
+            User newUser = new User(user.getName(), user.getEmail(), user.getPhone());
             userRepository.save(newUser);
             return newUser;
         } catch (Exception e) {
@@ -34,7 +39,7 @@ public class UserService {
         if (user.getEmail() == null) {
             throw new IllegalArgumentException("Email is required");
         }
-        if (user.getPassword() == null) {
+        if (user.getPhone() == null) {
             throw new IllegalArgumentException("Password is required");
         }
 

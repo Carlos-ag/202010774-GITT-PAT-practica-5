@@ -1,5 +1,3 @@
-// create the user class
-
 package com.stockify.stockifyapp.model;
 
 import jakarta.persistence.Entity;
@@ -16,12 +14,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-    private String password;
+    private String phone;
     private String email;
 
-    public User(String name, String password, String email) {
+    public User(String name, String phone, String email) {
         this.name = name;
-        this.password = password;
+        this.phone = phone;
         this.email = email;
     }
 
@@ -36,12 +34,12 @@ public class User {
         this.name = name;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPhone(String password) {
+        this.phone = password;
     }
 
     public String getEmail() {

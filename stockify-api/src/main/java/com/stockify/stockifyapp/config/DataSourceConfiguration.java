@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 public class DataSourceConfiguration {
     @Bean
     public DataSource getDataSource() {
-        return DataSourceBuilder.create().driverClassName("org.h2.Driver").url("jdbc:h2:mem:test").username("sa")
+        return DataSourceBuilder.create().driverClassName("org.h2.Driver").url("jdbc:h2:mem:testdb").username("sa")
                 .password("").build();
     }
 }

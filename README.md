@@ -1,5 +1,21 @@
 # Stockify
 
+## Práctica 5:
+
+### Bases de datos creadas:
+- unsigned messages (para mensajes enviados por usuarios que no han iniciado sesión)
+- Signed messages (para mensajes enviados por usuarios que han iniciado sesión)
+- portfolio_movements
+- portfolios
+ <!-- TODO: AÑADIR IMAGEN -->
+ 
+
+Endpoints añadidos:
+
+
+
+
+
 ## Práctica 4:
 
 ### MUY IMPORTANTE: USO:
