@@ -7,19 +7,22 @@ import org.springframework.context.annotation.Bean;
 
 import com.stockify.stockifyapp.model.User;
 import com.stockify.stockifyapp.repository.UserRepository;
+import com.stockify.stockifyapp.utils.SuscriptionPlanServiceInitialData;
 
 @SpringBootApplication
 public class StockifyAppApplication {
-	public static void main(String[] args) {
+	public static void main(String[] args) {		
 		SpringApplication.run(StockifyAppApplication.class, args);
 	}
 
-	// // add some basic data to the database
+	// // // add some basic data to the database
 	// @Bean
 	// CommandLineRunner initDatabase(UserRepository userRepository) {
 
 	// return args -> {
-	// userRepository.save(new User("John", "+34666666666", "carlos@gmail.com"));
+	// 	SuscriptionPlanServiceInitialData suscriptionPlanServiceInitialData = new SuscriptionPlanServiceInitialData();
+	// 	suscriptionPlanServiceInitialData.addBulkData();
+
 	// };
 	// }
 

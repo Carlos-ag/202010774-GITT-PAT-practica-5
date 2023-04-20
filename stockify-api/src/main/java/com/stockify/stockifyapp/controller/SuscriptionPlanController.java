@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.stockify.stockifyapp.model.SuscriptionPlan;
+import com.stockify.stockifyapp.model.SubscriptionPlan;
 import com.stockify.stockifyapp.service.SuscriptionPlanService;
 
 @RestController
@@ -17,7 +17,7 @@ public class SuscriptionPlanController {
     }
 
     @GetMapping("/suscriptionPlans/{suscriptionPlanID}")
-    public SuscriptionPlan getSuscriptionPlanInfo(@PathVariable("suscriptionPlanID") Integer suscriptionPlanID) {
+    public SubscriptionPlan getSuscriptionPlanInfo(@PathVariable("suscriptionPlanID") Integer suscriptionPlanID) {
         return suscriptionPlanService.getSuscriptionPlanInfo(suscriptionPlanID);
     }
     

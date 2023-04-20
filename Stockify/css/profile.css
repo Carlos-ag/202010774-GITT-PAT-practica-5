@@ -3,7 +3,7 @@ body {
 }
 
 h2 {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 #user-info-section {
@@ -19,24 +19,28 @@ h2 {
 }
 .list-group-item {
   cursor: pointer;
+  color: #333 !important;
 }
 
 #chat {
   position: relative;
+  margin-top: 20px;
+  height: calc(100% - 60px);
 }
 
 #back-button {
   position: absolute;
-  top: -45px;
+  top: -65px;
   left: 0;
 }
 
 #chat-content {
-  margin-top: 10px;
-  height: 400px;
+  margin-top: 20px;
+  height: calc(100% - 90px - 48px);
   overflow-y: auto;
   border: 1px solid #ddd;
   padding: 10px;
+  border-radius: 10px;
 }
 
 .message {
@@ -47,12 +51,16 @@ h2 {
   text-align: right;
 }
 
-.message.support .message-text {
-  background-color: #007bff;
-  color: white;
-  display: inline-block;
+.message-text {
   padding: 8px 12px;
-  border-radius: 15px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.message.support .message-text {
+  background-color: #DCF8C6;
+  color: #333;
+  border-radius: 10px 10px 0 10px;
 }
 
 .message.user .message-text {
@@ -61,4 +69,25 @@ h2 {
   display: inline-block;
   padding: 8px 12px;
   border-radius: 15px;
+}
+
+.list-group-item {
+  color: #333 !important;
+}
+
+#message-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container {
+  border-radius: 10px;
+  background-color: rgb(47, 48, 51);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 100%;
 }/*# sourceMappingURL=profile.css.map */

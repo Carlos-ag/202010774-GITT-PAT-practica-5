@@ -8,6 +8,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
+import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 
 @Entity
@@ -16,10 +17,15 @@ public class UnsignedMessage {
     
     @Id    
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id; 
-    private String name; 
+    @Column(name = "ID")
+    private Integer id;
+    @Column(name = "NAME")
+    private String name;
+    @Column(name = "EMAIL") 
     private String email; 
+    @Column(name = "MESSAGE")
     private String message;
+    @Column(name = "TIMESTAMP")
     private LocalDateTime timestamp;
 
     public UnsignedMessage() {

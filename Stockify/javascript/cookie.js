@@ -30,3 +30,10 @@ export function saveUserIdInCookie(userId) {
 
     setCookie(cookieName, userId, cookieDurationInDays);
 }
+
+// Función para obtener el userId de la cookie
+
+export function getUserIdFromCookie() {
+    return getCookie("userId");
+}
+

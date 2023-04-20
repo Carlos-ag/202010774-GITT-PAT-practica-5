@@ -20,7 +20,7 @@ public class UserService {
     public User addUser(User user) {
         try {
             checkIfPayloadIsValid(user);
-            User newUser = new User(user.getName(), user.getEmail(), user.getPhone());
+            User newUser = new User(user.getName(), user.getEmail(), user.getPhone(), user.getSubscriptionPlan());
             userRepository.save(newUser);
             return newUser;
         } catch (Exception e) {
