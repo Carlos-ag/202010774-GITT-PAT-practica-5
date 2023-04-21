@@ -20,9 +20,8 @@ public class UserService {
     public User addUser(User user) {
         try {
             checkIfPayloadIsValid(user);
-            User newUser = new User(user.getName(), user.getEmail(), user.getPhone(), user.getSubscriptionPlan());
-            userRepository.save(newUser);
-            return newUser;
+            userRepository.save(user);
+            return user;
         } catch (Exception e) {
             throw e;
         }

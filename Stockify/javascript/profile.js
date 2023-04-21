@@ -10,6 +10,8 @@ $(document).ready(function () {
     $('#send-message').on('click', sendMessage);
 });
 
+let currentConversationId = null;
+
 async function fetchSubscriptionPlans() {
     const apiUrl = 'http://localhost:8080/subscriptionPlans';
 
@@ -53,23 +55,31 @@ async function fetchUserData() {
     }
 }
 
-function fetchContactMessages() {
-    // Replace with a call to your API to fetch contact messages using the user token
-    const messages = [
-        { id: 1, subject: 'Billing Issue' },
-        { id: 2, subject: 'Technical Support' },
-        { id: 3, subject: 'Feature Request' }
-    ];
+async function fetchContactMessages() {
+    const userId = getUserIdFromCookie();
+    const apiUrl = `http://localhost:8080/signedMessages/latest/${userId}`;
 
-    // Add messages to the list
-    messages.forEach(message => {
-        const listItem = $('<li></li>')
-            .addClass('list-group-item')
-            .text(message.subject)
-            .on('click', () => displayChat(message.id));
-        $('#messages-list ul').append(listItem);
-    });
+    try {
+        const response = await fetch(apiUrl);
+        const messages = await response.json();
+
+        // Add messages to the list
+        messages.forEach(message => {
+            const listItem = $('<li></li>')
+                .addClass('list-group-item')
+                .text(message.message)
+                .data('conversation-id', message.conversationId)
+                .on('click', function () {
+                    displayChat($(this).data('conversation-id'));
+                });
+            $('#messages-list ul').append(listItem);
+        });
+        
+    } catch (error) {
+        console.error('Error fetching contact messages:', error);
+    }
 }
+
 
 function editUserInfo() {
     const fields = ['name', 'phone', 'subscription'];
@@ -115,30 +125,33 @@ function toggleEditSave() {
 }
 
 
-function displayChat(messageId) {
+async function displayChat(conversationId) {
+    currentConversationId = conversationId;
+    const apiUrl = `http://localhost:8080/signedMessages/${conversationId}`;
 
-    // Replace with a call to your API to fetch the chat data for the selected message
-    const chatData = [
-        { sender: 'user', text: 'Hello, I cannot access my account.' },
-        { sender: 'support', text: 'Please try resetting your password.' }
-    ];
+    try {
+        const response = await fetch(apiUrl);
+        const chatData = await response.json();
 
-    // Populate the chat content
-    $('#chat-content').empty();
-    chatData.forEach(message => {
-        const messageDiv = $('<div></div>').addClass(`message ${message.sender}`);
-        const messageText = $('<div></div>').addClass('message-text').text(message.text);
-        messageDiv.append(messageText);
-        $('#chat-content').append(messageDiv);
-    });
+        // Populate the chat content
+        $('#chat-content').empty();
+        chatData.forEach(message => {
+            const messageDiv = $('<div></div>').addClass(`message ${message.user.id === getUserIdFromCookie() ? 'user' : 'support'}`);
+            const messageText = $('<div></div>').addClass('message-text').text(message.message);
+            messageDiv.append(messageText);
+            $('#chat-content').append(messageDiv);
+        });
+    } catch (error) {
+        console.error('Error fetching chat data:', error);
+    }
 
     // Show the chat and hide the messages list
     $('#messages-list').hide();
     $('#new-message-button').hide(); // Hide the New Message button
     $('#chat').show();
     $('#message-input').show(); // Show the message input
-
 }
+
 
 function goBackToMessagesList() {
     // Show the messages list and hide the chat
@@ -157,13 +170,34 @@ function startNewMessage() {
     $('#message-input').show(); // Show the message input
 }
 
-function sendMessage() {
+async function sendMessage() {
     const messageText = $('#message-input input').val().trim();
     if (messageText) {
-        // TODO: Call the API to send the message using the conversation ID and the message text
-        console.log('Sending message:', messageText);
+        const userId = getUserIdFromCookie();
+        const apiUrl = 'http://localhost:8080/signedMessages';
+        const signedMessage = {
+            conversationId: currentConversationId,
+            message: messageText,
+            user: {
+                id: userId
+            }
+        };
+
+        try {
+            await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(signedMessage)
+            });
+            console.log('Message sent:', messageText);
+        } catch (error) {
+            console.error('Error sending message:', error);
+        }
+
         // Clear the input field
         $('#message-input input').val('');
     }
-
 }
+

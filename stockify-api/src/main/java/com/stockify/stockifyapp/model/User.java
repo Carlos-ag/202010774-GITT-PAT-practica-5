@@ -18,7 +18,7 @@ public class User {
     @Column("SUBSCRIPTION_PLAN")
     private AggregateReference<SubscriptionPlan, Integer> subscriptionPlan;
 
-    // Add an empty constructor for JPA
+
     public User() {
     }
 
