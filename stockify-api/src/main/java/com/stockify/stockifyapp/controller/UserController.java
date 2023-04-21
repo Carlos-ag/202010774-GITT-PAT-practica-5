@@ -1,5 +1,6 @@
 package com.stockify.stockifyapp.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +20,9 @@ public class UserController {
     }
 
     @GetMapping("/users/{userID}")
+    @CrossOrigin(origins = "*")
     public User getUserInfo(@PathVariable("userID") Integer userID) {
+
         return userService.getUserInfo(userID);
     }
 

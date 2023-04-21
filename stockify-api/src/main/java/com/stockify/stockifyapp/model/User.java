@@ -1,37 +1,28 @@
 package com.stockify.stockifyapp.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
-import jakarta.persistence.Id;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.jdbc.core.mapping.AggregateReference;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
-@Entity
-@Table(name = "app_users")
+@Table("USERS")
 public class User {
-    
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
     private Integer id;
-    @Column(name = "NAME")
+    @Column("NAME")
     private String name;
-    @Column(name = "PHONE")
+    @Column("PHONE")
     private String phone;
-    @Column(name = "EMAIL")
+    @Column("EMAIL")
     private String email;
-    @ManyToOne
-    @JoinColumn(name = "SUSCRIPTION_PLAN")
-    private SubscriptionPlan subscriptionPlan;
+    @Column("SUBSCRIPTION_PLAN")
+    private AggregateReference<SubscriptionPlan, Integer> subscriptionPlan;
 
     // Add an empty constructor for JPA
     public User() {
     }
 
-    public User(String name, String phone, String email, SubscriptionPlan subscriptionPlan) {
+    public User(String name, String phone, String email, AggregateReference<SubscriptionPlan, Integer> subscriptionPlan) {
         this.name = name;
         this.phone = phone;
         this.email = email;
@@ -70,13 +61,13 @@ public class User {
         this.email = email;
     }
 
-    public SubscriptionPlan getSubscriptionPlan() {
+    public AggregateReference<SubscriptionPlan, Integer> getSubscriptionPlan() {
         return subscriptionPlan;
     }
 
-    public void setSubscriptionPlan(SubscriptionPlan subscriptionPlan) {
+    public void setSubscriptionPlan(AggregateReference<SubscriptionPlan, Integer> subscriptionPlan) {
         this.subscriptionPlan = subscriptionPlan;
     }
 
-    // Other getters and setters
+    
 }

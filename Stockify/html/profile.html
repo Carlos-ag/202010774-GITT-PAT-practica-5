@@ -30,10 +30,6 @@
                             <input type="text" class="form-control" id="name" readonly>
                         </div>
                         <div class="form-group">
-                            <label for="surname">Surname</label>
-                            <input type="text" class="form-control" id="surname" readonly>
-                        </div>
-                        <div class="form-group">
                             <label for="phone">Phone Number</label>
                             <input type="tel" class="form-control" id="phone" readonly>
                         </div>
@@ -43,8 +39,9 @@
                         </div>
                         <div class="form-group">
                             <label for="subscription">Subscription Plan</label>
-                            <input type="text" class="form-control" id="subscription" readonly>
-                        </div>
+                            <select class="form-control" id="subscription" disabled>
+                            </select>
+                        </div>                        
                         <button type="button" id="edit-button" class="btn btn-primary float-right">
                             <i class="fas fa-edit"></i> Edit
                         </button>
@@ -84,7 +81,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../javascript/profile.js"></script>
+    <script src="../javascript/cookie.js" type="module"></script>
+    <script src="../javascript/profile.js" type="module"></script>
 
 
 </body>

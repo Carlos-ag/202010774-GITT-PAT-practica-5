@@ -2,30 +2,17 @@ package com.stockify.stockifyapp.model;
 
 import java.time.LocalDateTime;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
-
-@Entity
-@Table(name = "unsigned_messages")
+@Table("UNSIGNED_MESSAGES")
 public class UnsignedMessage {
     
-    @Id    
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
+    @Id
     private Integer id;
-    @Column(name = "NAME")
     private String name;
-    @Column(name = "EMAIL") 
     private String email; 
-    @Column(name = "MESSAGE")
     private String message;
-    @Column(name = "TIMESTAMP")
     private LocalDateTime timestamp;
 
     public UnsignedMessage() {

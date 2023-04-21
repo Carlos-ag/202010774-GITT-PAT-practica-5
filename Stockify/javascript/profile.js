@@ -1,3 +1,5 @@
+import { saveUserIdInCookie, getUserIdFromCookie } from "./cookie.js";
+
 $(document).ready(function () {
     fetchUserData();
     fetchContactMessages();
@@ -8,27 +10,56 @@ $(document).ready(function () {
     $('#send-message').on('click', sendMessage);
 });
 
-function fetchUserData() {
-    // Replace with a call to your API to fetch user data using the user token
-    const userData = {
-        name: 'John',
-        surname: 'Doe',
-        phone: '+1 (555) 123-4567',
-        email: 'john.doe@example.com',
-        subscription: 'Premium'
-    };
+async function fetchSubscriptionPlans() {
+    const apiUrl = 'http://localhost:8080/subscriptionPlans';
 
-    // Populate the form with the user data
-    $('#name').val(userData.name);
-    $('#surname').val(userData.surname);
-    $('#phone').val(userData.phone);
-    $('#email').val(userData.email);
-    $('#subscription').val(userData.subscription);
+    try {
+        const response = await fetch(apiUrl);
+        const plans = await response.json();
+
+        const subscriptionSelect = $('#subscription');
+        plans.forEach(plan => {
+            const option = $('<option></option>').val(plan.id).text(plan.name);
+            subscriptionSelect.append(option);
+        });
+    } catch (error) {
+        console.error('Error fetching subscription plans:', error);
+    }
+}
+
+async function fetchUserData() {
+    await fetchSubscriptionPlans();
+    const userID = getUserIdFromCookie();
+
+    if (!userID) {
+        console.error('User ID not found in the cookie');
+        return;
+    }
+
+    const apiUrl = `http://localhost:8080/users/${userID}`;
+
+    try {
+        const response = await fetch(apiUrl);
+        const userData = await response.json();
+
+        // Populate the form with the user data
+        $('#name').val(userData.name);
+        $('#phone').val(userData.phone);
+        $('#email').val(userData.email);
+        $('#subscription').val(userData.subscriptionPlan.id);
+
+    } catch (error) {
+        console.error('Error fetching user data:', error);
+    }
 }
 
 function fetchContactMessages() {
     // Replace with a call to your API to fetch contact messages using the user token
-    const messages = [        { id: 1, subject: 'Billing Issue' },        { id: 2, subject: 'Technical Support' },        { id: 3, subject: 'Feature Request' }    ];
+    const messages = [
+        { id: 1, subject: 'Billing Issue' },
+        { id: 2, subject: 'Technical Support' },
+        { id: 3, subject: 'Feature Request' }
+    ];
 
     // Add messages to the list
     messages.forEach(message => {
@@ -41,7 +72,7 @@ function fetchContactMessages() {
 }
 
 function editUserInfo() {
-    const fields = ['name', 'surname', 'phone', 'email', 'subscription'];
+    const fields = ['name', 'phone', 'subscription'];
     fields.forEach(field => {
         const input = $(`#${field}`);
         input.prop('readonly', !input.prop('readonly'));
@@ -49,17 +80,21 @@ function editUserInfo() {
 }
 
 function toggleEditSave() {
-    const isEditMode = $('#edit-button').text() === 'Edit';
-    const fields = ['name', 'surname', 'phone', 'email', 'subscription'];
-    
+    const isEditMode = $('#edit-button').text().trim() === 'Edit';
+    const fields = ['name', 'phone', 'subscription'];
+
     if (isEditMode) {
         fields.forEach(field => {
             const input = $(`#${field}`);
             input.prop('readonly', false);
         });
-        $('#edit-button').text('Save');
+        // Make email editable
+        $('#email').prop('readonly', false);
+        $('#subscription').prop('disabled', false);
+        $('#edit-button').html('<i class="fas fa-save"></i> Save');
     } else {
         let dataChanged = false;
+        fields.push('email'); // Include email in the fields to check for changes
         fields.forEach(field => {
             const input = $(`#${field}`);
             if (input.val() !== input.data('initial-value')) {
@@ -74,14 +109,19 @@ function toggleEditSave() {
         } else {
             console.log('No changes detected.');
         }
-        $('#edit-button').text('Edit');
+        $('#subscription').prop('disabled', true);
+        $('#edit-button').html('<i class="fas fa-edit"></i> Edit');
     }
 }
 
+
 function displayChat(messageId) {
-    
+
     // Replace with a call to your API to fetch the chat data for the selected message
-    const chatData = [        { sender: 'user', text: 'Hello, I have a problem with my account.' },        { sender: 'support', text: 'Hi, how can we help you?' },        { sender: 'user', text: 'I cannot access my account.' },        { sender: 'support', text: 'Please try resetting your password.' }    ];
+    const chatData = [
+        { sender: 'user', text: 'Hello, I cannot access my account.' },
+        { sender: 'support', text: 'Please try resetting your password.' }
+    ];
 
     // Populate the chat content
     $('#chat-content').empty();
@@ -97,6 +137,7 @@ function displayChat(messageId) {
     $('#new-message-button').hide(); // Hide the New Message button
     $('#chat').show();
     $('#message-input').show(); // Show the message input
+
 }
 
 function goBackToMessagesList() {
@@ -121,8 +162,8 @@ function sendMessage() {
     if (messageText) {
         // TODO: Call the API to send the message using the conversation ID and the message text
         console.log('Sending message:', messageText);
-
         // Clear the input field
         $('#message-input input').val('');
     }
+
 }

@@ -15,5 +15,9 @@ public class SuscriptionPlanService {
     public SubscriptionPlan getSuscriptionPlanInfo(Integer suscriptionPlanID) {
         return suscriptionPlanRepository.findById(suscriptionPlanID).get();
     }
+
+    public Iterable<SubscriptionPlan> getAllSuscriptionPlans() {
+        return suscriptionPlanRepository.findAll();
+    }
     
 }

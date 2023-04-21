@@ -4,8 +4,8 @@ INSERT INTO SUBSCRIPTION_PLANS (NAME, PRICE) VALUES
 ('Premium', 19.99),
 ('Enterprise', 49.99);
 
--- Insertar datos iniciales en la tabla APP_USERS
-INSERT INTO APP_USERS (NAME, EMAIL, PHONE, SUBSCRIPTION_PLAN) VALUES
+-- Insertar datos iniciales en la tabla USERS
+INSERT INTO USERS (NAME, EMAIL, PHONE, SUBSCRIPTION_PLAN) VALUES
 ('Alice', 'alice@example.com', '555-1234', 1),
 ('Bob', 'bob@example.com', '555-5678', 2),
 ('Carol', 'carol@example.com', '555-9012', 3);
