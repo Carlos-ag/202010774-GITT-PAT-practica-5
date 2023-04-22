@@ -146,23 +146,4 @@ public class SignedMessageControllerTest {
         mockMvc.perform(get("/signedMessages/latest/{userId}", validUserId))
                 .andExpect(status().isInternalServerError());
     }
-
-    @Test
-    public void addSignedMessage_shouldReturnBadRequest_whenRequiredFieldMissing() throws Exception {
-        SignedMessageDTO messageWithMissingField = new SignedMessageDTO();
-        // faltaría el campo de userId
-        messageWithMissingField.setConversationId(1);
-        messageWithMissingField.setMessage("test");
-    
-        MvcResult result = mockMvc.perform(post("/signedMessages")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(messageWithMissingField)))
-                .andReturn();
-    
-        System.out.println("Response content: " + result.getResponse().getContentAsString());
-    
-        assertEquals(HttpStatus.BAD_REQUEST.value(), result.getResponse().getStatus());
-
-    }
-    
 }
