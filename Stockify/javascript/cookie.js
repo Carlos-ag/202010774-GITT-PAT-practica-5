@@ -12,7 +12,7 @@ function setCookie(name, value, days) {
 }
 
 // Función para obtener una cookie
-function getCookie(name) {
+function getCookie2(name) {
     let nameEQ = name + "=";
     let ca = document.cookie.split(';');
     for (let i = 0; i < ca.length; i++) {
@@ -33,9 +33,10 @@ function saveUserIdInCookie(userId) {
 }
 
 // Función para obtener el userId de la cookie
-function getUserIdFromCookie() {
+function getUserIdFromCookie2() {
+    console.log("getUserIdFromCookie");
     return 1;
     // return getCookie("userId");
 }
 
-export { setCookie, getCookie, saveUserIdInCookie, getUserIdFromCookie };
+export { setCookie, getCookie2, saveUserIdInCookie, getUserIdFromCookie2 };

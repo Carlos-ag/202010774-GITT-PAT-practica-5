@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.stockify.stockifyapp.dto.SignedMessageDTO;
 import com.stockify.stockifyapp.model.SignedMessage;
 import com.stockify.stockifyapp.repository.SignedMessagesRepository;
 import com.stockify.stockifyapp.repository.SignedMessagesRepositoryImpl;
@@ -18,14 +19,16 @@ public class SignedMessageService {
     @Autowired
     private SignedMessagesRepositoryImpl signedMessagesRepositoryImpl;
 
-    public void addSignedMessage(SignedMessage signedMessage) {
+    public void addSignedMessage(SignedMessageDTO signedMessageDTO) {
         try {
+            SignedMessage signedMessage = signedMessageDTO.toSignedMessage();
             checkIfPayloadIsValid(signedMessage);
             signedMessagesRepository.save(signedMessage);
         } catch (Exception e) {
             throw e;
         }
     }
+
 
     private void checkIfPayloadIsValid(SignedMessage signedMessage) {
         if (signedMessage == null) {
@@ -52,6 +55,11 @@ public class SignedMessageService {
 
     public List<SignedMessage> getLatestMessagesByUserId(Integer userId) {
         return signedMessagesRepositoryImpl.findLatestMessagesByUserId(userId);
+    }
+
+
+    public Integer getLastConversationId() {
+        return signedMessagesRepositoryImpl.findLastConversationId();
     }
     
 }

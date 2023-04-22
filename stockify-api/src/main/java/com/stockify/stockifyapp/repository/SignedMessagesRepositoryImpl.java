@@ -18,4 +18,14 @@ public class SignedMessagesRepositoryImpl {
         List<SignedMessage> messages = jdbcTemplate.query(sql, new SignedMessageRowMapper(), userId, userId);
         return messages;
     }
+
+    public Integer findLastConversationId() {
+        String sql = "SELECT MAX(CONVERSATION_ID) FROM SIGNED_MESSAGES";
+        Integer lastConversationId = jdbcTemplate.queryForObject(sql, Integer.class);
+        return lastConversationId;
+    }
+
+
+
+    
 }

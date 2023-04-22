@@ -1,16 +1,33 @@
-import { saveUserIdInCookie, getUserIdFromCookie } from "./cookie.js";
+function getCookie(name) {
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
 
-$(document).ready(function () {
-    fetchUserData();
+function getUserIdFromCookie() {
+    console.log("getUserIdFromCookie");
+    return 1;
+    // return getCookie("userId");
+}
+
+async function init() {
+    console.log("init");
+    await fetchUserData();
     fetchContactMessages();
-
     $('#edit-button').on('click', toggleEditSave);
     $('#back-button').on('click', goBackToMessagesList);
     $('#new-message-button').on('click', startNewMessage);
     $('#send-message').on('click', sendMessage);
-});
+}
 
-let currentConversationId = null;
+
+
+var currentConversationId = null;
 
 async function fetchSubscriptionPlans() {
     const apiUrl = 'http://localhost:8080/subscriptionPlans';
@@ -30,7 +47,7 @@ async function fetchSubscriptionPlans() {
 }
 
 async function fetchUserData() {
-    await fetchSubscriptionPlans();
+    const subscriptionPlansPromise = fetchSubscriptionPlans();
     const userID = getUserIdFromCookie();
 
     if (!userID) {
@@ -50,10 +67,13 @@ async function fetchUserData() {
         $('#email').val(userData.email);
         $('#subscription').val(userData.subscriptionPlan.id);
 
+        await subscriptionPlansPromise; // Wait for the subscription plans to be fetched
+
     } catch (error) {
         console.error('Error fetching user data:', error);
     }
 }
+
 
 async function fetchContactMessages() {
     const userId = getUserIdFromCookie();
@@ -80,14 +100,6 @@ async function fetchContactMessages() {
     }
 }
 
-
-function editUserInfo() {
-    const fields = ['name', 'phone', 'subscription'];
-    fields.forEach(field => {
-        const input = $(`#${field}`);
-        input.prop('readonly', !input.prop('readonly'));
-    });
-}
 
 function toggleEditSave() {
     const isEditMode = $('#edit-button').text().trim() === 'Edit';
@@ -136,7 +148,7 @@ async function displayChat(conversationId) {
         // Populate the chat content
         $('#chat-content').empty();
         chatData.forEach(message => {
-            const messageDiv = $('<div></div>').addClass(`message ${message.user.id === getUserIdFromCookie() ? 'user' : 'support'}`);
+            const messageDiv = $('<div></div>').addClass(`message ${message.user.id !== getUserIdFromCookie() ? 'user' : 'support'}`);
             const messageText = $('<div></div>').addClass('message-text').text(message.message);
             messageDiv.append(messageText);
             $('#chat-content').append(messageDiv);
@@ -159,9 +171,27 @@ function goBackToMessagesList() {
     $('#message-input').hide(); // Hide the message input
     $('#messages-list').show();
     $('#new-message-button').show(); // Show the New Message button
+
+    // Fetch the latest messages and add them to the list
+    $('#messages-list ul').empty(); // clear the previous messages
+    fetchContactMessages();
 }
 
-function startNewMessage() {
+
+async function fetchLastConversationId() {
+    const apiUrl = 'http://localhost:8080/lastConversationId';
+    try {
+        const response = await fetch(apiUrl);
+        const conversationId = await response.json();
+        return conversationId;
+    } catch (error) {
+        console.error('Error fetching last conversation id:', error);
+        return null;
+    }
+}
+
+async function startNewMessage() {
+    currentConversationId = null;
     // Show the chat and hide the messages list
     $('#messages-list').hide();
     $('#new-message-button').hide(); // Hide the New Message button
@@ -170,19 +200,36 @@ function startNewMessage() {
     $('#message-input').show(); // Show the message input
 }
 
+function addMessageToChat(messageText, isUser) {
+    const messageDiv = $('<div></div>').addClass(`message ${isUser ? 'user' : 'support'}`);
+    const messageTextElement = $('<div></div>').addClass('message-text').text(messageText);
+    messageDiv.append(messageTextElement);
+    $('#chat-content').append(messageDiv);
+}
+
+
 async function sendMessage() {
     const messageText = $('#message-input input').val().trim();
     if (messageText) {
+        // Fetch the conversationId for the new conversation just before sending the message
+        if (!currentConversationId) {
+            const conversationId = await fetchLastConversationId();
+            if (conversationId) {
+                currentConversationId = conversationId + 1;
+            } else {
+                console.error('Error sending a message: could not fetch conversationId');
+                return;
+            }
+        }
+
         const userId = getUserIdFromCookie();
         const apiUrl = 'http://localhost:8080/signedMessages';
         const signedMessage = {
             conversationId: currentConversationId,
             message: messageText,
-            user: {
-                id: userId
-            }
+            userId: userId
         };
-
+        
         try {
             await fetch(apiUrl, {
                 method: 'POST',
@@ -196,8 +243,19 @@ async function sendMessage() {
             console.error('Error sending message:', error);
         }
 
+        // Add the new message to the chat as a user message
+        addMessageToChat(messageText, true);
+
         // Clear the input field
         $('#message-input input').val('');
     }
 }
 
+
+
+
+init();
+
+document.addEventListener('DOMContentLoaded', async () => {
+    await init();
+});

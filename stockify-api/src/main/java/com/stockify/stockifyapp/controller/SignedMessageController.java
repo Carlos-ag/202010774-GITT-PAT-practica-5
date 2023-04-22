@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.stockify.stockifyapp.dto.SignedMessageDTO;
 import com.stockify.stockifyapp.model.SignedMessage;
 import com.stockify.stockifyapp.service.SignedMessageService;
-
-
 
 @RestController
 public class SignedMessageController {
@@ -25,8 +24,14 @@ public class SignedMessageController {
 
     @PostMapping("/signedMessages")
     @CrossOrigin(origins = "*")
-    public void addSignedMessage(@RequestBody SignedMessage signedMessage) {
-        signedMessageService.addSignedMessage(signedMessage);
+    public void addSignedMessage(@RequestBody SignedMessageDTO signedMessageDTO) {
+        signedMessageService.addSignedMessage(signedMessageDTO);
+    }
+
+    @GetMapping("/lastConversationId")
+    @CrossOrigin(origins = "*")
+    public Integer getLastConversationId() {
+        return signedMessageService.getLastConversationId();
     }
 
     @GetMapping("/signedMessages/{conversationId}")
@@ -39,11 +44,7 @@ public class SignedMessageController {
     @CrossOrigin(origins = "*")
     public List<SignedMessage> getLatestMessagesByUserId(@PathVariable("userId") Integer userId) {
 
-
         return signedMessageService.getLatestMessagesByUserId(userId);
     }
 
-
-    
-    
 }
