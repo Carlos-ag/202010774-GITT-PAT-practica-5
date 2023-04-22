@@ -12,6 +12,13 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
+    public UserService() {
+    }
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
 
     public User getUserInfo(Integer userId) {
         return userRepository.findById(userId).get();

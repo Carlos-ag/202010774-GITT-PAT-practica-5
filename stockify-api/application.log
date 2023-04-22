@@ -4516,3 +4516,1029 @@ Caused by: java.lang.annotation.AnnotationFormatError: Duplicate annotation for 
 2023-04-22T16:09:40.947+02:00  WARN 2539 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m10s40ms).
 2023-04-22T16:35:22.802+02:00  WARN 2539 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m41s854ms).
 2023-04-22T16:37:22.130+02:00  WARN 2539 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m59s329ms).
+2023-04-22T16:49:26.725+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 2539 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T16:49:26.726+02:00 DEBUG 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T16:49:26.726+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T16:49:26.960+02:00  WARN 2539 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'signedMessageService': Unsatisfied dependency expressed through field 'signedMessagesRepository': Error creating bean with name 'signedMessagesRepositoryImpl': Unsatisfied dependency expressed through field 'jdbcTemplate': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: DROP TABLE IF EXISTS SUBSCRIPTION_PLANS
+2023-04-22T16:49:26.976+02:00 ERROR 2539 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'signedMessageService': Unsatisfied dependency expressed through field 'signedMessagesRepository': Error creating bean with name 'signedMessagesRepositoryImpl': Unsatisfied dependency expressed through field 'jdbcTemplate': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: DROP TABLE IF EXISTS SUBSCRIPTION_PLANS
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'signedMessageService': Unsatisfied dependency expressed through field 'signedMessagesRepository': Error creating bean with name 'signedMessagesRepositoryImpl': Unsatisfied dependency expressed through field 'jdbcTemplate': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: DROP TABLE IF EXISTS SUBSCRIPTION_PLANS
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:712) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:692) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:481) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1408) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'signedMessagesRepositoryImpl': Unsatisfied dependency expressed through field 'jdbcTemplate': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: DROP TABLE IF EXISTS SUBSCRIPTION_PLANS
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:712) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:692) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:481) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1408) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:709) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 39 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: DROP TABLE IF EXISTS SUBSCRIPTION_PLANS
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:709) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 55 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: DROP TABLE IF EXISTS SUBSCRIPTION_PLANS
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-6.0.6.jar:6.0.6]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-6.0.6.jar:6.0.6]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-6.0.6.jar:6.0.6]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applySchemaScripts(AbstractScriptDatabaseInitializer.java:98) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 67 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Impossible de supprimer "SUBSCRIPTION_PLANS" car "CONSTRAINT_4D4" dépend de lui
+Cannot drop "SUBSCRIPTION_PLANS" because "CONSTRAINT_4D4" depends on it; SQL statement:
+DROP TABLE IF EXISTS SUBSCRIPTION_PLANS [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-6.0.6.jar:6.0.6]
+	... 77 common frames omitted
+
+2023-04-22T16:54:19.272+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 2539 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T16:54:19.272+02:00 DEBUG 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T16:54:19.272+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T16:54:19.534+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.28 seconds (process running for 8130.046)
+2023-04-22T16:54:21.014+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 2539 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T16:54:21.014+02:00 DEBUG 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T16:54:21.014+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T16:54:21.216+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.212 seconds (process running for 8131.728)
+2023-04-22T16:55:38.636+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 2539 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T16:55:38.636+02:00 DEBUG 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T16:55:38.636+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T16:55:38.834+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.206 seconds (process running for 8209.345)
+2023-04-22T16:55:41.301+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 2539 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T16:55:41.302+02:00 DEBUG 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T16:55:41.302+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T16:55:41.490+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.198 seconds (process running for 8212.001)
+2023-04-22T16:55:44.966+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 2539 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T16:55:44.966+02:00 DEBUG 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T16:55:44.966+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T16:55:45.104+02:00  WARN 2539 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/UserController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.UserController]: Constructor threw exception
+2023-04-22T16:55:45.109+02:00 ERROR 2539 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/UserController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.UserController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:312) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controller.UserController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeader
+	Syntax error, insert "EnumBody" to complete EnumDeclaration
+
+	at com.stockify.stockifyapp.controller.UserController.<init>(UserController.java:30) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+
+2023-04-22T16:55:47.559+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 2539 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T16:55:47.559+02:00 DEBUG 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T16:55:47.559+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T16:55:47.703+02:00  WARN 2539 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/UserController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.UserController]: Constructor threw exception
+2023-04-22T16:55:47.709+02:00 ERROR 2539 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/UserController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.UserController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:312) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controller.UserController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeader
+	Syntax error, insert "EnumBody" to complete EnumDeclaration
+
+	at com.stockify.stockifyapp.controller.UserController.<init>(UserController.java:30) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+
+2023-04-22T16:55:49.153+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 2539 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T16:55:49.154+02:00 DEBUG 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T16:55:49.154+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T16:55:49.300+02:00  WARN 2539 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/UserController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.UserController]: Constructor threw exception
+2023-04-22T16:55:49.304+02:00 ERROR 2539 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/UserController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.UserController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:312) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controller.UserController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeader
+	Syntax error, insert "EnumBody" to complete EnumDeclaration
+
+	at com.stockify.stockifyapp.controller.UserController.<init>(UserController.java:30) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+
+2023-04-22T16:55:56.798+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 2539 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T16:55:56.798+02:00 DEBUG 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T16:55:56.798+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T16:55:56.935+02:00  WARN 2539 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/UserController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.UserController]: Constructor threw exception
+2023-04-22T16:55:56.940+02:00 ERROR 2539 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/UserController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.UserController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:312) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controller.UserController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "enum Identifier" to complete EnumHeader
+	Syntax error, insert "EnumBody" to complete EnumDeclaration
+
+	at com.stockify.stockifyapp.controller.UserController.<init>(UserController.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+
+2023-04-22T16:55:59.393+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 2539 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T16:55:59.393+02:00 DEBUG 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T16:55:59.393+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T16:55:59.571+02:00  INFO 2539 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.197 seconds (process running for 8230.083)
+2023-04-22T17:16:37.340+02:00  WARN 2539 --- [HikariPool-11 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Thread starvation or clock leap detected (housekeeper delta=4m37s634ms).
+2023-04-22T17:51:32.186+02:00  INFO 6513 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 6513 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T17:51:32.188+02:00 DEBUG 6513 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T17:51:32.188+02:00  INFO 6513 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T17:51:33.543+02:00  INFO 6513 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.598 seconds (process running for 1.883)
+2023-04-22T17:51:39.879+02:00  WARN 6523 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T17:51:39.886+02:00  INFO 6523 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 6523 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T17:51:39.887+02:00 DEBUG 6523 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T17:51:39.887+02:00  INFO 6523 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T17:51:40.513+02:00  INFO 6523 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.806 seconds (process running for 1.252)
+2023-04-22T17:53:13.146+02:00  WARN 6559 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T17:53:13.152+02:00  INFO 6559 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 6559 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T17:53:13.152+02:00 DEBUG 6559 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T17:53:13.152+02:00  INFO 6559 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T17:53:13.783+02:00  INFO 6559 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.833 seconds (process running for 1.286)
+2023-04-22T17:53:17.684+02:00  WARN 6567 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T17:53:17.691+02:00  INFO 6567 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 6567 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T17:53:17.692+02:00 DEBUG 6567 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T17:53:17.692+02:00  INFO 6567 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T17:53:18.286+02:00  INFO 6567 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.784 seconds (process running for 1.255)
+2023-04-22T17:53:49.786+02:00  WARN 6580 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T17:53:49.792+02:00  INFO 6580 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 6580 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T17:53:49.793+02:00 DEBUG 6580 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T17:53:49.793+02:00  INFO 6580 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T17:53:50.383+02:00  INFO 6580 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.772 seconds (process running for 1.216)
+2023-04-22T17:53:53.732+02:00  WARN 6584 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T17:53:53.739+02:00  INFO 6584 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 6584 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T17:53:53.739+02:00 DEBUG 6584 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T17:53:53.740+02:00  INFO 6584 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T17:53:54.336+02:00  INFO 6584 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.788 seconds (process running for 1.239)
+2023-04-22T17:54:58.221+02:00  WARN 6601 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T17:54:58.229+02:00  INFO 6601 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 6601 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T17:54:58.229+02:00 DEBUG 6601 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T17:54:58.229+02:00  INFO 6601 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T17:54:58.818+02:00  INFO 6601 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.785 seconds (process running for 1.233)
+2023-04-22T17:54:58.934+02:00  WARN 6601 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T17:54:58.935+02:00  INFO 6601 --- [main] c.s.s.StockifyAppApplicationTests        : Starting StockifyAppApplicationTests using Java 17.0.6 with PID 6601 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T17:54:58.935+02:00 DEBUG 6601 --- [main] c.s.s.StockifyAppApplicationTests        : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T17:54:58.935+02:00  INFO 6601 --- [main] c.s.s.StockifyAppApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T17:54:59.725+02:00  INFO 6601 --- [main] c.s.s.StockifyAppApplicationTests        : Started StockifyAppApplicationTests in 0.802 seconds (process running for 2.14)
+2023-04-22T17:56:36.772+02:00  WARN 6646 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T17:56:36.779+02:00  INFO 6646 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 6646 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T17:56:36.779+02:00 DEBUG 6646 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T17:56:36.780+02:00  INFO 6646 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T17:56:37.393+02:00  INFO 6646 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.809 seconds (process running for 1.261)
+2023-04-22T17:57:24.376+02:00  WARN 6672 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T17:57:24.383+02:00  INFO 6672 --- [main] c.s.s.StockifyAppApplicationTests        : Starting StockifyAppApplicationTests using Java 17.0.6 with PID 6672 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T17:57:24.384+02:00 DEBUG 6672 --- [main] c.s.s.StockifyAppApplicationTests        : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T17:57:24.384+02:00  INFO 6672 --- [main] c.s.s.StockifyAppApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T17:57:25.532+02:00  INFO 6672 --- [main] c.s.s.StockifyAppApplicationTests        : Started StockifyAppApplicationTests in 1.311 seconds (process running for 1.783)
+2023-04-22T17:57:25.751+02:00  WARN 6672 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T17:57:25.752+02:00  INFO 6672 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 6672 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T17:57:25.752+02:00 DEBUG 6672 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T17:57:25.752+02:00  INFO 6672 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T17:57:25.866+02:00  INFO 6672 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.126 seconds (process running for 2.118)
+2023-04-22T17:59:28.507+02:00  WARN 6727 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T17:59:28.516+02:00  INFO 6727 --- [main] c.s.s.StockifyAppApplicationTests        : Starting StockifyAppApplicationTests using Java 17.0.6 with PID 6727 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T17:59:28.516+02:00 DEBUG 6727 --- [main] c.s.s.StockifyAppApplicationTests        : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T17:59:28.516+02:00  INFO 6727 --- [main] c.s.s.StockifyAppApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T17:59:29.742+02:00  INFO 6727 --- [main] c.s.s.StockifyAppApplicationTests        : Started StockifyAppApplicationTests in 1.397 seconds (process running for 1.897)
+2023-04-22T17:59:29.993+02:00  WARN 6727 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T17:59:29.994+02:00  INFO 6727 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 6727 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T17:59:29.994+02:00 DEBUG 6727 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T17:59:29.994+02:00  INFO 6727 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T17:59:30.113+02:00  INFO 6727 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.131 seconds (process running for 2.269)
+2023-04-22T18:01:08.056+02:00  WARN 6771 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:01:08.064+02:00  INFO 6771 --- [main] c.s.s.StockifyAppApplicationTests        : Starting StockifyAppApplicationTests using Java 17.0.6 with PID 6771 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:01:08.065+02:00 DEBUG 6771 --- [main] c.s.s.StockifyAppApplicationTests        : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:01:08.065+02:00  INFO 6771 --- [main] c.s.s.StockifyAppApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:01:09.186+02:00  INFO 6771 --- [main] c.s.s.StockifyAppApplicationTests        : Started StockifyAppApplicationTests in 1.278 seconds (process running for 1.729)
+2023-04-22T18:01:09.404+02:00  WARN 6771 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:01:09.405+02:00  INFO 6771 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 6771 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:01:09.405+02:00 DEBUG 6771 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:01:09.405+02:00  INFO 6771 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:01:09.527+02:00  INFO 6771 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.132 seconds (process running for 2.071)
+2023-04-22T18:01:15.443+02:00  WARN 6779 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:01:15.451+02:00  INFO 6779 --- [main] c.s.s.StockifyAppApplicationTests        : Starting StockifyAppApplicationTests using Java 17.0.6 with PID 6779 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:01:15.451+02:00 DEBUG 6779 --- [main] c.s.s.StockifyAppApplicationTests        : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:01:15.452+02:00  INFO 6779 --- [main] c.s.s.StockifyAppApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:01:16.519+02:00  INFO 6779 --- [main] c.s.s.StockifyAppApplicationTests        : Started StockifyAppApplicationTests in 1.22 seconds (process running for 1.652)
+2023-04-22T18:01:16.730+02:00  WARN 6779 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:01:16.731+02:00  INFO 6779 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 6779 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:01:16.731+02:00 DEBUG 6779 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:01:16.731+02:00  INFO 6779 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:01:16.848+02:00  INFO 6779 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.127 seconds (process running for 1.981)
+2023-04-22T18:04:02.683+02:00  WARN 6876 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:04:02.691+02:00  INFO 6876 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 17.0.6 with PID 6876 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:04:02.691+02:00 DEBUG 6876 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:04:02.691+02:00  INFO 6876 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:04:03.292+02:00  INFO 6876 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.795 seconds (process running for 1.283)
+2023-04-22T18:04:03.340+02:00  INFO 6876 --- [main] c.s.s.c.UnsignedMessageController        : Added contact message: ContactMessage [email=john.doe@example.com, message=Test message, name=John Doe]
+2023-04-22T18:06:23.095+02:00  WARN 6925 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:06:23.102+02:00  INFO 6925 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 17.0.6 with PID 6925 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:06:23.102+02:00 DEBUG 6925 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:06:23.103+02:00  INFO 6925 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:06:23.711+02:00  INFO 6925 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.795 seconds (process running for 1.25)
+2023-04-22T18:06:23.759+02:00 ERROR 6925 --- [main] c.s.s.c.UnsignedMessageController        : Error adding contact message: Name, email, and message cannot be null
+2023-04-22T18:07:37.488+02:00  WARN 6957 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:07:37.506+02:00  INFO 6957 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 17.0.6 with PID 6957 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:07:37.506+02:00 DEBUG 6957 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:07:37.507+02:00  INFO 6957 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:07:38.118+02:00  INFO 6957 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.83 seconds (process running for 1.3)
+2023-04-22T18:07:38.166+02:00 ERROR 6957 --- [main] c.s.s.c.UnsignedMessageController        : Error adding contact message: Unexpected error
+2023-04-22T18:07:54.085+02:00  WARN 6964 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:07:54.090+02:00  INFO 6964 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 17.0.6 with PID 6964 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:07:54.091+02:00 DEBUG 6964 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:07:54.091+02:00  INFO 6964 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:07:54.654+02:00  INFO 6964 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.744 seconds (process running for 1.2)
+2023-04-22T18:07:54.699+02:00 ERROR 6964 --- [main] c.s.s.c.UnsignedMessageController        : Error adding contact message: Unexpected error
+2023-04-22T18:09:56.058+02:00  WARN 7028 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:09:56.071+02:00  INFO 7028 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 17.0.6 with PID 7028 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:09:56.071+02:00 DEBUG 7028 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:09:56.072+02:00  INFO 7028 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:09:56.722+02:00  INFO 7028 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.863 seconds (process running for 1.367)
+2023-04-22T18:09:56.773+02:00 ERROR 7028 --- [main] c.s.s.c.UnsignedMessageController        : Unexpected error adding contact message: Unexpected error
+2023-04-22T18:12:17.803+02:00  WARN 7089 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:12:17.809+02:00  INFO 7089 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 7089 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:12:17.810+02:00 DEBUG 7089 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:12:17.810+02:00  INFO 7089 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:12:18.410+02:00  INFO 7089 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.798 seconds (process running for 1.255)
+2023-04-22T18:12:25.708+02:00  WARN 7103 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:12:25.714+02:00  INFO 7103 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 7103 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:12:25.714+02:00 DEBUG 7103 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:12:25.715+02:00  INFO 7103 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:12:26.286+02:00  INFO 7103 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.754 seconds (process running for 1.192)
+2023-04-22T18:12:37.327+02:00  WARN 7110 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:12:37.334+02:00  INFO 7110 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 17.0.6 with PID 7110 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:12:37.334+02:00 DEBUG 7110 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:12:37.335+02:00  INFO 7110 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:12:37.916+02:00  INFO 7110 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.763 seconds (process running for 1.203)
+2023-04-22T18:12:37.966+02:00 ERROR 7110 --- [main] c.s.s.c.UnsignedMessageController        : Error adding contact message: Name, email, and message cannot be null
+2023-04-22T18:12:37.983+02:00  INFO 7110 --- [main] c.s.s.c.UnsignedMessageController        : Added contact message: ContactMessage [email=john.doe@example.com, message=Test message, name=John Doe]
+2023-04-22T18:12:37.991+02:00 ERROR 7110 --- [main] c.s.s.c.UnsignedMessageController        : Unexpected error adding contact message: Unexpected error
+2023-04-22T18:12:47.244+02:00  WARN 7116 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:12:47.251+02:00  INFO 7116 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 7116 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:12:47.251+02:00 DEBUG 7116 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:12:47.251+02:00  INFO 7116 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:12:47.825+02:00  INFO 7116 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.753 seconds (process running for 1.205)
+2023-04-22T18:16:30.052+02:00  WARN 7249 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:16:30.059+02:00  INFO 7249 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 7249 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:16:30.059+02:00 DEBUG 7249 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:16:30.059+02:00  INFO 7249 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:16:30.651+02:00  INFO 7249 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.786 seconds (process running for 1.243)
+2023-04-22T18:16:30.691+02:00 ERROR 7249 --- [main] c.s.s.controller.UserController          : Error adding contact message: Invalid data
+2023-04-22T18:16:36.373+02:00  WARN 7256 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:16:36.379+02:00  INFO 7256 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 7256 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:16:36.379+02:00 DEBUG 7256 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:16:36.379+02:00  INFO 7256 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:16:36.950+02:00  INFO 7256 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.748 seconds (process running for 1.181)
+2023-04-22T18:16:38.714+02:00  WARN 7257 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:16:38.720+02:00  INFO 7257 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 7257 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:16:38.720+02:00 DEBUG 7257 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:16:38.720+02:00  INFO 7257 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:16:39.282+02:00  INFO 7257 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.739 seconds (process running for 1.178)
+2023-04-22T18:16:39.358+02:00  INFO 7257 --- [main] c.s.s.controller.UserController          : Added user: com.stockify.stockifyapp.model.User@76828577
+2023-04-22T18:16:39.366+02:00 ERROR 7257 --- [main] c.s.s.controller.UserController          : Unexpected error adding contact message: Unexpected error
+2023-04-22T18:16:39.370+02:00 ERROR 7257 --- [main] c.s.s.controller.UserController          : Error adding contact message: Invalid data
+2023-04-22T18:17:30.362+02:00  WARN 7281 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:17:30.368+02:00  INFO 7281 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 7281 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:17:30.369+02:00 DEBUG 7281 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:17:30.369+02:00  INFO 7281 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:17:30.949+02:00  INFO 7281 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.767 seconds (process running for 1.201)
+2023-04-22T18:17:30.986+02:00  INFO 7281 --- [main] c.s.s.controller.UserController          : Added user: com.stockify.stockifyapp.model.User@374c3975
+2023-04-22T18:18:44.616+02:00  WARN 7308 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:18:44.625+02:00  INFO 7308 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 7308 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:18:44.625+02:00 DEBUG 7308 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:18:44.625+02:00  INFO 7308 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:18:45.211+02:00  INFO 7308 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.803 seconds (process running for 1.252)
+2023-04-22T18:18:45.290+02:00  INFO 7308 --- [main] c.s.s.controller.UserController          : Added user: com.stockify.stockifyapp.model.User@3d0352
+2023-04-22T18:18:45.297+02:00 ERROR 7308 --- [main] c.s.s.controller.UserController          : Unexpected error adding contact message: Unexpected error
+2023-04-22T18:18:45.301+02:00 ERROR 7308 --- [main] c.s.s.controller.UserController          : Error adding contact message: Invalid data
+2023-04-22T18:19:31.818+02:00  WARN 7338 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:19:31.824+02:00  INFO 7338 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 7338 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:19:31.824+02:00 DEBUG 7338 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:19:31.824+02:00  INFO 7338 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:19:32.403+02:00  INFO 7338 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.765 seconds (process running for 1.203)
+2023-04-22T18:19:32.496+02:00  INFO 7338 --- [main] c.s.s.controller.UserController          : Added user: com.stockify.stockifyapp.model.User@561d88ee
+2023-04-22T18:19:32.502+02:00 ERROR 7338 --- [main] c.s.s.controller.UserController          : Unexpected error adding contact message: Unexpected error
+2023-04-22T18:19:32.506+02:00 ERROR 7338 --- [main] c.s.s.controller.UserController          : Error adding contact message: Invalid data
+2023-04-22T18:19:53.588+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:19:53.589+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:19:53.590+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:19:54.952+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.594 seconds (process running for 1.912)
+2023-04-22T18:19:59.924+02:00  WARN 7366 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:19:59.932+02:00  INFO 7366 --- [main] c.s.s.StockifyAppApplicationTests        : Starting StockifyAppApplicationTests using Java 17.0.6 with PID 7366 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:19:59.932+02:00 DEBUG 7366 --- [main] c.s.s.StockifyAppApplicationTests        : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:19:59.932+02:00  INFO 7366 --- [main] c.s.s.StockifyAppApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:20:01.022+02:00  INFO 7366 --- [main] c.s.s.StockifyAppApplicationTests        : Started StockifyAppApplicationTests in 1.245 seconds (process running for 1.679)
+2023-04-22T18:20:01.233+02:00  WARN 7366 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:20:01.234+02:00  INFO 7366 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 7366 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:20:01.234+02:00 DEBUG 7366 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:20:01.234+02:00  INFO 7366 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:20:01.353+02:00  INFO 7366 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.129 seconds (process running for 2.011)
+2023-04-22T18:20:01.434+02:00  INFO 7366 --- [main] c.s.s.controller.UserController          : Added user: com.stockify.stockifyapp.model.User@3dc7c5fd
+2023-04-22T18:20:01.439+02:00 ERROR 7366 --- [main] c.s.s.controller.UserController          : Unexpected error adding contact message: Unexpected error
+2023-04-22T18:20:01.444+02:00 ERROR 7366 --- [main] c.s.s.controller.UserController          : Error adding contact message: Invalid data
+2023-04-22T18:20:01.459+02:00  WARN 7366 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:20:01.459+02:00  INFO 7366 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 17.0.6 with PID 7366 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:20:01.460+02:00 DEBUG 7366 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:20:01.460+02:00  INFO 7366 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:20:01.527+02:00  INFO 7366 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.076 seconds (process running for 2.185)
+2023-04-22T18:20:01.532+02:00 ERROR 7366 --- [main] c.s.s.c.UnsignedMessageController        : Error adding contact message: Name, email, and message cannot be null
+2023-04-22T18:20:01.535+02:00  INFO 7366 --- [main] c.s.s.c.UnsignedMessageController        : Added contact message: ContactMessage [email=john.doe@example.com, message=Test message, name=John Doe]
+2023-04-22T18:20:01.538+02:00 ERROR 7366 --- [main] c.s.s.c.UnsignedMessageController        : Unexpected error adding contact message: Unexpected error
+2023-04-22T18:22:16.921+02:00  WARN 7427 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:22:16.927+02:00  INFO 7427 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Starting SuscriptionPlanControllerTest using Java 17.0.6 with PID 7427 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:22:16.928+02:00 DEBUG 7427 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:22:16.928+02:00  INFO 7427 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:22:17.477+02:00  INFO 7427 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Started SuscriptionPlanControllerTest in 0.736 seconds (process running for 1.17)
+2023-04-22T18:24:38.082+02:00  WARN 7465 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:24:38.088+02:00  INFO 7465 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Starting SuscriptionPlanControllerTest using Java 17.0.6 with PID 7465 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:24:38.088+02:00 DEBUG 7465 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:24:38.088+02:00  INFO 7465 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:24:38.660+02:00  INFO 7465 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Started SuscriptionPlanControllerTest in 0.758 seconds (process running for 1.205)
+2023-04-22T18:26:44.323+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:26:44.323+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:26:44.324+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:26:44.614+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.305 seconds (process running for 411.579)
+2023-04-22T18:26:46.073+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:26:46.073+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:26:46.073+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:26:46.311+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.251 seconds (process running for 413.276)
+2023-04-22T18:26:49.790+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:26:49.790+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:26:49.790+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:26:50.028+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.251 seconds (process running for 416.993)
+2023-04-22T18:26:51.873+02:00  WARN 7527 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:26:51.881+02:00  INFO 7527 --- [main] c.s.s.StockifyAppApplicationTests        : Starting StockifyAppApplicationTests using Java 17.0.6 with PID 7527 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:26:51.881+02:00 DEBUG 7527 --- [main] c.s.s.StockifyAppApplicationTests        : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:26:51.882+02:00  INFO 7527 --- [main] c.s.s.StockifyAppApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:26:52.947+02:00  INFO 7527 --- [main] c.s.s.StockifyAppApplicationTests        : Started StockifyAppApplicationTests in 1.218 seconds (process running for 1.638)
+2023-04-22T18:26:53.162+02:00  WARN 7527 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:26:53.163+02:00  INFO 7527 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 7527 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:26:53.163+02:00 DEBUG 7527 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:26:53.163+02:00  INFO 7527 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:26:53.280+02:00  INFO 7527 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.126 seconds (process running for 1.971)
+2023-04-22T18:26:53.365+02:00  INFO 7527 --- [main] c.s.s.controller.UserController          : Added user: com.stockify.stockifyapp.model.User@62c42a3
+2023-04-22T18:26:53.370+02:00 ERROR 7527 --- [main] c.s.s.controller.UserController          : Unexpected error adding contact message: Unexpected error
+2023-04-22T18:26:53.374+02:00 ERROR 7527 --- [main] c.s.s.controller.UserController          : Error adding contact message: Invalid data
+2023-04-22T18:26:53.388+02:00  WARN 7527 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:26:53.389+02:00  INFO 7527 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 17.0.6 with PID 7527 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:26:53.389+02:00 DEBUG 7527 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:26:53.389+02:00  INFO 7527 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:26:53.454+02:00  INFO 7527 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.074 seconds (process running for 2.146)
+2023-04-22T18:26:53.459+02:00 ERROR 7527 --- [main] c.s.s.c.UnsignedMessageController        : Error adding contact message: Name, email, and message cannot be null
+2023-04-22T18:26:53.462+02:00  INFO 7527 --- [main] c.s.s.c.UnsignedMessageController        : Added contact message: ContactMessage [email=john.doe@example.com, message=Test message, name=John Doe]
+2023-04-22T18:26:53.465+02:00 ERROR 7527 --- [main] c.s.s.c.UnsignedMessageController        : Unexpected error adding contact message: Unexpected error
+2023-04-22T18:26:53.478+02:00  WARN 7527 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:26:53.479+02:00  INFO 7527 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Starting SuscriptionPlanControllerTest using Java 17.0.6 with PID 7527 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:26:53.479+02:00 DEBUG 7527 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:26:53.479+02:00  INFO 7527 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:26:53.547+02:00  INFO 7527 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Started SuscriptionPlanControllerTest in 0.077 seconds (process running for 2.238)
+2023-04-22T18:28:20.493+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:28:20.493+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:28:20.493+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:28:20.699+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.215 seconds (process running for 507.664)
+2023-04-22T18:28:25.171+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:28:25.171+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:28:25.171+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:28:25.367+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.205 seconds (process running for 512.333)
+2023-04-22T18:28:26.815+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:28:26.815+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:28:26.815+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:28:27.023+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.218 seconds (process running for 513.989)
+2023-04-22T18:28:29.502+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:28:29.502+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:28:29.502+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:28:29.696+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.202 seconds (process running for 516.662)
+2023-04-22T18:28:34.195+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:28:34.195+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:28:34.196+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:28:34.367+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.18 seconds (process running for 521.333)
+2023-04-22T18:28:36.833+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:28:36.833+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:28:36.833+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:28:37.010+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.184 seconds (process running for 523.975)
+2023-04-22T18:28:40.500+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:28:40.500+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:28:40.500+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:28:40.687+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.195 seconds (process running for 527.653)
+2023-04-22T18:28:55.277+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:28:55.277+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:28:55.277+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:28:55.452+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.183 seconds (process running for 542.418)
+2023-04-22T18:29:00.814+02:00  WARN 7613 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:29:00.820+02:00  INFO 7613 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Starting SuscriptionPlanControllerTest using Java 17.0.6 with PID 7613 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:29:00.820+02:00 DEBUG 7613 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:29:00.821+02:00  INFO 7613 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:29:01.371+02:00  INFO 7613 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Started SuscriptionPlanControllerTest in 0.729 seconds (process running for 1.151)
+2023-04-22T18:29:03.013+02:00  WARN 7616 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:29:03.019+02:00  INFO 7616 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Starting SuscriptionPlanControllerTest using Java 17.0.6 with PID 7616 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:29:03.019+02:00 DEBUG 7616 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:29:03.019+02:00  INFO 7616 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:29:03.586+02:00  INFO 7616 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Started SuscriptionPlanControllerTest in 0.746 seconds (process running for 1.174)
+2023-04-22T18:29:06.304+02:00  WARN 7623 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:29:06.311+02:00  INFO 7623 --- [main] c.s.s.StockifyAppApplicationTests        : Starting StockifyAppApplicationTests using Java 17.0.6 with PID 7623 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:29:06.311+02:00 DEBUG 7623 --- [main] c.s.s.StockifyAppApplicationTests        : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:29:06.311+02:00  INFO 7623 --- [main] c.s.s.StockifyAppApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:29:07.355+02:00  INFO 7623 --- [main] c.s.s.StockifyAppApplicationTests        : Started StockifyAppApplicationTests in 1.194 seconds (process running for 1.619)
+2023-04-22T18:29:07.580+02:00  WARN 7623 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:29:07.580+02:00  INFO 7623 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 7623 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:29:07.580+02:00 DEBUG 7623 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:29:07.580+02:00  INFO 7623 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:29:07.698+02:00  INFO 7623 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.128 seconds (process running for 1.963)
+2023-04-22T18:29:07.778+02:00  INFO 7623 --- [main] c.s.s.controller.UserController          : Added user: com.stockify.stockifyapp.model.User@641cea11
+2023-04-22T18:29:07.783+02:00 ERROR 7623 --- [main] c.s.s.controller.UserController          : Unexpected error adding contact message: Unexpected error
+2023-04-22T18:29:07.787+02:00 ERROR 7623 --- [main] c.s.s.controller.UserController          : Error adding contact message: Invalid data
+2023-04-22T18:29:07.813+02:00  WARN 7623 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:29:07.816+02:00  INFO 7623 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 17.0.6 with PID 7623 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:29:07.818+02:00 DEBUG 7623 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:29:07.819+02:00  INFO 7623 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:29:07.898+02:00  INFO 7623 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.106 seconds (process running for 2.163)
+2023-04-22T18:29:07.904+02:00 ERROR 7623 --- [main] c.s.s.c.UnsignedMessageController        : Error adding contact message: Name, email, and message cannot be null
+2023-04-22T18:29:07.907+02:00  INFO 7623 --- [main] c.s.s.c.UnsignedMessageController        : Added contact message: ContactMessage [email=john.doe@example.com, message=Test message, name=John Doe]
+2023-04-22T18:29:07.910+02:00 ERROR 7623 --- [main] c.s.s.c.UnsignedMessageController        : Unexpected error adding contact message: Unexpected error
+2023-04-22T18:29:07.925+02:00  WARN 7623 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:29:07.926+02:00  INFO 7623 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Starting SuscriptionPlanControllerTest using Java 17.0.6 with PID 7623 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:29:07.926+02:00 DEBUG 7623 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:29:07.926+02:00  INFO 7623 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:29:07.996+02:00  INFO 7623 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Started SuscriptionPlanControllerTest in 0.08 seconds (process running for 2.26)
+2023-04-22T18:32:06.105+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:32:06.106+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:32:06.106+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:32:06.302+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.204 seconds (process running for 733.271)
