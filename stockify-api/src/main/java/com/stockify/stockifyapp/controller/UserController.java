@@ -44,10 +44,10 @@ public ResponseEntity<User> addUser(@RequestBody User user) {
         logger.info("Added user: " + newUser.toString());
         return ResponseEntity.ok(newUser);
     } catch (IllegalArgumentException e) {
-        logger.error("Error adding contact message: " + e.getMessage());
+        logger.error("Error adding user: " + e.getMessage());
         return ResponseEntity.badRequest().body(null);
     } catch (Exception e) {
-        logger.error("Unexpected error adding contact message: " + e.getMessage());
+        logger.error("Unexpected error adding user: " + e.getMessage());
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
     }
 }

@@ -19,15 +19,35 @@ public class SignedMessageService {
     @Autowired
     private SignedMessagesRepositoryImpl signedMessagesRepositoryImpl;
 
-    public void addSignedMessage(SignedMessageDTO signedMessageDTO) {
+    public void addSignedMessage(SignedMessageDTO signedMessageDTO) throws IllegalArgumentException {
         try {
+            checkIfDtoPayloadIsValid(signedMessageDTO);
             SignedMessage signedMessage = signedMessageDTO.toSignedMessage();
             checkIfPayloadIsValid(signedMessage);
             signedMessagesRepository.save(signedMessage);
+        } catch (IllegalArgumentException e) {
+            throw e;
         } catch (Exception e) {
             throw e;
         }
     }
+    
+    
+    private void checkIfDtoPayloadIsValid(SignedMessageDTO signedMessageDTO) {
+        if (signedMessageDTO == null) {
+            throw new IllegalArgumentException("SignedMessageDTO is required");
+        }
+        if (signedMessageDTO.getMessage() == null) {
+            throw new IllegalArgumentException("Message is required");
+        }
+        if (signedMessageDTO.getConversationId() == null) {
+            throw new IllegalArgumentException("ConversationId is required");
+        }
+        if (signedMessageDTO.getUserId() == null) {
+            throw new IllegalArgumentException("UserId is required");
+        }
+    }
+    
 
 
     private void checkIfPayloadIsValid(SignedMessage signedMessage) {

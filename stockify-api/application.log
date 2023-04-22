@@ -5542,3 +5542,1066 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 2023-04-22T18:32:06.106+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
 2023-04-22T18:32:06.106+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
 2023-04-22T18:32:06.302+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.204 seconds (process running for 733.271)
+2023-04-22T18:32:49.179+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:32:49.179+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:32:49.179+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:32:49.322+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+2023-04-22T18:32:49.339+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:470) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:340) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1283) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.stockify.stockifyapp.controller.SignedMessageController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6e3248fc]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:448) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: ResponseEntity
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Unknown Source) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: ResponseEntity
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	... 30 common frames omitted
+
+2023-04-22T18:32:50.766+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:32:50.766+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:32:50.766+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:32:50.879+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+2023-04-22T18:32:50.884+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:470) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:340) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1283) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.stockify.stockifyapp.controller.SignedMessageController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7b58fb86]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:448) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: ResponseEntity
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Unknown Source) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: ResponseEntity
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	... 30 common frames omitted
+
+2023-04-22T18:32:55.346+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:32:55.346+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:32:55.346+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:32:55.469+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+2023-04-22T18:32:55.474+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:470) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:340) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1283) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.stockify.stockifyapp.controller.SignedMessageController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@303ece3f]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:448) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: ResponseEntity
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Unknown Source) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: ResponseEntity
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	... 30 common frames omitted
+
+2023-04-22T18:32:57.919+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:32:57.919+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:32:57.920+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:32:58.039+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+2023-04-22T18:32:58.044+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:470) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:340) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1283) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.stockify.stockifyapp.controller.SignedMessageController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@df1daa8]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:448) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: ResponseEntity
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Unknown Source) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: ResponseEntity
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	... 30 common frames omitted
+
+2023-04-22T18:32:59.491+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:32:59.491+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:32:59.491+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:32:59.601+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+2023-04-22T18:32:59.605+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:470) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:340) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1283) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.stockify.stockifyapp.controller.SignedMessageController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@31fcdd8]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:448) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: ResponseEntity
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Unknown Source) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: ResponseEntity
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	... 30 common frames omitted
+
+2023-04-22T18:33:02.038+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:33:02.038+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:33:02.038+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:33:02.134+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+2023-04-22T18:33:02.138+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:470) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:340) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1283) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.stockify.stockifyapp.controller.SignedMessageController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3fa782f6]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:448) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: ResponseEntity
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Unknown Source) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: ResponseEntity
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	... 30 common frames omitted
+
+2023-04-22T18:33:03.572+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:33:03.573+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:33:03.573+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:33:03.671+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+2023-04-22T18:33:03.676+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:470) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:340) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1283) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.stockify.stockifyapp.controller.SignedMessageController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@79aefc0b]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:448) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: ResponseEntity
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Unknown Source) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: ResponseEntity
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	... 30 common frames omitted
+
+2023-04-22T18:33:11.155+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:33:11.155+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:33:11.155+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:33:11.251+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+2023-04-22T18:33:11.255+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:470) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:340) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1283) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.stockify.stockifyapp.controller.SignedMessageController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7a094d0c]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:448) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: ResponseEntity
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Unknown Source) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: ResponseEntity
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source) ~[na:na]
+	... 30 common frames omitted
+
+2023-04-22T18:33:17.748+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:33:17.748+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:33:17.748+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:33:17.869+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+2023-04-22T18:33:17.874+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:312) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "Finally" to complete BlockStatements
+	Syntax error on token "catch", Identifier expected
+	Duplicate field SignedMessageController.e
+	logger cannot be resolved
+	Void methods cannot return a value
+	Syntax error on token "catch", Identifier expected
+	Duplicate field SignedMessageController.e
+	logger cannot be resolved
+	HttpStatus cannot be resolved to a variable
+	Syntax error on token "}", delete this token
+
+	at com.stockify.stockifyapp.controller.SignedMessageController.<init>(SignedMessageController.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+
+2023-04-22T18:33:23.358+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:33:23.358+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:33:23.358+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:33:23.530+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.186 seconds (process running for 810.499)
+2023-04-22T18:33:53.265+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:33:53.266+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:33:53.266+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:33:53.437+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.178 seconds (process running for 840.406)
+2023-04-22T18:33:55.918+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:33:55.918+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:33:55.918+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:33:56.118+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.206 seconds (process running for 843.087)
+2023-04-22T18:34:07.670+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:34:07.670+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:34:07.671+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:34:07.774+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+2023-04-22T18:34:07.782+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:312) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Logger cannot be resolved to a type
+	LoggerFactory cannot be resolved
+	Logger cannot be resolved to a type
+	Logger cannot be resolved to a type
+	HttpStatus cannot be resolved to a variable
+
+	at com.stockify.stockifyapp.controller.SignedMessageController.<init>(SignedMessageController.java:22) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+
+2023-04-22T18:34:11.230+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:34:11.230+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:34:11.230+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:34:11.349+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+2023-04-22T18:34:11.354+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:312) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Logger cannot be resolved to a type
+	Logger cannot be resolved to a type
+	Logger cannot be resolved to a type
+	HttpStatus cannot be resolved to a variable
+
+	at com.stockify.stockifyapp.controller.SignedMessageController.<init>(SignedMessageController.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+
+2023-04-22T18:34:12.772+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:34:12.772+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:34:12.772+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:34:12.887+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+2023-04-22T18:34:12.894+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:312) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Logger cannot be resolved to a type
+	Logger cannot be resolved to a type
+	Logger cannot be resolved to a type
+	HttpStatus cannot be resolved to a variable
+
+	at com.stockify.stockifyapp.controller.SignedMessageController.<init>(SignedMessageController.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+
+2023-04-22T18:34:14.332+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:34:14.332+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:34:14.332+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:34:14.452+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+2023-04-22T18:34:14.457+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:312) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Logger cannot be resolved to a type
+	Logger cannot be resolved to a type
+	Logger cannot be resolved to a type
+	HttpStatus cannot be resolved to a variable
+
+	at com.stockify.stockifyapp.controller.SignedMessageController.<init>(SignedMessageController.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+
+2023-04-22T18:34:16.904+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:34:16.904+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:34:16.904+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:34:17.072+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.184 seconds (process running for 864.042)
+2023-04-22T18:34:24.603+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:34:24.603+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:34:24.603+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:34:24.708+02:00  WARN 7356 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+2023-04-22T18:34:24.714+02:00 ERROR 7356 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'signedMessageController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/SignedMessageController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:312) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controller.SignedMessageController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Signed cannot be resolved to a type
+	HttpStatus cannot be resolved to a variable
+
+	at com.stockify.stockifyapp.controller.SignedMessageController.<init>(SignedMessageController.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 26 common frames omitted
+
+2023-04-22T18:34:29.166+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:34:29.166+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:34:29.166+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:34:29.344+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.184 seconds (process running for 876.314)
+2023-04-22T18:34:31.812+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:34:31.812+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:34:31.812+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:34:31.958+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.153 seconds (process running for 878.928)
+2023-04-22T18:34:38.485+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:34:38.485+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:34:38.485+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:34:38.621+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.141 seconds (process running for 885.591)
+2023-04-22T18:34:48.170+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:34:48.170+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:34:48.170+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:34:48.311+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.147 seconds (process running for 895.281)
+2023-04-22T18:34:50.793+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:34:50.794+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:34:50.794+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:34:50.937+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.149 seconds (process running for 897.907)
+2023-04-22T18:34:53.427+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:34:53.427+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:34:53.427+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:34:53.564+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.143 seconds (process running for 900.534)
+2023-04-22T18:35:02.085+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:35:02.086+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:35:02.086+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:35:02.226+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.147 seconds (process running for 909.197)
+2023-04-22T18:35:04.715+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:35:04.715+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:35:04.715+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:35:04.853+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.143 seconds (process running for 911.823)
+2023-04-22T18:35:08.355+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:35:08.355+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:35:08.355+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:35:08.488+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.139 seconds (process running for 915.458)
+2023-04-22T18:35:09.952+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:35:09.952+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:35:09.952+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:35:10.093+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.147 seconds (process running for 917.063)
+2023-04-22T18:35:11.566+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:35:11.566+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:35:11.566+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:35:11.702+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.142 seconds (process running for 918.672)
+2023-04-22T18:35:15.181+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:35:15.181+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:35:15.181+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:35:15.321+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.148 seconds (process running for 922.292)
+2023-04-22T18:39:02.329+02:00  WARN 7356 --- [HikariPool-35 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-35 - Thread starvation or clock leap detected (housekeeper delta=46s927ms).
+2023-04-22T18:42:40.684+02:00  WARN 7356 --- [HikariPool-35 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-35 - Thread starvation or clock leap detected (housekeeper delta=3m8s333ms).
+2023-04-22T18:50:27.012+02:00  WARN 8233 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:50:27.019+02:00  INFO 8233 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8233 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:50:27.020+02:00 DEBUG 8233 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:50:27.020+02:00  INFO 8233 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:50:27.616+02:00  INFO 8233 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.789 seconds (process running for 1.279)
+2023-04-22T18:50:27.713+02:00 ERROR 8233 --- [main] c.s.s.c.SignedMessageController          : Unexpected error adding contact message: null
+2023-04-22T18:50:27.728+02:00 ERROR 8233 --- [main] c.s.s.c.SignedMessageController          : Error adding contact message: null
+2023-04-22T18:50:27.733+02:00  INFO 8233 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@61a704d3
+2023-04-22T18:50:31.386+02:00  WARN 8238 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:50:31.393+02:00  INFO 8238 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8238 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:50:31.394+02:00 DEBUG 8238 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:50:31.394+02:00  INFO 8238 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:50:31.973+02:00  INFO 8238 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.763 seconds (process running for 1.201)
+2023-04-22T18:50:32.057+02:00 ERROR 8238 --- [main] c.s.s.c.SignedMessageController          : Unexpected error adding contact message: null
+2023-04-22T18:50:32.072+02:00 ERROR 8238 --- [main] c.s.s.c.SignedMessageController          : Error adding contact message: null
+2023-04-22T18:50:32.077+02:00  INFO 8238 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@44ccd75c
+2023-04-22T18:52:55.324+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:52:55.324+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:52:55.324+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:52:55.527+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.211 seconds (process running for 1807.244)
+2023-04-22T18:52:56.702+02:00  WARN 8278 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:52:56.708+02:00  INFO 8278 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8278 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:52:56.708+02:00 DEBUG 8278 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:52:56.709+02:00  INFO 8278 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:52:57.287+02:00  INFO 8278 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.761 seconds (process running for 1.195)
+2023-04-22T18:52:57.325+02:00 ERROR 8278 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting signed messages: null
+2023-04-22T18:52:57.373+02:00 ERROR 8278 --- [main] c.s.s.c.SignedMessageController          : Unexpected error adding contact message: null
+2023-04-22T18:52:57.385+02:00 ERROR 8278 --- [main] c.s.s.c.SignedMessageController          : Error adding contact message: null
+2023-04-22T18:52:57.389+02:00  INFO 8278 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@6b3d9c38
+2023-04-22T18:52:57.392+02:00 ERROR 8278 --- [main] c.s.s.c.SignedMessageController          : Error getting signed messages: null
+2023-04-22T18:52:57.395+02:00 ERROR 8278 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting latest messages by user ID: null
+2023-04-22T18:52:57.398+02:00 ERROR 8278 --- [main] c.s.s.c.SignedMessageController          : Error getting latest messages by user ID: null
+2023-04-22T18:56:54.217+02:00  WARN 8367 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:56:54.227+02:00  INFO 8367 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8367 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:56:54.227+02:00 DEBUG 8367 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:56:54.227+02:00  INFO 8367 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:56:54.832+02:00  INFO 8367 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.789 seconds (process running for 1.228)
+2023-04-22T18:56:54.868+02:00 ERROR 8367 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting signed messages: null
+2023-04-22T18:56:54.914+02:00 ERROR 8367 --- [main] c.s.s.c.SignedMessageController          : Unexpected error adding contact message: null
+2023-04-22T18:56:54.927+02:00 ERROR 8367 --- [main] c.s.s.c.SignedMessageController          : Error adding contact message: null
+2023-04-22T18:56:54.932+02:00  INFO 8367 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@5c5a91b4
+2023-04-22T18:56:54.935+02:00 ERROR 8367 --- [main] c.s.s.c.SignedMessageController          : Error getting signed messages: null
+2023-04-22T18:56:54.939+02:00  INFO 8367 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@2ba9f986
+2023-04-22T18:56:54.944+02:00 ERROR 8367 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting latest messages by user ID: null
+2023-04-22T18:56:54.947+02:00 ERROR 8367 --- [main] c.s.s.c.SignedMessageController          : Error getting latest messages by user ID: null
+2023-04-22T18:58:53.345+02:00  WARN 8399 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T18:58:53.352+02:00  INFO 8399 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8399 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T18:58:53.352+02:00 DEBUG 8399 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T18:58:53.352+02:00  INFO 8399 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T18:58:53.979+02:00  INFO 8399 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.807 seconds (process running for 1.264)
+2023-04-22T18:58:54.041+02:00  INFO 8399 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@59d6642a
+2023-04-22T19:00:37.683+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:00:37.684+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:00:37.684+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:00:37.847+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.171 seconds (process running for 2269.567)
+2023-04-22T19:00:41.325+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:00:41.325+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:00:41.325+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:00:41.474+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.154 seconds (process running for 2273.194)
+2023-04-22T19:00:43.355+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:00:43.355+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:00:43.355+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:00:43.499+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.15 seconds (process running for 2275.219)
+2023-04-22T19:00:47.989+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:00:47.989+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:00:47.989+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:00:48.128+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.145 seconds (process running for 2279.848)
+2023-04-22T19:00:57.161+02:00  WARN 8471 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T19:00:57.168+02:00  INFO 8471 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8471 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:00:57.168+02:00 DEBUG 8471 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:00:57.168+02:00  INFO 8471 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:00:57.764+02:00  INFO 8471 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.783 seconds (process running for 1.228)
+2023-04-22T19:00:57.825+02:00  INFO 8471 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@59d6642a
+2023-04-22T19:00:59.548+02:00  WARN 8472 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T19:00:59.555+02:00  INFO 8472 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8472 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:00:59.556+02:00 DEBUG 8472 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:00:59.556+02:00  INFO 8472 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:01:00.165+02:00  INFO 8472 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.822 seconds (process running for 1.28)
+2023-04-22T19:01:00.226+02:00  INFO 8472 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@59d6642a
+2023-04-22T19:01:10.041+02:00  WARN 8482 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T19:01:10.047+02:00  INFO 8482 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8482 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:01:10.047+02:00 DEBUG 8482 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:01:10.048+02:00  INFO 8482 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:01:10.619+02:00  INFO 8482 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.747 seconds (process running for 1.173)
+2023-04-22T19:01:10.681+02:00  INFO 8482 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@59d6642a
+2023-04-22T19:01:37.011+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:01:37.011+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:01:37.011+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:01:37.150+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.144 seconds (process running for 2328.87)
+2023-04-22T19:01:40.585+02:00  WARN 8508 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T19:01:40.591+02:00  INFO 8508 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8508 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:01:40.591+02:00 DEBUG 8508 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:01:40.591+02:00  INFO 8508 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:01:41.169+02:00  INFO 8508 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.755 seconds (process running for 1.184)
+2023-04-22T19:01:41.229+02:00  INFO 8508 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@59d6642a
+2023-04-22T19:02:32.258+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:02:32.258+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:02:32.258+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:02:32.399+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.147 seconds (process running for 2384.12)
+2023-04-22T19:02:35.651+02:00  WARN 8534 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T19:02:35.657+02:00  INFO 8534 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8534 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:02:35.657+02:00 DEBUG 8534 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:02:35.657+02:00  INFO 8534 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:02:36.220+02:00  INFO 8534 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.74 seconds (process running for 1.175)
+2023-04-22T19:02:36.276+02:00  INFO 8534 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@2c99c8d
+2023-04-22T19:08:04.571+02:00  WARN 8658 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T19:08:04.577+02:00  INFO 8658 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8658 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:08:04.577+02:00 DEBUG 8658 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:08:04.578+02:00  INFO 8658 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:08:05.153+02:00  INFO 8658 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.758 seconds (process running for 1.194)
+2023-04-22T19:08:05.210+02:00  INFO 8658 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@59d6642a
+2023-04-22T19:12:43.407+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 7356 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:12:43.407+02:00 DEBUG 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:12:43.407+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:12:43.555+02:00  INFO 7356 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.154 seconds (process running for 2995.281)
+2023-04-22T19:12:45.920+02:00  WARN 8760 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T19:12:45.927+02:00  INFO 8760 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8760 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:12:45.927+02:00 DEBUG 8760 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:12:45.928+02:00  INFO 8760 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:12:46.514+02:00  INFO 8760 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.766 seconds (process running for 1.218)
+2023-04-22T19:12:46.551+02:00 ERROR 8760 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting signed messages: null
+2023-04-22T19:12:46.598+02:00 ERROR 8760 --- [main] c.s.s.c.SignedMessageController          : Unexpected error adding contact message: null
+2023-04-22T19:12:46.616+02:00 ERROR 8760 --- [main] c.s.s.c.SignedMessageController          : Error adding contact message: null
+2023-04-22T19:12:46.620+02:00  INFO 8760 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@7cb29ea8
+2023-04-22T19:12:46.623+02:00 ERROR 8760 --- [main] c.s.s.c.SignedMessageController          : Error getting signed messages: null
+2023-04-22T19:12:46.627+02:00  INFO 8760 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@25218a4d
+2023-04-22T19:12:46.638+02:00 ERROR 8760 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting latest messages by user ID: null
+2023-04-22T19:12:46.641+02:00 ERROR 8760 --- [main] c.s.s.c.SignedMessageController          : Error getting latest messages by user ID: null
+2023-04-22T19:12:50.306+02:00  WARN 8769 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T19:12:50.313+02:00  INFO 8769 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8769 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:12:50.314+02:00 DEBUG 8769 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:12:50.314+02:00  INFO 8769 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:12:50.873+02:00  INFO 8769 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.736 seconds (process running for 1.161)
+2023-04-22T19:12:50.929+02:00  INFO 8769 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@2c99c8d
+2023-04-22T19:19:11.766+02:00  WARN 8858 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-22T19:19:11.772+02:00  INFO 8858 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 8858 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:19:11.772+02:00 DEBUG 8858 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:19:11.773+02:00  INFO 8858 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:19:12.374+02:00  INFO 8858 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.791 seconds (process running for 1.275)
+2023-04-22T19:19:12.433+02:00  INFO 8858 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@59d6642a
+2023-04-22T19:27:44.958+02:00  INFO 9187 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 9187 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-22T19:27:44.960+02:00 DEBUG 9187 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-22T19:27:44.960+02:00  INFO 9187 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-22T19:27:46.346+02:00  INFO 9187 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.623 seconds (process running for 1.983)
