@@ -1,8 +1,26 @@
-var url_fetch_portfolio = "http://localhost:8080/portfolio";
+function getCookie(name) {
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+function getUserIdFromCookie() {
+    console.log("getUserIdFromCookie");
+    return 1;
+    // return getCookie("userId");
+}
+
+var userID = getUserIdFromCookie();
+var url_fetch_portfolio = "http://localhost:8080/portfolio/" + userID;
 var url_add_movement = "http://localhost:8080/movement";
 var url_server_health = "http://localhost:8080/actuator/health";
 var url_upload_file = "http://localhost:8080/upload";
-var url_download_file = "http://localhost:8080/download";
+var url_download_file = "http://localhost:8080/download/" + userID;
 var serverUP = false;
 
 function formatDate(dateString) {
@@ -30,15 +48,15 @@ function fillTable(responseJson) {
     for(let i = 0; i<responseJson.length; i++){
         const row = table.insertRow(); 
         responseJson[i].date = formatDate(responseJson[i].date);
-        const values = [responseJson[i].date, responseJson[i].stock.ticker, responseJson[i].quantity, responseJson[i].price];
+        const values = [responseJson[i].date, responseJson[i].ticker, responseJson[i].quantity, responseJson[i].price];
 
         for(let j = 0; j<values.length; j++){
             const cell = row.insertCell();
             cell.innerHTML = values[j];
         }
     }
-
 }
+
 
 // Add this function to handle the upload button's state
 function handleFileUploadButtonState() {
@@ -124,12 +142,11 @@ async function postPortfolioMovement(symbol, date, quantity, price) {
                 'Content-Type': 'application/json'
             },
             body: `{
-                "stock": {
-                    "ticker": "${symbol}"
-                },
+                "ticker": "${symbol}",
                 "date": "${date}",
                 "quantity": ${quantity},
-                "price": ${price}
+                "price": ${price},
+                "userId": ${userID}
             }`,
         });
 
