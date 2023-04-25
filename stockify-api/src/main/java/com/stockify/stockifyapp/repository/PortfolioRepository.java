@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.stockify.stockifyapp.model.PortfolioMovement;
 
 @Repository
-public interface PortfolioRepository extends CrudRepository<PortfolioMovement, Integer>{
+public interface PortfolioRepository extends CrudRepository<PortfolioMovement, Integer>, PortfolioRepositoryCustom{
 
     List<PortfolioMovement> findByUserId(Integer userId);
     

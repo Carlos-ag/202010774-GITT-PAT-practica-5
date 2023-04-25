@@ -1,19 +1,246 @@
 # Stockify
 
-## Práctica 5:
+# Práctica 5:
 
-### Bases de datos creadas:
-- unsigned messages (para mensajes enviados por usuarios que no han iniciado sesión)
-- Signed messages (para mensajes enviados por usuarios que han iniciado sesión)
-- portfolio_movements
-- portfolios
- <!-- TODO: AÑADIR IMAGEN -->
+En esta práctica se ha implementado una base de datos SQL gracias al DBMS H2. Además, se han incluido pruebas unitarias para probar los controller de las APIs para verificar el correcto funcionamiento de las mismas.
+
+## Puntos adicionales:
+Se han usado varios puntos adicionales en esta práctica:
+
+### Transacciones:
+
+Hemos implementado también un `@Transactional` para garantizar que la operación de guardar todos los movimientos de cartera en la base de datos se realice como una transacción atómica. El uso de `@Transactional` asegura que todos los movimientos se agreguen correctamente a la base de datos, o en caso de cualquier error, se revierta la transacción, evitando así estados inconsistentes en la base de datos.
+
+La anotación `@Transactional` en el método `saveAllMovements()` del repositorio tiene el siguiente propósito:
+
+1. **Atomicidad**: Si alguno de los movimientos no se guarda correctamente en la base de datos (por ejemplo, debido a restricciones de integridad), se revertirá toda la transacción y no se guardarán ninguno de los movimientos. Esto garantiza que la base de datos siempre esté en un estado consistente y no haya movimientos parciales guardados.
+
+2. **Aislamiento**: La anotación `@Transactional` también garantiza que la operación se ejecute con un cierto nivel de aislamiento de otras transacciones concurrentes. Dependiendo de la configuración y el motor de la base de datos, esto puede incluir la prevención de lecturas sucias, lecturas no repetibles y/o fantasmas.
+
+3. **Gestión de errores**: Si ocurre un error durante la ejecución de la transacción, Spring manejará automáticamente el proceso de deshacer los cambios y lanzará una excepción. Esto simplifica el manejo de errores en el código del servicio, ya que no es necesario manejar explícitamente el proceso de reversión de la transacción.
+
+En resumen, al utilizar la anotación `@Transactional` en nuestro método `saveAllMovements()`, nos aseguramos de que todos los movimientos se guarden de manera atómica y segura en la base de datos, evitando posibles problemas de consistencia y simplificando el manejo de errores.
+
+### Queries SQL avanzadas:
+
+1. Método `findLatestMessagesByUserId(Integer userId)`:
+
+Este método devuelve una lista de el mensaje más recientes de cada conversación asociada con un usuario específico, identificado por su `userId`.
+
+La consulta SQL utilizada en este método es una subconsulta correlacionada. Primero, se seleccionan el `CONVERSATION_ID` y el `MAX(TIMESTAMP)` de la tabla `SIGNED_MESSAGES` agrupados por `CONVERSATION_ID`, solo para las filas que coinciden con el `USER_ID` especificado. Luego, se realiza una unión (JOIN) de los resultados con la tabla `SIGNED_MESSAGES` utilizando las condiciones de que `CONVERSATION_ID` y `TIMESTAMP` sean iguales. Finalmente, se filtran los resultados para obtener solo las filas con el `USER_ID` especificado.
+
+El uso de esta consulta compleja permite obtener los últimos mensajes de cada conversación del usuario de manera eficiente y con una sola consulta a la base de datos.
+
+`SELECT t1.* FROM SIGNED_MESSAGES AS t1 JOIN (SELECT CONVERSATION_ID, MAX(TIMESTAMP) as MAX_TIMESTAMP FROM SIGNED_MESSAGES WHERE USER_ID = ? GROUP BY CONVERSATION_ID) AS t2 ON t1.CONVERSATION_ID = t2.CONVERSATION_ID AND t1.TIMESTAMP = t2.MAX_TIMESTAMP WHERE t1.USER_ID = ?`
+
+2. Método `findLastConversationId()`:
+
+Este método devuelve el último `CONVERSATION_ID` en la tabla `SIGNED_MESSAGES`.
+
+La consulta SQL utilizada en este método es una agregación simple, utilizando la función `MAX()` para encontrar el valor máximo de `CONVERSATION_ID` en la tabla `SIGNED_MESSAGES`. Aunque esta consulta no es tan compleja como la anterior, sigue siendo importante mencionarla en la documentación, ya que es esencial para la funcionalidad del sistema. 
+
+`SELECT MAX(CONVERSATION_ID) FROM SIGNED_MESSAGES`
+
+
+
+## Bases de datos creadas:
+Para representar las bases de datos creadas hemos creado el diagrama que se puede ver a continuación:
+ ![Diagrama SQL](assets/sql_diagram.png)
+
+ A continuación, se presenta la documentación de las bases de datos en forma de una lista con las tablas creadas y los campos correspondientes:
+
+1. Tabla SUBSCRIPTION_PLANS (Tabla de planes de suscripción de pago):
+   - ID (INT, NOT NULL, AUTO_INCREMENT): Identificador único de cada plan de suscripción.
+   - NAME (VARCHAR(255), NOT NULL): Nombre del plan de suscripción.
+   - PRICE (DOUBLE, NOT NULL): Precio del plan de suscripción.
+
+2. Tabla USERS (Tabla de los datos personales de los usuarios):
+   - ID (INT, NOT NULL, AUTO_INCREMENT): Identificador único de cada usuario.
+   - NAME (VARCHAR(255), NOT NULL): Nombre del usuario.
+   - EMAIL (VARCHAR(255), NOT NULL): Correo electrónico del usuario.
+   - PHONE (VARCHAR(255), NOT NULL): Teléfono del usuario.
+   - SUBSCRIPTION_PLAN (INT, NOT NULL): Identificador del plan de suscripción al que está suscrito el usuario (clave foránea que hace referencia a la tabla SUBSCRIPTION_PLANS).
+
+3. Tabla SIGNED_MESSAGES (Tabla de los mensajes de contacto de los usuarios ya registrados en la aplicación):
+   - ID (INT, NOT NULL, AUTO_INCREMENT): Identificador único de cada mensaje firmado.
+   - USER_ID (INT, NOT NULL): Identificador del usuario que envía el mensaje (clave foránea que hace referencia a la tabla USERS).
+   - MESSAGE (VARCHAR(255), NOT NULL): Contenido del mensaje.
+   - TIMESTAMP (TIMESTAMP, NOT NULL): Fecha y hora en la que se envió el mensaje.
+   - CONVERSATION_ID (INT, NOT NULL): Identificador de la conversación a la que pertenece el mensaje.
+
+4. Tabla UNSIGNED_MESSAGES (Tabla de los mensajes de contacto de los usuarios no registrados en la aplicación):
+   - ID (INT, NOT NULL, AUTO_INCREMENT): Identificador único de cada mensaje sin firmar.
+   - NAME (VARCHAR(255), NOT NULL): Nombre del remitente del mensaje.
+   - EMAIL (VARCHAR(255), NOT NULL): Correo electrónico del remitente del mensaje.
+   - MESSAGE (VARCHAR(255), NOT NULL): Contenido del mensaje.
+   - TIMESTAMP (TIMESTAMP, NOT NULL): Fecha y hora en la que se envió el mensaje.
+
+5. Tabla PORTFOLIO_MOVEMENTS (Tabla de los movimientos del portafolio de los usuarios, es decir, las compras y ventas de instrumentos financieros):
+   - ID (INT, NOT NULL, AUTO_INCREMENT): Identificador único de cada movimiento del portafolio.
+   - USER_ID (INT, NOT NULL): Identificador del usuario asociado al movimiento del portafolio (clave foránea que hace referencia a la tabla USERS).
+   - TICKER (VARCHAR(255), NOT NULL): Símbolo de cotización (ticker) del instrumento financiero.
+   - QUANTITY (INT, NOT NULL): Cantidad de instrumentos involucrados en el movimiento.
+   - PRICE (DOUBLE, NOT NULL): Precio del instrumento financiero en el momento del movimiento.
+   - DATE (DATE, NOT NULL): Fecha del movimiento del portafolio.
  
 
-Endpoints añadidos:
+## Endpoints de la API:
 
-Tests unitarios añadidos:
-En estos test se está comprobando el correcto funcionamiento de los controladores que manejan las peticiones HTTP para los distintos modelos de la aplicación.
+A continuación se presenta la documentación de los endpoints de las APIs proporcionadas:
+
+### PortfolioController
+
+1. **GET /portfolio/{userID}**
+
+   Obtiene el portafolio del usuario especificado por el ID de usuario.
+
+   - Parámetros de ruta:
+     - `userID`: ID del usuario (Integer)
+
+   - Respuestas:
+     - `200 OK`: Si se encuentra el portafolio del usuario.
+     - `400 BAD_REQUEST`: Si ocurre un error al obtener el portafolio.
+     - `500 INTERNAL_SERVER_ERROR`: Si ocurre un error inesperado.
+
+2. **POST /movement**
+
+   Añade un nuevo movimiento al portafolio.
+
+   - Parámetros de cuerpo (JSON):
+     - `payload`: Objeto PortfolioMovement
+
+   - Respuestas:
+     - `200 OK`: Si se añade correctamente el movimiento.
+     - `400 BAD_REQUEST`: Si ocurre un error al añadir el movimiento.
+     - `500 INTERNAL_SERVER_ERROR`: Si ocurre un error inesperado.
+
+3. **POST /upload**
+
+   Sube y procesa un archivo CSV con movimientos del portafolio.
+
+   - Parámetros de formulario:
+     - `file`: Archivo CSV (MultipartFile)
+
+   - Respuestas:
+     - `200 OK`: Si se sube y procesa correctamente el archivo.
+     - `500 INTERNAL_SERVER_ERROR`: Si falla la subida o el procesamiento del archivo.
+
+4. **GET /download/{userID}**
+
+   Descarga el archivo CSV con los movimientos del portafolio del usuario especificado por el ID de usuario.
+
+   - Parámetros de ruta:
+     - `userID`: ID del usuario (Integer)
+
+   - Respuestas:
+     - `200 OK`: Si se descarga correctamente el archivo.
+     - `404 NOT_FOUND`: Si no se encuentra el archivo.
+     - `500 INTERNAL_SERVER_ERROR`: Si falla la descarga del archivo.
+
+### SignedMessageController
+
+1. **POST /signedMessages**
+
+   Añade un mensaje firmado.
+
+   - Parámetros de cuerpo (JSON):
+     - `signedMessageDTO`: Objeto SignedMessageDTO
+
+   - Respuestas:
+     - `200 OK`: Si se añade correctamente el mensaje firmado.
+     - `400 BAD_REQUEST`: Si ocurre un error al añadir el mensaje firmado.
+     - `500 INTERNAL_SERVER_ERROR`: Si ocurre un error inesperado.
+
+2. **GET /lastConversationId**
+
+   Obtiene el último ID de conversación.
+
+   - Respuestas:
+     - `200 OK`: Si se obtiene correctamente el último ID de conversación.
+
+3. **GET /signedMessages/{conversationId}**
+
+   Obtiene los mensajes firmados de una conversación específica.
+
+   - Parámetros de ruta:
+     - `conversationId`: ID de la conversación (Integer)
+
+   - Respuestas:
+     - `200 OK`: Si se obtienen correctamente los mensajes firmados.
+     - `400 BAD_REQUEST`: Si ocurre un error al obtener los mensajes firmados.
+     - `500 INTERNAL_SERVER_ERROR`: Si ocurre un error inesperado.
+
+4. **GET /signedMessages/latest/{userId}**
+
+   Obtiene los últimos mensajes firmados del usuario especificado por el ID de usuario.
+
+   - Parámetros de ruta:
+     - `userId`: ID del usuario (Integer)
+
+   - Respuestas:
+     - `200 OK`: Si se obtienen correctamente los últimos mensajes firmados.
+     - `400 BAD_REQUEST`: Si ocurre un error al obtener los últimos mensajes firmados.
+     - `500 INTERNAL_SERVER_ERROR`: Si ocurre un error inesperado.
+
+### SuscriptionPlanController
+
+1. **GET /suscriptionPlans/{suscriptionPlanID}**
+
+   Obtiene información del plan de suscripción especificado por el ID de suscripción.
+
+   - Parámetros de ruta:
+     - `suscriptionPlanID`: ID del plan de suscripción (Integer)
+
+   - Respuestas:
+     - `200 OK`: Si se obtiene correctamente la información del plan de suscripción.
+
+2. **GET /subscriptionPlans**
+
+   Obtiene todos los planes de suscripción.
+
+   - Respuestas:
+     - `200 OK`: Si se obtienen correctamente los planes de suscripción.
+
+### UnsignedMessageController
+
+1. **POST /contact**
+
+   Añade un mensaje de contacto.
+
+   - Parámetros de cuerpo (JSON):
+     - `message`: Mapa con información del mensaje de contacto
+
+   - Respuestas:
+     - `200 OK`: Si se añade correctamente el mensaje de contacto.
+     - `400 BAD_REQUEST`: Si ocurre un error al añadir el mensaje de contacto.
+     - `500 INTERNAL_SERVER_ERROR`: Si ocurre un error inesperado.
+
+### UserController
+
+1. **GET /users/{userID}**
+
+   Obtiene información del usuario especificado por el ID de usuario.
+
+   - Parámetros de ruta:
+     - `userID`: ID del usuario (Integer)
+
+   - Respuestas:
+     - `200 OK`: Si se obtiene correctamente la información del usuario.
+
+2. **POST /users**
+
+   Añade un nuevo usuario.
+
+   - Parámetros de cuerpo (JSON):
+     - `user`: Objeto User
+
+   - Respuestas:
+     - `200 OK`: Si se añade correctamente el usuario.
+     - `400 BAD_REQUEST`: Si ocurre un error al añadir el usuario.
+     - `500 INTERNAL_SERVER_ERROR`: Si ocurre un error inesperado.
+
+
+## Tests unitarios:
 
 - SignedMessageControllerTest:
     - addSignedMessage_shouldReturnOk_whenValidMessage: Comprueba que se devuelve una respuesta con estado OK (200) cuando se añade un mensaje válido.
@@ -49,51 +276,15 @@ En estos test se está comprobando el correcto funcionamiento de los controlador
 
 
 
-
-## Práctica 4:
-
 ### MUY IMPORTANTE: USO:
-Para usarlo hay que ejecutar el backend en el puerto 8080 (por defecto) para que funcione con el front. Como verá tengo el front y el backend en dos carpetas diferentes. Para ejecutar el backend hay que ponerse en la carpeta stockify-api. La web se puede acceder desde [aquí](https://carlos-ag.github.io/202010774-GITT-PAT-practica-4/Stockify/html/index.html)
+Para usarlo hay que ejecutar el backend en el puerto 8080 (por defecto) para que funcione con el front. Como verá tengo el front y el backend en dos carpetas diferentes. Para ejecutar el backend hay que ponerse en la carpeta stockify-api. La web se puede acceder desde [aquí](https://carlos-ag.github.io/202010774-GITT-PAT-practica-5/Stockify/html/index.html)
 
-### Endpoints:
-
-En esta práctica se ha realizado el Backend de la página web Stockify. Para ello se ha usado Spring Boot y Java. Se ha incluido los siguientes endpoints, ya incorporados en la página web:
-- /portfolio (GET): Devuelve la información de la cartera de acciones del usuario.
-- /movement (POST): Añade un movimiento a la cartera de acciones del usuario.
-- /contact (POST): Añade un mensaje para el equipo de Stockify.
-- /upload (POST): Añade un archivo CSV con los movimientos de la cartera de acciones del usuario.
-- /download (GET): Descarga un archivo CSV con los movimientos de la cartera de acciones del usuario.
-
-En todas las páginas en las que aparecen estos endpoints se ha añadido una verificación de que el backend está funcionando correctamente (health check). Si no lo está, se muestra un mensaje de error en el frontend. 
-Además hay mensajes de error en el frontend para cuando se produce un error en el backend. Por ejemplo, si se subir un CSV con un formato incorrecto, se muestra un mensaje de error en el frontend y obviamente no se cambia el archivo que estaba previamente.
-Se dispone de un registro de log, y los datos que se envían al servidor se almacenan en los ficheros contactMessages.csv y portfolioMovements.csv (que este ultimo es el fichero que se cambia / descarga con el /upload o el /download). Por lo que verá que si añade un movimiento a la cartera de acciones, se almacena en el fichero portfolioMovements.csv y si envía un mensaje de contacto, se almacena en el fichero contactMessages.csv. Y claro, si vuelve a inicializar la página web sus datos siguen ahí y verá su cartera de acciones y los mensajes de contacto que ha enviado.
-
-Un movimiento de la cartera de acciones se compone de los siguientes datos:
-- Nombre de la acción (Ticker)
-- Número de acciones
-- Precio de compra
-- Fecha de compra
-Para el post se ha realizado una validación de datos tanto en el frontend (ya realizada en la práctica anterior) como en el backend. En el backend se ha comprobado el tipo de datos y que no sean nulos. Además se ha comprobado que el número de acciones sea mayor que 0. También se ha comprobado que la fecha de compra sea anterior a la fecha actual. Si cualquiera de estas condiciones no se cumple, se devuelve un error 400 Bad Request y una alerta en el frontend para que el usuario sepa que ha ocurrido un error.
-
-### Loggers:
-Se han añadido loggers en el backend para que se puedan ver los movimientos que se realizan en la página web. Estos loggers se almacenan en el fichero application.txt. Para ello se ha usado la librería log4j2.
-
-### Actuator:
-Se ha añadido el actuator para poder ver los endpoints disponibles en la página web. Para ello se ha usado la librería spring-boot-starter-actuator. Para ver los endpoints disponibles se puede acceder a la siguiente dirección: http://localhost:8080/actuator 
-Sobre todo se ha usado el endpoint /actuator/health para comprobar que el backend está funcionando correctamente y si no es así, se muestra un mensaje de error en el frontend. Este mensaje podríamos verlo en la pestaña Portfolios de la página web ya que es la que necesita del backend para funcionar.
 
 ### IMPORTANTE:
 Para ejecutar la API hace falta ponerse desde la carpeta stockify-api.
 El frontend y el backend están separados (Stockify y stockify-api respectivamente)
 
 
-
-
-## Uso:
-Para visualizar la página web desde un navegador se puede acceder al siguiente enlace [Stockify](https://carlos-ag.github.io/202010774-GITT-PAT-practica-3/Stockify/html/index.html)
-
-## Documentación:
-Para editarla la página web en VSCODE, hay que abrir la carpeta Stockify, que no incluye el README.md.
 
 ## IMPORTANTE:
 - API Noticias (100 noticias por día) (en principio *5 ya que he puesto 5 api keys diferentes)
@@ -107,7 +298,7 @@ La utilidad de la página es el de facilitar información al usuario sobre su ca
 
 La página web funciona tanto en ordenadores como en dispositivos móviles y además es responsive, es decir, se adapta al tamaño de la pantalla del dispositivo en el que se visualiza. Verá que los colores del header también cambian para que quede bonita en cualquier dispositivo.
 
-Las técnologías usadas por el momento son HTML, CSS, Javascript, Python y Plotly.
+Las técnologías usadas por el momento son HTML, CSS, Javascript, Python y Plotly, Java, Spring Boot, H2.
 
 Para familiarizarnos con los frameworks, hemos incluido Bootstrap en la página de login.
 

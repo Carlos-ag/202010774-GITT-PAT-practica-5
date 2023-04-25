@@ -28,6 +28,11 @@ import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.transaction.annotation.Transactional;
+
+
+
 
 @Service
 public class PortfolioService {
@@ -120,13 +125,16 @@ public class PortfolioService {
     //     }
     // }
 
+    @Transactional
     public void addMovementsFromCSV(MultipartFile file) throws IOException {
         // create a temporary file from the input stream
         Path tempFile = Files.createTempFile("temp", null);
         Files.copy(file.getInputStream(), tempFile, StandardCopyOption.REPLACE_EXISTING);
-        
+
         // read the file, line by line and add the movements
         List<String> lines = Files.readAllLines(tempFile);
+        List<PortfolioMovement> movements = new ArrayList<>();
+
         for (int i = 1; i < lines.size(); i++) { // start at index 1 to skip header line
             String line = lines.get(i);
             String[] values = line.split(",");
@@ -136,9 +144,12 @@ public class PortfolioService {
             movement.setQuantity(Integer.parseInt(values[2]));
             movement.setPrice(Double.parseDouble(values[3]));
             movement.setDate(LocalDate.parse(values[4]));
-            addPortfolioMovement(movement);
+            movements.add(movement);
         }
-        
+
+        // Save all movements in a transaction
+        portfolioRepository.saveAllMovements(movements);
+
         // delete the temporary file
         Files.deleteIfExists(tempFile);
     }
