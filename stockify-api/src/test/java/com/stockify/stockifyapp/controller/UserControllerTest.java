@@ -51,36 +51,38 @@ public class UserControllerTest {
 
     @Test
     public void addUser_shouldAddUser() throws Exception {
-        given(userService.addUser(any(User.class))).willReturn(user);
-    
+        given(userService.addUser(any(User.class), any(Integer.class))).willReturn(user);
+
         mockMvc.perform(post("/users")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"name\":\"John Doe\",\"phone\":\"1234567890\",\"email\":\"john.doe@example.com\"}"))
+                .content("{\"name\":\"John Doe\",\"phone\":\"1234567890\",\"email\":\"john.doe@example.com\"}")
+                .param("subscriptionPlanId", "1"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("id").value(1))
                 .andExpect(jsonPath("name").value("John Doe"))
                 .andExpect(jsonPath("phone").value("1234567890"))
                 .andExpect(jsonPath("email").value("john.doe@example.com"));
     }
-    
 
     @Test
     public void addUser_shouldReturnBadRequest_whenInvalidData() throws Exception {
-        given(userService.addUser(any(User.class))).willThrow(new IllegalArgumentException("Invalid data"));
+        given(userService.addUser(any(User.class), any(Integer.class))).willThrow(new IllegalArgumentException("Invalid data"));
 
         mockMvc.perform(post("/users")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"name\":\"John Doe\",\"phone\":\"1234567890\",\"email\":\"invalid_email\"}"))
+                .content("{\"name\":\"John Doe\",\"phone\":\"1234567890\",\"email\":\"invalid_email\"}")
+                .param("subscriptionPlanId", "1"))
                 .andExpect(status().isBadRequest());
     }
 
     @Test
     public void addUser_shouldReturnInternalServerError_whenUnexpectedError() throws Exception {
-        given(userService.addUser(any(User.class))).willThrow(new RuntimeException("Unexpected error"));
+        given(userService.addUser(any(User.class), any(Integer.class))).willThrow(new RuntimeException("Unexpected error"));
 
         mockMvc.perform(post("/users")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"name\":\"John Doe\",\"phone\":\"1234567890\",\"email\":\"john.doe@example.com\"}"))
+                .content("{\"name\":\"John Doe\",\"phone\":\"1234567890\",\"email\":\"john.doe@example.com\"}")
+                .param("subscriptionPlanId", "1"))
                 .andExpect(status().isInternalServerError());
     }
 }

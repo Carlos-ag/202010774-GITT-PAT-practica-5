@@ -126,8 +126,14 @@ function toggleEditSave() {
         });
 
         if (dataChanged) {
-            // Save data by calling your API here
-            console.log('Data changed. Save to API.');
+            const updatedUserData = {
+                id: getUserIdFromCookie(),
+                name: $('#name').val(),
+                phone: $('#phone').val(),
+                email: $('#email').val(),
+                subscriptionPlanId: $('#subscription').val()
+            };
+            updateUser(updatedUserData);
         } else {
             console.log('No changes detected.');
         }
@@ -136,6 +142,23 @@ function toggleEditSave() {
     }
 }
 
+async function updateUser(userData) {
+    const userID = getUserIdFromCookie();
+    const apiUrl = `http://localhost:8080/users/${userID}/update?subscriptionPlanId=${userData.subscriptionPlanId}`;
+
+    try {
+        await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        });
+        console.log('User data updated:', userData);
+    } catch (error) {
+        console.error('Error updating user data:', error);
+    }
+}
 
 async function displayChat(conversationId) {
     currentConversationId = conversationId;

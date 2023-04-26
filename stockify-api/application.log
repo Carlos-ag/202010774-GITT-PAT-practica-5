@@ -1,194 +1,156 @@
-2023-04-24T14:28:25.630+02:00  INFO 1388 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 1388 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-24T14:28:25.635+02:00 DEBUG 1388 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-24T14:28:25.635+02:00  INFO 1388 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-24T14:28:27.054+02:00  INFO 1388 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.669 seconds (process running for 2.119)
-2023-04-24T14:50:48.935+02:00  INFO 1891 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 1891 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-24T14:50:48.937+02:00 DEBUG 1891 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-24T14:50:48.937+02:00  INFO 1891 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-24T14:50:50.282+02:00  INFO 1891 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.579 seconds (process running for 1.893)
-2023-04-24T15:08:57.258+02:00  WARN 1891 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m25s90ms).
-2023-04-24T15:14:28.099+02:00  INFO 1891 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 1891 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-24T15:14:28.100+02:00 DEBUG 1891 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-24T15:14:28.100+02:00  INFO 1891 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-24T15:14:28.291+02:00  WARN 1891 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/PorfolioController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'portfolioService': Unsatisfied dependency expressed through field 'portfolioRepository': Error creating bean with name 'portfolioRepository': Unsatisfied dependency expressed through method 'setMappingContext' parameter 0: Error creating bean with name 'jdbcMappingContext' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcMappingContext' parameter 1: Error creating bean with name 'jdbcCustomConversions' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.springframework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConversions' threw exception with message: Error creating bean with name 'jdbcDialect' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcDialect' parameter 0: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #4 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: CREATE IF CREATE TABLE USERS ( ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255) NOT NULL, EMAIL VARCHAR(255) NOT NULL, PHONE VARCHAR(255) NOT NULL, SUBSCRIPTION_PLAN INT NOT NULL, PRIMARY KEY (ID), FOREIGN KEY (SUBSCRIPTION_PLAN) REFERENCES SUBSCRIPTION_PLANS(ID) )
-2023-04-24T15:14:28.307+02:00 ERROR 1891 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+2023-04-26T17:12:37.972+02:00  WARN 2835 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
 
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/PorfolioController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'portfolioService': Unsatisfied dependency expressed through field 'portfolioRepository': Error creating bean with name 'portfolioRepository': Unsatisfied dependency expressed through method 'setMappingContext' parameter 0: Error creating bean with name 'jdbcMappingContext' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcMappingContext' parameter 1: Error creating bean with name 'jdbcCustomConversions' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.springframework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConversions' threw exception with message: Error creating bean with name 'jdbcDialect' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcDialect' parameter 0: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #4 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: CREATE IF CREATE TABLE USERS ( ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255) NOT NULL, EMAIL VARCHAR(255) NOT NULL, PHONE VARCHAR(255) NOT NULL, SUBSCRIPTION_PLAN INT NOT NULL, PRIMARY KEY (ID), FOREIGN KEY (SUBSCRIPTION_PLAN) REFERENCES SUBSCRIPTION_PLANS(ID) )
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
-	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'portfolioService': Unsatisfied dependency expressed through field 'portfolioRepository': Error creating bean with name 'portfolioRepository': Unsatisfied dependency expressed through method 'setMappingContext' parameter 0: Error creating bean with name 'jdbcMappingContext' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcMappingContext' parameter 1: Error creating bean with name 'jdbcCustomConversions' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.springframework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConversions' threw exception with message: Error creating bean with name 'jdbcDialect' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcDialect' parameter 0: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #4 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: CREATE IF CREATE TABLE USERS ( ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255) NOT NULL, EMAIL VARCHAR(255) NOT NULL, PHONE VARCHAR(255) NOT NULL, SUBSCRIPTION_PLAN INT NOT NULL, PRIMARY KEY (ID), FOREIGN KEY (SUBSCRIPTION_PLAN) REFERENCES SUBSCRIPTION_PLANS(ID) )
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:712) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:692) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:481) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1408) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.0.6.jar:6.0.6]
-	... 24 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'portfolioRepository': Unsatisfied dependency expressed through method 'setMappingContext' parameter 0: Error creating bean with name 'jdbcMappingContext' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcMappingContext' parameter 1: Error creating bean with name 'jdbcCustomConversions' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.springframework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConversions' threw exception with message: Error creating bean with name 'jdbcDialect' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcDialect' parameter 0: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #4 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: CREATE IF CREATE TABLE USERS ( ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255) NOT NULL, EMAIL VARCHAR(255) NOT NULL, PHONE VARCHAR(255) NOT NULL, SUBSCRIPTION_PLAN INT NOT NULL, PRIMARY KEY (ID), FOREIGN KEY (SUBSCRIPTION_PLAN) REFERENCES SUBSCRIPTION_PLANS(ID) )
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:817) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:769) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:133) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:481) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1408) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:709) ~[spring-beans-6.0.6.jar:6.0.6]
-	... 39 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jdbcMappingContext' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcMappingContext' parameter 1: Error creating bean with name 'jdbcCustomConversions' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.springframework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConversions' threw exception with message: Error creating bean with name 'jdbcDialect' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcDialect' parameter 0: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #4 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: CREATE IF CREATE TABLE USERS ( ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255) NOT NULL, EMAIL VARCHAR(255) NOT NULL, PHONE VARCHAR(255) NOT NULL, SUBSCRIPTION_PLAN INT NOT NULL, PRIMARY KEY (ID), FOREIGN KEY (SUBSCRIPTION_PLAN) REFERENCES SUBSCRIPTION_PLANS(ID) )
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:548) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:809) ~[spring-beans-6.0.6.jar:6.0.6]
-	... 53 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jdbcCustomConversions' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Failed to instantiate [org.springframework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConversions' threw exception with message: Error creating bean with name 'jdbcDialect' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcDialect' parameter 0: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #4 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: CREATE IF CREATE TABLE USERS ( ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255) NOT NULL, EMAIL VARCHAR(255) NOT NULL, PHONE VARCHAR(255) NOT NULL, SUBSCRIPTION_PLAN INT NOT NULL, PRIMARY KEY (ID), FOREIGN KEY (SUBSCRIPTION_PLAN) REFERENCES SUBSCRIPTION_PLANS(ID) )
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:491) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.0.6.jar:6.0.6]
-	... 66 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.jdbc.core.convert.JdbcCustomConversions]: Factory method 'jdbcCustomConversions' threw exception with message: Error creating bean with name 'jdbcDialect' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcDialect' parameter 0: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #4 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: CREATE IF CREATE TABLE USERS ( ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255) NOT NULL, EMAIL VARCHAR(255) NOT NULL, PHONE VARCHAR(255) NOT NULL, SUBSCRIPTION_PLAN INT NOT NULL, PRIMARY KEY (ID), FOREIGN KEY (SUBSCRIPTION_PLAN) REFERENCES SUBSCRIPTION_PLANS(ID) )
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.0.6.jar:6.0.6]
-	... 80 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jdbcDialect' defined in class path resource [org/springframework/boot/autoconfigure/data/jdbc/JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.class]: Unsatisfied dependency expressed through method 'jdbcDialect' parameter 0: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #4 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: CREATE IF CREATE TABLE USERS ( ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255) NOT NULL, EMAIL VARCHAR(255) NOT NULL, PHONE VARCHAR(255) NOT NULL, SUBSCRIPTION_PLAN INT NOT NULL, PRIMARY KEY (ID), FOREIGN KEY (SUBSCRIPTION_PLAN) REFERENCES SUBSCRIPTION_PLANS(ID) )
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:548) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:225) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1298) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1259) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:483) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:338) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:331) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1150) ~[spring-context-6.0.6.jar:6.0.6]
-	at org.springframework.data.jdbc.repository.config.AbstractJdbcConfiguration.jdbcCustomConversions(AbstractJdbcConfiguration.java:154) ~[spring-data-jdbc-3.0.3.jar:3.0.3]
-	at org.springframework.boot.autoconfigure.data.jdbc.JdbcRepositoriesAutoConfiguration$SpringBootJdbcConfiguration.jdbcCustomConversions(JdbcRepositoriesAutoConfiguration.java:121) ~[spring-boot-autoconfigure-3.0.4.jar:3.0.4]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139) ~[spring-beans-6.0.6.jar:6.0.6]
-	... 81 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #4 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: CREATE IF CREATE TABLE USERS ( ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255) NOT NULL, EMAIL VARCHAR(255) NOT NULL, PHONE VARCHAR(255) NOT NULL, SUBSCRIPTION_PLAN INT NOT NULL, PRIMARY KEY (ID), FOREIGN KEY (SUBSCRIPTION_PLAN) REFERENCES SUBSCRIPTION_PLANS(ID) )
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.0.6.jar:6.0.6]
-	... 103 common frames omitted
-Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #4 of file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/schema.sql]: CREATE IF CREATE TABLE USERS ( ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255) NOT NULL, EMAIL VARCHAR(255) NOT NULL, PHONE VARCHAR(255) NOT NULL, SUBSCRIPTION_PLAN INT NOT NULL, PRIMARY KEY (ID), FOREIGN KEY (SUBSCRIPTION_PLAN) REFERENCES SUBSCRIPTION_PLANS(ID) )
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-6.0.6.jar:6.0.6]
-	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-6.0.6.jar:6.0.6]
-	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-6.0.6.jar:6.0.6]
-	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applySchemaScripts(AbstractScriptDatabaseInitializer.java:98) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66) ~[spring-boot-3.0.4.jar:3.0.4]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.0.6.jar:6.0.6]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1758) ~[spring-beans-6.0.6.jar:6.0.6]
-	... 116 common frames omitted
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "CREATE [*]IF CREATE TABLE USERS ( ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255) NOT NULL, EMAIL VARCHAR(255) NOT NULL, PHONE VARCHAR(255) NOT NULL, SUBSCRIPTION_PLAN INT NOT NULL, PRIMARY KEY (ID), FOREIGN KEY (SUBSCRIPTION_PLAN) REFERENCES SUBSCRIPTION_PLANS(ID) )"; attendu "OR REPLACE, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMP, TEMPORARY, TABLE, SYNONYM, UNIQUE, HASH, SPATIAL, INDEX"
-Syntax error in SQL statement "CREATE [*]IF CREATE TABLE USERS ( ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255) NOT NULL, EMAIL VARCHAR(255) NOT NULL, PHONE VARCHAR(255) NOT NULL, SUBSCRIPTION_PLAN INT NOT NULL, PRIMARY KEY (ID), FOREIGN KEY (SUBSCRIPTION_PLAN) REFERENCES SUBSCRIPTION_PLANS(ID) )"; expected "OR REPLACE, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL TEMPORARY, GLOBAL TEMPORARY, TEMP, TEMPORARY, TABLE, SYNONYM, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
-CREATE IF CREATE TABLE USERS ( ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255) NOT NULL, EMAIL VARCHAR(255) NOT NULL, PHONE VARCHAR(255) NOT NULL, SUBSCRIPTION_PLAN INT NOT NULL, PRIMARY KEY (ID), FOREIGN KEY (SUBSCRIPTION_PLAN) REFERENCES SUBSCRIPTION_PLANS(ID) ) [42001-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Parser.getSyntaxError(Parser.java:900) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Parser.read(Parser.java:5667) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Parser.parseCreate(Parser.java:6812) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Parser.parsePrepared(Parser.java:763) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Parser.parse(Parser.java:689) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Parser.parse(Parser.java:666) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Parser.prepareCommand(Parser.java:569) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.0.1.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-6.0.6.jar:6.0.6]
-	... 126 common frames omitted
+Found multiple occurrences of org.json.JSONObject on the class path:
 
-2023-04-24T15:14:31.785+02:00  INFO 1891 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 1891 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-24T15:14:31.786+02:00 DEBUG 1891 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-24T15:14:31.786+02:00  INFO 1891 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-24T15:14:32.037+02:00  INFO 1891 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.272 seconds (process running for 1296.486)
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-26T17:12:37.982+02:00  INFO 2835 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 2835 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-26T17:12:37.982+02:00 DEBUG 2835 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-26T17:12:37.983+02:00  INFO 2835 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-26T17:12:38.583+02:00  INFO 2835 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.797 seconds (process running for 1.291)
+2023-04-26T17:12:38.687+02:00  INFO 2835 --- [main] c.s.s.controller.UserController          : Added user: com.stockify.stockifyapp.model.User@4b5ad306
+2023-04-26T17:12:38.693+02:00 ERROR 2835 --- [main] c.s.s.controller.UserController          : Unexpected error adding user: Unexpected error
+2023-04-26T17:12:38.697+02:00 ERROR 2835 --- [main] c.s.s.controller.UserController          : Error adding user: Invalid data
+2023-04-26T17:12:38.722+02:00  WARN 2835 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-26T17:12:38.723+02:00  INFO 2835 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 2835 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-26T17:12:38.723+02:00 DEBUG 2835 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-26T17:12:38.723+02:00  INFO 2835 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-26T17:12:38.818+02:00  INFO 2835 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.106 seconds (process running for 1.527)
+2023-04-26T17:12:38.823+02:00 ERROR 2835 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting signed messages: null
+2023-04-26T17:12:38.834+02:00 ERROR 2835 --- [main] c.s.s.c.SignedMessageController          : Unexpected error adding contact message: null
+2023-04-26T17:12:38.844+02:00 ERROR 2835 --- [main] c.s.s.c.SignedMessageController          : Error adding contact message: null
+2023-04-26T17:12:38.848+02:00  INFO 2835 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@4b343b6d
+2023-04-26T17:12:38.851+02:00 ERROR 2835 --- [main] c.s.s.c.SignedMessageController          : Error getting signed messages: null
+2023-04-26T17:12:38.855+02:00 ERROR 2835 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting latest messages by user ID: null
+2023-04-26T17:12:38.860+02:00 ERROR 2835 --- [main] c.s.s.c.SignedMessageController          : Error getting latest messages by user ID: null
+2023-04-26T17:12:38.878+02:00  WARN 2835 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-26T17:12:38.879+02:00  INFO 2835 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 17.0.6 with PID 2835 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-26T17:12:38.879+02:00 DEBUG 2835 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-26T17:12:38.879+02:00  INFO 2835 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-26T17:12:38.958+02:00  INFO 2835 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.089 seconds (process running for 1.667)
+2023-04-26T17:12:38.963+02:00 ERROR 2835 --- [main] c.s.s.c.UnsignedMessageController        : Error adding contact message: Name, email, and message cannot be null
+2023-04-26T17:12:38.966+02:00  INFO 2835 --- [main] c.s.s.c.UnsignedMessageController        : Added contact message: ContactMessage [email=john.doe@example.com, message=Test message, name=John Doe]
+2023-04-26T17:12:38.969+02:00 ERROR 2835 --- [main] c.s.s.c.UnsignedMessageController        : Unexpected error adding contact message: Unexpected error
+2023-04-26T17:12:38.986+02:00  WARN 2835 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-26T17:12:38.987+02:00  INFO 2835 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Starting SuscriptionPlanControllerTest using Java 17.0.6 with PID 2835 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-26T17:12:38.987+02:00 DEBUG 2835 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-26T17:12:38.987+02:00  INFO 2835 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-26T17:12:39.056+02:00  INFO 2835 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Started SuscriptionPlanControllerTest in 0.081 seconds (process running for 1.764)
+2023-04-26T17:12:39.086+02:00  WARN 2835 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-26T17:12:39.087+02:00  INFO 2835 --- [main] c.s.s.StockifyAppApplicationTests        : Starting StockifyAppApplicationTests using Java 17.0.6 with PID 2835 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-26T17:12:39.087+02:00 DEBUG 2835 --- [main] c.s.s.StockifyAppApplicationTests        : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-26T17:12:39.087+02:00  INFO 2835 --- [main] c.s.s.StockifyAppApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2023-04-26T17:12:39.836+02:00  INFO 2835 --- [main] c.s.s.StockifyAppApplicationTests        : Started StockifyAppApplicationTests in 0.759 seconds (process running for 2.544)
+2023-04-26T17:46:38.958+02:00  WARN 3820 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-26T17:46:38.965+02:00  INFO 3820 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 3820 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-26T17:46:38.966+02:00 DEBUG 3820 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-26T17:46:38.966+02:00  INFO 3820 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-26T17:46:39.579+02:00  INFO 3820 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.804 seconds (process running for 1.259)
+2023-04-26T17:46:39.679+02:00  INFO 3820 --- [main] c.s.s.controller.UserController          : Added user: com.stockify.stockifyapp.model.User@236861da
+2023-04-26T17:46:39.684+02:00 ERROR 3820 --- [main] c.s.s.controller.UserController          : Unexpected error adding user: Unexpected error
+2023-04-26T17:46:39.691+02:00 ERROR 3820 --- [main] c.s.s.controller.UserController          : Error adding user: Invalid data
+2023-04-26T17:46:39.711+02:00  WARN 3820 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-26T17:46:39.712+02:00  INFO 3820 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 3820 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-26T17:46:39.712+02:00 DEBUG 3820 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-26T17:46:39.712+02:00  INFO 3820 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-26T17:46:39.804+02:00  INFO 3820 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.103 seconds (process running for 1.483)
+2023-04-26T17:46:39.808+02:00 ERROR 3820 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting signed messages: null
+2023-04-26T17:46:39.818+02:00 ERROR 3820 --- [main] c.s.s.c.SignedMessageController          : Unexpected error adding contact message: null
+2023-04-26T17:46:39.828+02:00 ERROR 3820 --- [main] c.s.s.c.SignedMessageController          : Error adding contact message: null
+2023-04-26T17:46:39.832+02:00  INFO 3820 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@27438750
+2023-04-26T17:46:39.835+02:00 ERROR 3820 --- [main] c.s.s.c.SignedMessageController          : Error getting signed messages: null
+2023-04-26T17:46:39.838+02:00 ERROR 3820 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting latest messages by user ID: null
+2023-04-26T17:46:39.841+02:00 ERROR 3820 --- [main] c.s.s.c.SignedMessageController          : Error getting latest messages by user ID: null
+2023-04-26T17:46:39.864+02:00  WARN 3820 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-26T17:46:39.864+02:00  INFO 3820 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 17.0.6 with PID 3820 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-26T17:46:39.864+02:00 DEBUG 3820 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-26T17:46:39.864+02:00  INFO 3820 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-26T17:46:39.941+02:00  INFO 3820 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.09 seconds (process running for 1.62)
+2023-04-26T17:46:39.945+02:00 ERROR 3820 --- [main] c.s.s.c.UnsignedMessageController        : Error adding contact message: Name, email, and message cannot be null
+2023-04-26T17:46:39.948+02:00  INFO 3820 --- [main] c.s.s.c.UnsignedMessageController        : Added contact message: ContactMessage [email=john.doe@example.com, message=Test message, name=John Doe]
+2023-04-26T17:46:39.951+02:00 ERROR 3820 --- [main] c.s.s.c.UnsignedMessageController        : Unexpected error adding contact message: Unexpected error
+2023-04-26T17:46:39.967+02:00  WARN 3820 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-26T17:46:39.967+02:00  INFO 3820 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Starting SuscriptionPlanControllerTest using Java 17.0.6 with PID 3820 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-26T17:46:39.967+02:00 DEBUG 3820 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-26T17:46:39.967+02:00  INFO 3820 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-26T17:46:40.040+02:00  INFO 3820 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Started SuscriptionPlanControllerTest in 0.083 seconds (process running for 1.72)
+2023-04-26T17:46:40.070+02:00  WARN 3820 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2023-04-26T17:46:40.073+02:00  INFO 3820 --- [main] c.s.s.StockifyAppApplicationTests        : Starting StockifyAppApplicationTests using Java 17.0.6 with PID 3820 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-26T17:46:40.073+02:00 DEBUG 3820 --- [main] c.s.s.StockifyAppApplicationTests        : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-26T17:46:40.073+02:00  INFO 3820 --- [main] c.s.s.StockifyAppApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2023-04-26T17:46:40.781+02:00  INFO 3820 --- [main] c.s.s.StockifyAppApplicationTests        : Started StockifyAppApplicationTests in 0.718 seconds (process running for 2.46)
