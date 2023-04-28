@@ -33,29 +33,30 @@ function formatDate(dateString) {
 
 
 
-
 function fillTable(responseJson) {  
-    const table = document.getElementById("table-portfolio");
-    table.innerHTML = `<tr>
-    <th>Fecha de compra</th>
-    <th>Símbolo</th>
-    <th>Número de acciones</th>
-    <th>Precio de compra</th>
-    </tr>`;
-    
-    console.log(responseJson);
+  const table = document.getElementById("table-portfolio");
+  table.innerHTML = `<tr>
+  <th>ID</th>
+  <th>Fecha de compra</th>
+  <th>Símbolo</th>
+  <th>Número de acciones</th>
+  <th>Precio de compra</th>
+  </tr>`;
+  
+  console.log(responseJson);
 
-    for(let i = 0; i<responseJson.length; i++){
-        const row = table.insertRow(); 
-        responseJson[i].date = formatDate(responseJson[i].date);
-        const values = [responseJson[i].date, responseJson[i].ticker, responseJson[i].quantity, responseJson[i].price];
+  for(let i = 0; i<responseJson.length; i++){
+      const row = table.insertRow(); 
+      responseJson[i].date = formatDate(responseJson[i].date);
+      const values = [responseJson[i].id, responseJson[i].date, responseJson[i].ticker, responseJson[i].quantity, responseJson[i].price];
 
-        for(let j = 0; j<values.length; j++){
-            const cell = row.insertCell();
-            cell.innerHTML = values[j];
-        }
-    }
+      for(let j = 0; j<values.length; j++){
+          const cell = row.insertCell();
+          cell.innerHTML = values[j];
+      }
+  }
 }
+
 
 
 // Add this function to handle the upload button's state
