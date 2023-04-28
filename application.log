@@ -126,3 +126,6 @@ Caused by: java.lang.annotation.AnnotationFormatError: Duplicate annotation for 
 2023-04-29T00:58:32.292+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
 2023-04-29T00:58:32.457+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.173 seconds (process running for 120.271)
 2023-04-29T01:12:24.263+02:00  WARN 5757 --- [http-nio-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : "Path represents URL or has "url:" prefix: [http:/127.0.0.1:5501/html/portfolio]"
+2023-04-29T01:27:11.197+02:00  INFO 5757 --- [http-nio-8080-exec-3] c.s.s.controller.PorfolioController      : Deleted movement: 1
+2023-04-29T01:27:32.425+02:00  INFO 5757 --- [http-nio-8080-exec-2] c.s.s.controller.PorfolioController      : Updated movement: com.stockify.stockifyapp.model.PortfolioMovement@52b352df
+2023-04-29T01:27:43.391+02:00  INFO 5757 --- [http-nio-8080-exec-4] c.s.s.controller.PorfolioController      : Added movement: com.stockify.stockifyapp.model.PortfolioMovement@789f0b14

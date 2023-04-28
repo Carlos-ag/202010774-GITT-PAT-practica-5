@@ -17,7 +17,7 @@ function getUserIdFromCookie() {
 
 var userID = getUserIdFromCookie();
 var url_fetch_portfolio = "http://localhost:8080/portfolio/" + userID;
-var url_add_movement = "http://localhost:8080/movement";
+var url_movement = "http://localhost:8080/movement";
 var url_server_health = "http://localhost:8080/actuator/health";
 var url_upload_file = "http://localhost:8080/upload";
 var url_download_file = "http://localhost:8080/download/" + userID;
@@ -135,7 +135,7 @@ async function fetchTable() {
 
 async function postPortfolioMovement(symbol, date, quantity, price) {
     try {
-        const response = await fetch(url_add_movement, {
+        const response = await fetch(url_movement, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -159,6 +159,151 @@ async function postPortfolioMovement(symbol, date, quantity, price) {
     }
     return null;
 }
+
+
+
+function displayFoundMovement(movement) {
+    const symbolInput = document.getElementById("form-search-symbol");
+    const dateInput = document.getElementById("form-search-date");
+    const quantityInput = document.getElementById("form-search-quantity");
+    const priceInput = document.getElementById("form-search-price");
+  
+    symbolInput.value = movement.ticker;
+    dateInput.value = movement.date;
+    quantityInput.value = movement.quantity;
+    priceInput.value = movement.price;
+  
+    document.getElementById("found-movement").style.display = "block";
+    document.getElementById("modify-button").style.display = "inline";
+    document.getElementById("delete-button").style.display = "inline";
+  }
+  
+  async function handleModifyMovement(movementID) {
+    const symbolInput = document.getElementById("form-search-symbol");
+    const dateInput = document.getElementById("form-search-date");
+    const quantityInput = document.getElementById("form-search-quantity");
+    const priceInput = document.getElementById("form-search-price");
+  
+    symbolInput.readOnly = !symbolInput.readOnly;
+    dateInput.readOnly = !dateInput.readOnly;
+    quantityInput.readOnly = !quantityInput.readOnly;
+    priceInput.readOnly = !priceInput.readOnly;
+  
+    if (!symbolInput.readOnly) {
+      document.getElementById("modify-button").innerText = "Guardar";
+    } else {
+      document.getElementById("modify-button").innerText = "Modificar";
+  
+      try {
+        const response = await fetch(`${url_movement}/update`, {
+          method: "POST",
+          headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: movementID,
+            ticker: symbolInput.value,
+            date: dateInput.value,
+            quantity: quantityInput.value,
+            price: priceInput.value,
+            userId: userID,
+          }),
+        });
+  
+        if (!response.ok) {
+          const errorText = await response.text();
+          throw new Error(errorText);
+        }
+  
+        alert("Movimiento modificado con éxito");
+        fetchTable();
+      } catch (error) {
+        alert("Error al modificar el movimiento: " + error.message);
+      }
+    }
+  }
+  
+  async function handleDeleteMovement(movementID) {
+    if (confirm("¿Estás seguro de que deseas eliminar este movimiento?")) {
+      try {
+        const response = await fetch(`${url_movement}/${movementID}`, {
+          method: "DELETE",
+        });
+  
+        if (!response.ok) {
+          const errorText = await response.text();
+          throw new Error(errorText);
+        }
+  
+        alert("Movimiento eliminado con éxito");
+        fetchTable();
+      } catch (error) {
+        alert("Error al eliminar el movimiento: " + error.message);
+      }
+    }
+  }
+  
+
+  function handleSearchButton() {
+    const searchButton = document.getElementById("form-search-submit");
+    const searchInput = document.getElementById("form-search-id");
+  
+    searchButton.addEventListener("click", async function () {
+      const movementID = searchInput.value;
+  
+      try {
+        url_fetch_movements = `${url_movement}/${movementID}`;
+        const response = await fetch(url_fetch_movements);
+  
+        if (!response.ok) {
+          const errorText = await response.text();
+          throw new Error(errorText);
+          }  
+          const movementData = await response.json();
+          displayMovementData(movementData);
+          handleModifyButton(movementID);
+          handleDeleteButton(movementID);
+        
+        } catch (error) {
+          alert("Error al buscar movimiento: " + error.message);
+        }
+        
+
+    });
+}
+
+function displayMovementData(movementData) {
+    const symbolInput = document.getElementById("form-search-symbol");
+    const dateInput = document.getElementById("form-search-date");
+    const quantityInput = document.getElementById("form-search-quantity");
+    const priceInput = document.getElementById("form-search-price");
+  
+    symbolInput.value = movementData.ticker;
+    dateInput.value = movementData.date;
+    quantityInput.value = movementData.quantity;
+    priceInput.value = movementData.price;
+  
+    document.getElementById("found-movement").style.display = "block";
+    document.getElementById("modify-button").style.display = "inline";
+    document.getElementById("delete-button").style.display = "inline";
+  }
+  
+  function handleModifyButton(movementID) {
+    const modifyButton = document.getElementById("modify-button");
+    modifyButton.addEventListener("click", () => handleModifyMovement(movementID));
+  }
+  
+  function handleDeleteButton(movementID) {
+    const deleteButton = document.getElementById("delete-button");
+    deleteButton.addEventListener("click", () => handleDeleteMovement(movementID));
+  }
+  
+
+
+
+
+
 
 function handleFormSubmit() {
     // listener in the form submit button
@@ -235,6 +380,8 @@ async function init() {
     fetchTable();
     handleFileUploadButtonState();
     handleFileButtons();
+    handleSearchButton();
+
 
 }
 
