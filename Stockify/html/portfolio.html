@@ -54,6 +54,31 @@
             <input type="submit" id="form-portfolio-submit">
           </form>
         </details>
+        <details>
+          <summary>
+              Buscar y gestionar movimiento:
+          </summary>
+          <form id="form-search">
+              <br>
+              <label for="search-id">ID:</label><br>
+              <input type="number" id="form-search-id" name="search-id" required><br><br>
+              <input type="button" id="form-search-submit" value="Buscar">
+          </form>
+          <div id="found-movement" style="display: none;">
+              <br>
+              <label for="symbol">Símbolo:</label><br>
+              <input type="text" id="form-search-symbol" name="symbol" placeholder="Ticker symbol de la acción" readonly><br><br>
+              <label for="date">Fecha:</label><br>
+              <input type="date" id="form-search-date" name="date" max="today" readonly><br><br>
+              <label for="quantity">Cantidad:</label><br>
+              <input type="number" min="1" id="form-search-quantity" name="quantity" placeholder="Número de acciones compradas" readonly><br><br>
+              <label for="price">Precio:</label><br>
+              <input type="number" id="form-search-price" name="price" placeholder="$" step="0.01" readonly><br><br>
+              <button id="modify-button" style="display: none;">Modificar</button>
+              <button id="delete-button" style="display: none;">Borrar</button>
+          </div>
+      </details>
+        
       </aside>
 
       <br><br>

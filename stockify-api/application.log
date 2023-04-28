@@ -1,4 +1,4 @@
-2023-04-26T17:12:37.972+02:00  WARN 2835 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+2023-04-28T18:52:12.577+02:00  WARN 13659 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -7,14 +7,11 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2023-04-26T17:12:37.982+02:00  INFO 2835 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 2835 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-26T17:12:37.982+02:00 DEBUG 2835 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:12:37.983+02:00  INFO 2835 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:12:38.583+02:00  INFO 2835 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.797 seconds (process running for 1.291)
-2023-04-26T17:12:38.687+02:00  INFO 2835 --- [main] c.s.s.controller.UserController          : Added user: com.stockify.stockifyapp.model.User@4b5ad306
-2023-04-26T17:12:38.693+02:00 ERROR 2835 --- [main] c.s.s.controller.UserController          : Unexpected error adding user: Unexpected error
-2023-04-26T17:12:38.697+02:00 ERROR 2835 --- [main] c.s.s.controller.UserController          : Error adding user: Invalid data
-2023-04-26T17:12:38.722+02:00  WARN 2835 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+2023-04-28T18:52:12.589+02:00  INFO 13659 --- [main] c.s.s.StockifyAppApplicationTests        : Starting StockifyAppApplicationTests using Java 19.0.2 with PID 13659 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-28T18:52:12.589+02:00 DEBUG 13659 --- [main] c.s.s.StockifyAppApplicationTests        : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-28T18:52:12.590+02:00  INFO 13659 --- [main] c.s.s.StockifyAppApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2023-04-28T18:52:13.756+02:00  INFO 13659 --- [main] c.s.s.StockifyAppApplicationTests        : Started StockifyAppApplicationTests in 1.33 seconds (process running for 1.787)
+2023-04-28T18:52:14.021+02:00  WARN 13659 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -23,18 +20,11 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2023-04-26T17:12:38.723+02:00  INFO 2835 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 2835 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-26T17:12:38.723+02:00 DEBUG 2835 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:12:38.723+02:00  INFO 2835 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:12:38.818+02:00  INFO 2835 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.106 seconds (process running for 1.527)
-2023-04-26T17:12:38.823+02:00 ERROR 2835 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting signed messages: null
-2023-04-26T17:12:38.834+02:00 ERROR 2835 --- [main] c.s.s.c.SignedMessageController          : Unexpected error adding contact message: null
-2023-04-26T17:12:38.844+02:00 ERROR 2835 --- [main] c.s.s.c.SignedMessageController          : Error adding contact message: null
-2023-04-26T17:12:38.848+02:00  INFO 2835 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@4b343b6d
-2023-04-26T17:12:38.851+02:00 ERROR 2835 --- [main] c.s.s.c.SignedMessageController          : Error getting signed messages: null
-2023-04-26T17:12:38.855+02:00 ERROR 2835 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting latest messages by user ID: null
-2023-04-26T17:12:38.860+02:00 ERROR 2835 --- [main] c.s.s.c.SignedMessageController          : Error getting latest messages by user ID: null
-2023-04-26T17:12:38.878+02:00  WARN 2835 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+2023-04-28T18:52:14.021+02:00  INFO 13659 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Starting SuscriptionPlanControllerTest using Java 19.0.2 with PID 13659 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-28T18:52:14.021+02:00 DEBUG 13659 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-28T18:52:14.021+02:00  INFO 13659 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-28T18:52:14.150+02:00  INFO 13659 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Started SuscriptionPlanControllerTest in 0.139 seconds (process running for 2.181)
+2023-04-28T18:52:14.248+02:00  WARN 13659 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -43,14 +33,14 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2023-04-26T17:12:38.879+02:00  INFO 2835 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 17.0.6 with PID 2835 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-26T17:12:38.879+02:00 DEBUG 2835 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:12:38.879+02:00  INFO 2835 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:12:38.958+02:00  INFO 2835 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.089 seconds (process running for 1.667)
-2023-04-26T17:12:38.963+02:00 ERROR 2835 --- [main] c.s.s.c.UnsignedMessageController        : Error adding contact message: Name, email, and message cannot be null
-2023-04-26T17:12:38.966+02:00  INFO 2835 --- [main] c.s.s.c.UnsignedMessageController        : Added contact message: ContactMessage [email=john.doe@example.com, message=Test message, name=John Doe]
-2023-04-26T17:12:38.969+02:00 ERROR 2835 --- [main] c.s.s.c.UnsignedMessageController        : Unexpected error adding contact message: Unexpected error
-2023-04-26T17:12:38.986+02:00  WARN 2835 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+2023-04-28T18:52:14.248+02:00  INFO 13659 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 19.0.2 with PID 13659 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-28T18:52:14.248+02:00 DEBUG 13659 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-28T18:52:14.248+02:00  INFO 13659 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-04-28T18:52:14.312+02:00  INFO 13659 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.077 seconds (process running for 2.344)
+2023-04-28T18:52:14.321+02:00 ERROR 13659 --- [main] c.s.s.c.UnsignedMessageController        : Error adding contact message: Name, email, and message cannot be null
+2023-04-28T18:52:14.326+02:00  INFO 13659 --- [main] c.s.s.c.UnsignedMessageController        : Added contact message: ContactMessage [email=john.doe@example.com, message=Test message, name=John Doe]
+2023-04-28T18:52:14.329+02:00 ERROR 13659 --- [main] c.s.s.c.UnsignedMessageController        : Unexpected error adding contact message: Unexpected error
+2023-04-28T18:52:14.343+02:00  WARN 13659 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -59,11 +49,18 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2023-04-26T17:12:38.987+02:00  INFO 2835 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Starting SuscriptionPlanControllerTest using Java 17.0.6 with PID 2835 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-26T17:12:38.987+02:00 DEBUG 2835 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:12:38.987+02:00  INFO 2835 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:12:39.056+02:00  INFO 2835 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Started SuscriptionPlanControllerTest in 0.081 seconds (process running for 1.764)
-2023-04-26T17:12:39.086+02:00  WARN 2835 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+2023-04-28T18:52:14.343+02:00  INFO 13659 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 19.0.2 with PID 13659 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-28T18:52:14.343+02:00 DEBUG 13659 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-28T18:52:14.344+02:00  INFO 13659 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-28T18:52:14.405+02:00  INFO 13659 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.069 seconds (process running for 2.436)
+2023-04-28T18:52:14.408+02:00 ERROR 13659 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting signed messages: null
+2023-04-28T18:52:14.424+02:00 ERROR 13659 --- [main] c.s.s.c.SignedMessageController          : Unexpected error adding contact message: null
+2023-04-28T18:52:14.435+02:00 ERROR 13659 --- [main] c.s.s.c.SignedMessageController          : Error adding contact message: null
+2023-04-28T18:52:14.440+02:00  INFO 13659 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@72ea6fcb
+2023-04-28T18:52:14.442+02:00 ERROR 13659 --- [main] c.s.s.c.SignedMessageController          : Error getting signed messages: null
+2023-04-28T18:52:14.445+02:00 ERROR 13659 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting latest messages by user ID: null
+2023-04-28T18:52:14.448+02:00 ERROR 13659 --- [main] c.s.s.c.SignedMessageController          : Error getting latest messages by user ID: null
+2023-04-28T18:52:14.462+02:00  WARN 13659 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -72,85 +69,10 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2023-04-26T17:12:39.087+02:00  INFO 2835 --- [main] c.s.s.StockifyAppApplicationTests        : Starting StockifyAppApplicationTests using Java 17.0.6 with PID 2835 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-26T17:12:39.087+02:00 DEBUG 2835 --- [main] c.s.s.StockifyAppApplicationTests        : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:12:39.087+02:00  INFO 2835 --- [main] c.s.s.StockifyAppApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:12:39.836+02:00  INFO 2835 --- [main] c.s.s.StockifyAppApplicationTests        : Started StockifyAppApplicationTests in 0.759 seconds (process running for 2.544)
-2023-04-26T17:46:38.958+02:00  WARN 3820 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2023-04-26T17:46:38.965+02:00  INFO 3820 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 17.0.6 with PID 3820 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-26T17:46:38.966+02:00 DEBUG 3820 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:46:38.966+02:00  INFO 3820 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:46:39.579+02:00  INFO 3820 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.804 seconds (process running for 1.259)
-2023-04-26T17:46:39.679+02:00  INFO 3820 --- [main] c.s.s.controller.UserController          : Added user: com.stockify.stockifyapp.model.User@236861da
-2023-04-26T17:46:39.684+02:00 ERROR 3820 --- [main] c.s.s.controller.UserController          : Unexpected error adding user: Unexpected error
-2023-04-26T17:46:39.691+02:00 ERROR 3820 --- [main] c.s.s.controller.UserController          : Error adding user: Invalid data
-2023-04-26T17:46:39.711+02:00  WARN 3820 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2023-04-26T17:46:39.712+02:00  INFO 3820 --- [main] c.s.s.c.SignedMessageControllerTest      : Starting SignedMessageControllerTest using Java 17.0.6 with PID 3820 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-26T17:46:39.712+02:00 DEBUG 3820 --- [main] c.s.s.c.SignedMessageControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:46:39.712+02:00  INFO 3820 --- [main] c.s.s.c.SignedMessageControllerTest      : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:46:39.804+02:00  INFO 3820 --- [main] c.s.s.c.SignedMessageControllerTest      : Started SignedMessageControllerTest in 0.103 seconds (process running for 1.483)
-2023-04-26T17:46:39.808+02:00 ERROR 3820 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting signed messages: null
-2023-04-26T17:46:39.818+02:00 ERROR 3820 --- [main] c.s.s.c.SignedMessageController          : Unexpected error adding contact message: null
-2023-04-26T17:46:39.828+02:00 ERROR 3820 --- [main] c.s.s.c.SignedMessageController          : Error adding contact message: null
-2023-04-26T17:46:39.832+02:00  INFO 3820 --- [main] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@27438750
-2023-04-26T17:46:39.835+02:00 ERROR 3820 --- [main] c.s.s.c.SignedMessageController          : Error getting signed messages: null
-2023-04-26T17:46:39.838+02:00 ERROR 3820 --- [main] c.s.s.c.SignedMessageController          : Unexpected error getting latest messages by user ID: null
-2023-04-26T17:46:39.841+02:00 ERROR 3820 --- [main] c.s.s.c.SignedMessageController          : Error getting latest messages by user ID: null
-2023-04-26T17:46:39.864+02:00  WARN 3820 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2023-04-26T17:46:39.864+02:00  INFO 3820 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Starting UnsignedMessageControllerTest using Java 17.0.6 with PID 3820 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-26T17:46:39.864+02:00 DEBUG 3820 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:46:39.864+02:00  INFO 3820 --- [main] c.s.s.c.UnsignedMessageControllerTest    : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:46:39.941+02:00  INFO 3820 --- [main] c.s.s.c.UnsignedMessageControllerTest    : Started UnsignedMessageControllerTest in 0.09 seconds (process running for 1.62)
-2023-04-26T17:46:39.945+02:00 ERROR 3820 --- [main] c.s.s.c.UnsignedMessageController        : Error adding contact message: Name, email, and message cannot be null
-2023-04-26T17:46:39.948+02:00  INFO 3820 --- [main] c.s.s.c.UnsignedMessageController        : Added contact message: ContactMessage [email=john.doe@example.com, message=Test message, name=John Doe]
-2023-04-26T17:46:39.951+02:00 ERROR 3820 --- [main] c.s.s.c.UnsignedMessageController        : Unexpected error adding contact message: Unexpected error
-2023-04-26T17:46:39.967+02:00  WARN 3820 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2023-04-26T17:46:39.967+02:00  INFO 3820 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Starting SuscriptionPlanControllerTest using Java 17.0.6 with PID 3820 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-26T17:46:39.967+02:00 DEBUG 3820 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:46:39.967+02:00  INFO 3820 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:46:40.040+02:00  INFO 3820 --- [main] c.s.s.c.SuscriptionPlanControllerTest    : Started SuscriptionPlanControllerTest in 0.083 seconds (process running for 1.72)
-2023-04-26T17:46:40.070+02:00  WARN 3820 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
-
-Found multiple occurrences of org.json.JSONObject on the class path:
-
-	jar:file:/Users/carlos/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
-	jar:file:/Users/carlos/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
-
-You may wish to exclude one of them to ensure predictable runtime behavior
-
-2023-04-26T17:46:40.073+02:00  INFO 3820 --- [main] c.s.s.StockifyAppApplicationTests        : Starting StockifyAppApplicationTests using Java 17.0.6 with PID 3820 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
-2023-04-26T17:46:40.073+02:00 DEBUG 3820 --- [main] c.s.s.StockifyAppApplicationTests        : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:46:40.073+02:00  INFO 3820 --- [main] c.s.s.StockifyAppApplicationTests        : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:46:40.781+02:00  INFO 3820 --- [main] c.s.s.StockifyAppApplicationTests        : Started StockifyAppApplicationTests in 0.718 seconds (process running for 2.46)
+2023-04-28T18:52:14.463+02:00  INFO 13659 --- [main] c.s.s.controller.UserControllerTest      : Starting UserControllerTest using Java 19.0.2 with PID 13659 (started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api)
+2023-04-28T18:52:14.463+02:00 DEBUG 13659 --- [main] c.s.s.controller.UserControllerTest      : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-28T18:52:14.463+02:00  INFO 13659 --- [main] c.s.s.controller.UserControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-04-28T18:52:14.522+02:00  INFO 13659 --- [main] c.s.s.controller.UserControllerTest      : Started UserControllerTest in 0.066 seconds (process running for 2.553)
+2023-04-28T18:52:14.531+02:00  INFO 13659 --- [main] c.s.s.controller.UserController          : Added user: com.stockify.stockifyapp.model.User@73c6ae15
+2023-04-28T18:52:14.534+02:00 ERROR 13659 --- [main] c.s.s.controller.UserController          : Unexpected error adding user: Unexpected error
+2023-04-28T18:52:14.536+02:00 ERROR 13659 --- [main] c.s.s.controller.UserController          : Error adding user: Invalid data

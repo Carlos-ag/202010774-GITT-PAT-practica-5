@@ -59,6 +59,10 @@ public class PortfolioService {
         return portfolioRepository.findByUserId(userId);
     }
 
+    public PortfolioMovement getPortfolioMovement(Integer movementID) {
+        return portfolioRepository.findById(movementID).orElse(null);
+    }
+
     public void addPortfolioMovement(PortfolioMovement movement) {
         try {
             checkIfPayloadIsValid(movement);
@@ -69,6 +73,34 @@ public class PortfolioService {
             throw new IllegalArgumentException(e.getMessage());
         } catch (Exception e) {
             throw new IllegalArgumentException("Unexpected error adding movement: " + e.getMessage());
+        }
+    }
+
+    public void deletePortfolioMovement(Integer id) {
+        portfolioRepository.deleteById(id);
+    }
+
+    public PortfolioMovement updatePortfolioMovement(PortfolioMovement movement) {
+        try {
+            checkIfPayloadIsValid(movement);
+            Optional<PortfolioMovement> existingMovement = portfolioRepository.findById(movement.getId());
+
+            if (existingMovement.isPresent()) {
+                PortfolioMovement updatedMovement = existingMovement.get();
+                updatedMovement.setTicker(movement.getTicker());
+                updatedMovement.setQuantity(movement.getQuantity());
+                updatedMovement.setPrice(movement.getPrice());
+                updatedMovement.setDate(movement.getDate());
+                updatedMovement.setUserId(movement.getUserId());
+
+                return portfolioRepository.save(updatedMovement);
+            } else {
+                throw new IllegalArgumentException("Movement with id " + movement.getId() + " not found.");
+            }
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException(e.getMessage());
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Unexpected error updating movement: " + e.getMessage());
         }
     }
 
@@ -182,6 +214,8 @@ public class PortfolioService {
         // Return the file as a Resource
         return new FileSystemResource(csvFile);
     }
+
+    
     
     
     

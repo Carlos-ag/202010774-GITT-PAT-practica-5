@@ -11,5 +11,6 @@ import com.stockify.stockifyapp.model.PortfolioMovement;
 public interface PortfolioRepository extends CrudRepository<PortfolioMovement, Integer>, PortfolioRepositoryCustom{
 
     List<PortfolioMovement> findByUserId(Integer userId);
+    void deleteById(Integer id);
     
 }

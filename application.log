@@ -1,306 +1,128 @@
-2023-04-26T17:12:18.267+02:00  INFO 2820 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 2820 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:12:18.272+02:00 DEBUG 2820 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:12:18.272+02:00  INFO 2820 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:12:19.677+02:00  INFO 2820 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.682 seconds (process running for 2.174)
-2023-04-26T17:16:33.151+02:00 ERROR 2820 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.springframework.data.jdbc.core.mapping.AggregateReference]] with root cause
+2023-04-29T00:56:32.736+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5757 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
+2023-04-29T00:56:32.742+02:00 DEBUG 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-29T00:56:32.743+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-29T00:56:34.197+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.675 seconds (process running for 2.009)
+2023-04-29T00:57:46.900+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5757 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
+2023-04-29T00:57:46.900+02:00 DEBUG 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-29T00:57:46.900+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-29T00:57:47.179+02:00  WARN 5757 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.PorfolioController]: Constructor threw exception
+2023-04-29T00:57:47.194+02:00 ERROR 5757 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
-com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `org.springframework.data.jdbc.core.mapping.AggregateReference` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information
- at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 90] (through reference chain: com.stockify.stockifyapp.model.User["subscriptionPlan"])
-	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:67) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:1909) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:408) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1354) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserialize(AbstractDeserializer.java:274) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2105) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1481) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:395) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:354) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:183) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:163) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:136) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:181) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:148) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/PorfolioController.class]: Failed to instantiate [com.stockify.stockifyapp.controller.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:312) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.stockify.stockifyapp.controller.PorfolioController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "@", delete this token
 
-2023-04-26T17:17:05.583+02:00  WARN 2820 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'subscriptionPlanId' for method parameter type Integer is not present]
-2023-04-26T17:17:40.467+02:00  INFO 2981 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 2981 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:17:40.469+02:00 DEBUG 2981 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:17:40.470+02:00  INFO 2981 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:17:42.088+02:00  INFO 2981 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.871 seconds (process running for 2.201)
-2023-04-26T17:18:20.706+02:00  WARN 2981 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'subscriptionPlanId' for method parameter type Integer is not present]
-2023-04-26T17:18:30.119+02:00  WARN 2981 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'subscriptionPlanId' for method parameter type Integer is not present]
-2023-04-26T17:19:17.474+02:00  WARN 2981 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'subscriptionPlanId' for method parameter type Integer is not present]
-2023-04-26T17:20:11.383+02:00  INFO 2981 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 2981 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:20:11.383+02:00 DEBUG 2981 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:20:11.383+02:00  INFO 2981 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:20:11.661+02:00  INFO 2981 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.294 seconds (process running for 151.777)
-2023-04-26T17:20:40.944+02:00 ERROR 2981 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.springframework.data.jdbc.core.mapping.AggregateReference]] with root cause
+	at com.stockify.stockifyapp.controller.PorfolioController.<init>(PorfolioController.java:102) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 common frames omitted
 
-com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `org.springframework.data.jdbc.core.mapping.AggregateReference` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information
- at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 91] (through reference chain: com.stockify.stockifyapp.model.User["subscriptionPlan"])
-	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:67) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:1909) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:408) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1354) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserialize(AbstractDeserializer.java:274) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2105) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1481) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:395) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:354) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:183) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:163) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:136) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:181) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:148) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+2023-04-29T00:57:49.051+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5757 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
+2023-04-29T00:57:49.051+02:00 DEBUG 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-29T00:57:49.052+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-29T00:57:49.221+02:00  WARN 5757 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/PorfolioController.class]: Unexpected exception during bean creation
+2023-04-29T00:57:49.227+02:00 ERROR 5757 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
 
-2023-04-26T17:22:32.407+02:00  INFO 3162 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3162 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:22:32.409+02:00 DEBUG 3162 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:22:32.409+02:00  INFO 3162 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:22:33.961+02:00  INFO 3162 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.788 seconds (process running for 2.147)
-2023-04-26T17:22:45.100+02:00 ERROR 3162 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.springframework.data.jdbc.core.mapping.AggregateReference]] with root cause
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'porfolioController' defined in file [/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes/com/stockify/stockifyapp/controller/PorfolioController.class]: Unexpected exception during bean creation
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:534) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at com.stockify.stockifyapp.StockifyAppApplication.main(StockifyAppApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: interface org.springframework.web.bind.annotation.CrossOrigin: @org.springframework.web.bind.annotation.CrossOrigin(originPatterns={}, maxAge=-1L, exposedHeaders={}, methods={}, origins={"*"}, allowedHeaders={}, value={}, allowCredentials="")
+	at java.base/sun.reflect.annotation.AnnotationParser.parseAnnotations2(AnnotationParser.java:126) ~[na:na]
+	at java.base/sun.reflect.annotation.AnnotationParser.parseAnnotations(AnnotationParser.java:73) ~[na:na]
+	at java.base/java.lang.reflect.Executable.declaredAnnotations(Executable.java:625) ~[na:na]
+	at java.base/java.lang.reflect.Executable.declaredAnnotations(Executable.java:623) ~[na:na]
+	at java.base/java.lang.reflect.Executable.getAnnotation(Executable.java:591) ~[na:na]
+	at java.base/java.lang.reflect.Method.getAnnotation(Method.java:787) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.lambda$checkLookupMethods$0(AutowiredAnnotationBeanPostProcessor.java:449) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:323) ~[spring-core-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:448) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:340) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1283) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 17 common frames omitted
 
-com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `org.springframework.data.jdbc.core.mapping.AggregateReference` (no Creators, like default constructor, exist): abstract types either need to be mapped to concrete types, have custom deserializer, or contain additional type information
- at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 91] (through reference chain: com.stockify.stockifyapp.model.User["subscriptionPlan"])
-	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:67) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.DeserializationContext.reportBadDefinition(DeserializationContext.java:1909) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:408) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1354) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.AbstractDeserializer.deserialize(AbstractDeserializer.java:274) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2105) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1481) ~[jackson-databind-2.14.2.jar:2.14.2]
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:395) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:354) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:183) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:163) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:136) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:181) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:148) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.6.jar:6.0.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.6.jar:6.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
-
-2023-04-26T17:24:08.777+02:00  INFO 3219 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3219 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:24:08.778+02:00 DEBUG 3219 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:24:08.779+02:00  INFO 3219 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:24:10.199+02:00  INFO 3219 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.647 seconds (process running for 1.933)
-2023-04-26T17:24:17.502+02:00  WARN 3219 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'subscriptionPlanId' for method parameter type Integer is not present]
-2023-04-26T17:27:38.935+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3305 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:27:38.936+02:00 DEBUG 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:27:38.937+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:27:40.443+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.744 seconds (process running for 2.088)
-2023-04-26T17:27:48.714+02:00  WARN 3305 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'subscriptionPlanId' for method parameter type Integer is not present]
-2023-04-26T17:29:22.113+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3305 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:29:22.113+02:00 DEBUG 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:29:22.114+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:29:22.442+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.344 seconds (process running for 104.09)
-2023-04-26T17:29:23.910+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3305 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:29:23.910+02:00 DEBUG 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:29:23.910+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:29:24.140+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.242 seconds (process running for 105.788)
-2023-04-26T17:29:33.694+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3305 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:29:33.694+02:00 DEBUG 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:29:33.694+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:29:33.922+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.238 seconds (process running for 115.57)
-2023-04-26T17:29:35.399+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3305 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:29:35.399+02:00 DEBUG 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:29:35.399+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:29:35.597+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.212 seconds (process running for 117.245)
-2023-04-26T17:30:18.580+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3305 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:30:18.580+02:00 DEBUG 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:30:18.580+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:30:18.807+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.237 seconds (process running for 160.456)
-2023-04-26T17:30:21.295+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3305 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:30:21.296+02:00 DEBUG 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:30:21.296+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:30:21.491+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.206 seconds (process running for 163.141)
-2023-04-26T17:30:43.176+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3305 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:30:43.177+02:00 DEBUG 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:30:43.177+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:30:43.358+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.192 seconds (process running for 185.008)
-2023-04-26T17:30:48.832+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3305 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:30:48.832+02:00 DEBUG 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:30:48.832+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:30:49.018+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.194 seconds (process running for 190.668)
-2023-04-26T17:30:53.499+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3305 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:30:53.499+02:00 DEBUG 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:30:53.499+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:30:53.675+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.184 seconds (process running for 195.326)
-2023-04-26T17:30:57.146+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3305 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:30:57.146+02:00 DEBUG 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:30:57.146+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:30:57.326+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.188 seconds (process running for 198.977)
-2023-04-26T17:32:24.569+02:00  WARN 3305 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'subscriptionPlanId' for method parameter type Integer is not present]
-2023-04-26T17:33:00.466+02:00  WARN 3305 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'subscriptionPlanId' for method parameter type Integer is not present]
-2023-04-26T17:33:14.732+02:00  INFO 3305 --- [http-nio-8080-exec-4] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@235796bb
-2023-04-26T17:33:37.001+02:00  INFO 3305 --- [http-nio-8080-exec-2] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@562f65e1
-2023-04-26T17:33:46.368+02:00  INFO 3305 --- [http-nio-8080-exec-4] c.s.s.c.SignedMessageController          : Added signed message: com.stockify.stockifyapp.dto.SignedMessageDTO@3f30e504
-2023-04-26T17:34:45.032+02:00  WARN 3305 --- [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'subscriptionPlanId' for method parameter type Integer is not present]
-2023-04-26T17:36:34.269+02:00  WARN 3305 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'subscriptionPlanId' for method parameter type Integer is not present]
-2023-04-26T17:37:52.482+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3305 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:37:52.483+02:00 DEBUG 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:37:52.483+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:37:52.678+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.204 seconds (process running for 614.342)
-2023-04-26T17:39:23.311+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 17.0.6 with PID 3305 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
-2023-04-26T17:39:23.312+02:00 DEBUG 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
-2023-04-26T17:39:23.312+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
-2023-04-26T17:39:23.498+02:00  INFO 3305 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.194 seconds (process running for 705.101)
-2023-04-26T17:44:24.953+02:00  INFO 3305 --- [http-nio-8080-exec-5] c.s.s.controller.UserController          : Updated user: com.stockify.stockifyapp.model.User@55f4738b
-2023-04-26T17:44:49.508+02:00  INFO 3305 --- [http-nio-8080-exec-9] c.s.s.controller.UserController          : Updated user: com.stockify.stockifyapp.model.User@71da673e
-2023-04-26T17:44:58.052+02:00  INFO 3305 --- [http-nio-8080-exec-3] c.s.s.controller.UserController          : Updated user: com.stockify.stockifyapp.model.User@5b041a48
-2023-04-26T17:45:01.884+02:00  INFO 3305 --- [http-nio-8080-exec-7] c.s.s.controller.UserController          : Updated user: com.stockify.stockifyapp.model.User@7d76df98
-2023-04-26T17:45:27.220+02:00  INFO 3305 --- [http-nio-8080-exec-1] c.s.s.controller.UserController          : Updated user: com.stockify.stockifyapp.model.User@70a262b8
+2023-04-29T00:57:52.681+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5757 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
+2023-04-29T00:57:52.681+02:00 DEBUG 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-29T00:57:52.681+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-29T00:57:52.931+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.267 seconds (process running for 80.745)
+2023-04-29T00:57:59.419+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5757 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
+2023-04-29T00:57:59.419+02:00 DEBUG 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-29T00:57:59.419+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-29T00:57:59.668+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.258 seconds (process running for 87.482)
+2023-04-29T00:58:02.140+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5757 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
+2023-04-29T00:58:02.140+02:00 DEBUG 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-29T00:58:02.140+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-29T00:58:02.349+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.217 seconds (process running for 90.162)
+2023-04-29T00:58:14.907+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5757 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
+2023-04-29T00:58:14.907+02:00 DEBUG 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-29T00:58:14.908+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-29T00:58:15.121+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.221 seconds (process running for 102.934)
+2023-04-29T00:58:18.584+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5757 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
+2023-04-29T00:58:18.584+02:00 DEBUG 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-29T00:58:18.584+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-29T00:58:18.810+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.234 seconds (process running for 106.624)
+2023-04-29T00:58:22.289+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5757 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
+2023-04-29T00:58:22.289+02:00 DEBUG 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-29T00:58:22.289+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-29T00:58:22.481+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.202 seconds (process running for 110.295)
+2023-04-29T00:58:25.961+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5757 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
+2023-04-29T00:58:25.961+02:00 DEBUG 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-29T00:58:25.961+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-29T00:58:26.160+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.206 seconds (process running for 113.974)
+2023-04-29T00:58:27.627+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5757 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
+2023-04-29T00:58:27.627+02:00 DEBUG 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-29T00:58:27.627+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-29T00:58:27.800+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.18 seconds (process running for 115.613)
+2023-04-29T00:58:32.291+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5757 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
+2023-04-29T00:58:32.291+02:00 DEBUG 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-29T00:58:32.292+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-29T00:58:32.457+02:00  INFO 5757 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 0.173 seconds (process running for 120.271)
+2023-04-29T01:12:24.263+02:00  WARN 5757 --- [http-nio-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : "Path represents URL or has "url:" prefix: [http:/127.0.0.1:5501/html/portfolio]"
