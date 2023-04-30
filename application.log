@@ -154,3 +154,7 @@ Caused by: java.lang.annotation.AnnotationFormatError: Duplicate annotation for 
 2023-04-29T01:32:00.032+02:00  INFO 7041 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
 2023-04-29T01:32:01.435+02:00  INFO 7041 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.637 seconds (process running for 1.941)
 2023-04-29T01:37:17.953+02:00  INFO 7041 --- [http-nio-8080-exec-5] c.s.s.controller.PorfolioController      : Added movement: com.stockify.stockifyapp.model.PortfolioMovement@12c4f4a6
+2023-04-29T20:28:55.895+02:00  INFO 5169 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Starting StockifyAppApplication using Java 19.0.2 with PID 5169 (/Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5/stockify-api/target/classes started by carlos in /Users/carlos/Documents/PAD/202010774-GITT-PAT-practica-5)
+2023-04-29T20:28:55.897+02:00 DEBUG 5169 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-04-29T20:28:55.898+02:00  INFO 5169 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-04-29T20:28:57.524+02:00  INFO 5169 --- [restartedMain] c.s.stockifyapp.StockifyAppApplication   : Started StockifyAppApplication in 1.856 seconds (process running for 2.389)
