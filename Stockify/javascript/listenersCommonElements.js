@@ -1,10 +1,19 @@
 let previousPage = "home";
 
+function getBaseUrl() {
+  const currentUrl = window.location.href;
+  const isLocalhost = currentUrl.includes('localhost') || currentUrl.includes('127.0.0.1');
+  return isLocalhost ? '' : '/202010774-GITT-PAT-practica-5/Stockify';
+}
+
+
 function loadPage(pageName, addToHistory = true) {
+  const baseUrl = getBaseUrl();
+
   // Add new state and change the URL only if addToHistory is true
   if (addToHistory) {
     const stateObj = { page: pageName };
-    history.pushState(stateObj, pageName, `/html/${pageName}`);
+    history.pushState(stateObj, pageName, `${baseUrl}/html/${pageName}`);
   }
 
   // set the #content element to the page.html file
@@ -12,7 +21,7 @@ function loadPage(pageName, addToHistory = true) {
   $("#content").load("../html/" + pageName + ".html");
   document.title = pageName.charAt(0).toUpperCase() + pageName.slice(1);
   $(".loading").hide();
- 
+
   const previousButtonSelected = document.getElementById(previousPage);
   previousButtonSelected.classList.remove("sidebar-button-selected");
   previousButtonSelected.classList.add("sidebar-button-unselected");
@@ -23,9 +32,9 @@ function loadPage(pageName, addToHistory = true) {
 
   previousPage = pageName;
 
-   changeFavicon(pageName);
-
+  changeFavicon(pageName);
 }
+
 
 function handleNavigationButtons() {
   window.addEventListener("popstate", function (e) {
