@@ -137,6 +137,42 @@ A continuación se presenta la documentación de los endpoints de las APIs propo
      - `404 NOT_FOUND`: Si no se encuentra el archivo.
      - `500 INTERNAL_SERVER_ERROR`: Si falla la descarga del archivo.
 
+5. **POST /movement/update**
+
+   Actualiza un movimiento existente en el portafolio.
+
+   - Parámetros de cuerpo (JSON):
+     - `payload`: Objeto PortfolioMovement
+
+   - Respuestas:
+     - `200 OK`: Si se actualiza correctamente el movimiento.
+     - `400 BAD_REQUEST`: Si ocurre un error al actualizar el movimiento.
+     - `500 INTERNAL_SERVER_ERROR`: Si ocurre un error inesperado.
+
+6. **GET /movement/{movementID}**
+
+   Obtiene un movimiento específico del portafolio.
+
+   - Parámetros de ruta:
+     - `movementID`: ID del movimiento (Integer)
+
+   - Respuestas:
+     - `200 OK`: Si se encuentra el movimiento.
+     - `400 BAD_REQUEST`: Si ocurre un error al obtener el movimiento.
+     - `500 INTERNAL_SERVER_ERROR`: Si ocurre un error inesperado.
+
+7. **DELETE /movement/{movementID}**
+
+   Elimina un movimiento específico del portafolio.
+
+   - Parámetros de ruta:
+     - `movementID`: ID del movimiento (Integer)
+
+   - Respuestas:
+     - `200 OK`: Si se elimina correctamente el movimiento.
+     - `500 INTERNAL_SERVER_ERROR`: Si ocurre un error inesperado.
+
+
 ### SignedMessageController
 
 1. **POST /signedMessages**
