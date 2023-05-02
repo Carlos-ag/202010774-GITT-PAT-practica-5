@@ -1,16 +1,9 @@
 let previousPage = "home";
 
 function getBaseUrl() {
-  const { protocol, host, pathname } = window.location;
-  const isLocalhost = host.includes('localhost') || host.includes('127.0.0.1');
-
-  if (isLocalhost) {
-    return '';
-  } else {
-    const pathSegments = pathname.split('/');
-    const repoName = pathSegments[1]; // Assumes the repository name is the first segment in the path
-    return `${protocol}//${host}/${repoName}`;
-  }
+  const currentUrl = window.location.href;
+  const isLocalhost = currentUrl.includes('localhost') || currentUrl.includes('127.0.0.1');
+  return isLocalhost ? '' : '/202010774-GITT-PAT-practica-5/Stockify';
 }
 
 
