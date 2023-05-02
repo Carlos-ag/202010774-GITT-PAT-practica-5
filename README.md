@@ -4,6 +4,9 @@
 
 En esta práctica se ha implementado una base de datos SQL gracias al DBMS H2. Además, se han incluido pruebas unitarias para probar los controller de las APIs para verificar el correcto funcionamiento de las mismas.
 
+# IMPORTANTE:
+Hay en algunos navegadores que si abres la web desde Github Pages no funciona, se recomienda por lo tanto abrirla en local desde la URL: 127.0.0.1:5501/html/
+
 ## Puntos adicionales:
 Se han usado varios puntos adicionales en esta práctica:
 
